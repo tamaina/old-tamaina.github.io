@@ -11,7 +11,7 @@
 5. `git checkout src`
 6. `npm install`
 7. `npm install gulp -g`
-8. `git worktree add docs docs; git worktree add pages pages;`
+8. `git worktree add docs docs; git worktree add pages pages`
 
 ### ビルド
 
@@ -19,6 +19,9 @@
    画像を直接files以下に追加した場合、このコマンドを実行します。少し重いと思います。  
    詳細は後述。
 2. `gulp`
+
+### ページのみビルド
+ページのみを操作して公開したい場合`gulp pages`をすると、スタイルやスクリプトの生成をしないので、速くビルドできます。
 
 ### ローカルで確認
 ローカルサーバーを立てて内容を事前に確認できます。`.config/debug-override.yml`で設定できます。
@@ -92,8 +95,8 @@ sass形式で書かれています。main.jsを読みます。
 
 ### worktreeの追加
 
-1. (既存の{basebranch}ブランチを親として利用) `git checkout -b {basebranch}`, `git checkout {basebranch}`
-   (親もたない新規ブランチを作成) `git checkout --orphan {branch}`
+1. (既存の{basebranch}ブランチを親として利用) `git checkout -b {basebranch}; git checkout {basebranch}`
+   (親もたない新規ブランチを作成) 念のため新たな作業フォルダにcloneして`git checkout --orphan {branch}`→全てのフォルダを消去→`git push origin {branch}`
 2. `git checkout master`
 2. `git worktree add {path} {branch}`
 3. `cd {path}`

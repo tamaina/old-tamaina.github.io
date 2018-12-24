@@ -13,7 +13,7 @@ const pug = require('pug')
 //const mkdirp = require('mkdirp')
 const glog = require('fancy-log')
 const colors = require('colors')
-const readyaml = require('js-yaml').safeLoad()
+const readyaml = require('js-yaml').safeLoad
 
 const fontawesome = require("@fortawesome/fontawesome-svg-core")
 fontawesome.library.add(require("@fortawesome/free-solid-svg-icons").fas, require("@fortawesome/free-regular-svg-icons").far, require("@fortawesome/free-brands-svg-icons").fab)
@@ -53,10 +53,10 @@ let package = require('./package.json')
 let messages = loadyaml('./.config/messages.yml')
 let site = extend(true,
     loadyaml('./.config/default.yml'),
-    loadyaml('./.config/images.json')
+    loadyaml('./.config/images.yml')
 )
 
-if(argv._.some(e => e == 'local-server')) site = extend(this,site,readyaml(fs.readFileSync(`./.config/debug-override.yaml`)))
+if(argv._.some(e => e == 'local-server')) site = extend(this,site,readyaml(fs.readFileSync(`./.config/debug-override.yml`)))
 
 
 const keys = (() => {
@@ -117,7 +117,7 @@ gulp.task('register', async cb => {
             script: await rf('theme/pug/includes/_script.pug', {encoding: 'utf8'}),
             mixin: await rf('theme/pug/includes/_mixins.pug', {encoding: 'utf8'})
         }
-    const base_p = await require('./scripts/builder/registerer/base')(site, keys, temp_dir, instances)
+    const base_p = await require('./scripts/builder/registerer/base')(site, keys, temp_dir)
 
     base = extend(true,
         base_p, 
@@ -131,7 +131,6 @@ gulp.task('register', async cb => {
             messages,
             require,
             theme_pug,
-            instances,
             urlPrefix,
             DEBUG
         }
@@ -412,17 +411,17 @@ gulp.task('copy-f404', (cb) => {
     ], cb)
 })
 
+const images_allFalse = {
+    optipng: false,
+    pngquant: false,
+    zopflipng: false,
+    jpegRecompress: false,
+    mozjpeg: false,
+    guetzli: false,
+    gifsicle: false,
+    svgo: false
+}
 function images_base(){
-    const images_allFalse = {
-        optipng: false,
-        pngquant: false,
-        zopflipng: false,
-        jpegRecompress: false,
-        mozjpeg: false,
-        guetzli: false,
-        gifsicle: false,
-        svgo: false
-    }
     return site.images.files.all.image ? extend(true, images_allFalse, site.images.files.all.image) : images_allFalse
 }
 
@@ -618,6 +617,8 @@ gulp.task('make-rss', (cb) => {
                 (err) => { glog(colors.red(`✖ feed.atom`)); glog(err) }
             )
         ])
+    } else {
+        return cb()
     }
 })
 

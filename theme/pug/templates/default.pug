@@ -1,145 +1,27 @@
-doctype
-block before_script
-block _script
-  include ../includes/_script.pug
-block _mixin
-  include ../includes/_mixins.pug
-block preset
+extends ./plain.pug
+block main
+  #main.padding
+    .container.py-5.bg-white.main-shadow
+      article#article_maincontent.bg-white
+        header.w-100
+          h1= page.attributes.title
 
-html
-  head
-    block meta
-      block must
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, minimum-scale=1, initial-scale=1")
-      block title
-        title #{page.attributes['title-breadcrumb'] || page.attributes.title} - #{site.name}
+        if(headings.length > 2)
+          #article_sidenav.my-2.p-3.bg-light
+            details
+              summary.font-weight-bold 目次
+              +toc( headings, 2, "ul", "list-unstyled ml-3 page-index")
+        section.pt-2.pb-4!= main_html
 
-      block thankyou_seeing_sourcecode
-        //
-          *
-          *
-          * GitHub: https://github.com/joinmisskey
-          *
-          *
-      block canonical
-        link(rel="canonical", href=page.meta.url.href)
-        if(page.attributes.amp)
-          link(rel="amphtml", href=`${page.meta.url.href}amp.html`)
-      block seo
-        meta(name="author" content=site.author)
-        meta(name="generator" content="maqz")
-        if(page.attributes.noindex)
-          meta(name="robots" content="noindex,follow")
-
-      block description
-        meta(name="description", content=page.attributes.description)
-
-      block includes_head
-        link(rel="manifest" href=`${site.url.path}/manifest.json`)
-        link(rel="alternate" type="application/atom+xml" title=`${site.name}` href=`${urlPrefix}/feed.atom`)
-        link(rel="alternate" type="application/rss+xml" title=`${site.name}` href=`${urlPrefix}/feed.rss`)
-        link(rel="alternate" type="application/json" title=`${site.name}` href=`${urlPrefix}/feed.json`)
-        include ../includes/_includes_head.pug
-
-      block icons
-        link(rel="icon", href=`${site.url.path}/favicon.ico`, type="image/vnd.microsoft.icon")
-        each icon in site.icons
-          link(rel="apple-touch-icon", href=`${site.url.path}${icon.path}`, sizes=icon.sizes)
-          link(rel="icon", href=`${site.url.path}${icon.path}`, sizes=icon.sizes, type=icon.type)
-
-      block theme_color
-        meta(name="theme-color", content=site.theme_color.primary)
-
-      block og
-        meta(property="og:type", content="website")
-        meta(property="og:title", content=`${page.attributes.title} - ${site.name}`)
-        meta(property="og:description", content=page.attributes.description)
-        if ( !!page.meta.thumbnail )
-          meta(property="og:image", content=`${urlPrefix}${page.meta.thumbnail.dir}/${page.meta.thumbnail.base}`)
-        else if ( !!site.site_card_path )
-          meta(property="og:image", content=`${urlPrefix}${site.site_card_path}`)
-        else
-          meta(property="og:image", content=`/favicon.ico`)
-        meta(property="og:url", content=page.meta.url.href)
-        meta(property="og:site_name", content=(site.name))
-
-      block twitter_card
-        if ( site.social_media.twitter.card )
-          if ( !!page.meta.thumbnail )
-            meta(name="twitter:card", content="summary_large_image")
-            meta(name="twitter:image", content=`${urlPrefix}${page.meta.thumbnail.dir}/${page.meta.thumbnail.base}`)
-          else if ( !!site.site_card_path )
-            meta(name="twitter:card", content="summary_large_image")
-            meta(name="twitter:image", content=`${urlPrefix}${site.site_card_path}`)
-          else
-            meta(name="twitter:card", content="summary")
-          meta(name="twitter:title", content=`${page.attributes.title} - ${site.name}`)
-          meta(name="twitter:description", content=page.attributes.description)
-          meta(name="twitter:site", content=site.social_media.twitter.stalk)
-
-      block gtag
-        if(site.ga)
-          | <script async src="https://www.googletagmanager.com/gtag/js?id=#{site.ga}"></script>
-          | <script>
-          | window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '#{site.ga}', );
-          | </script>
-
-      block js_head
-
-  body
-    block wo_footer
-      block nav
-        #nav
-          include ../includes/_nav.pug
-
-      block main
-        #main
-          != main_html
-
-    block footer
-      #footer.bg-white
-        if( site.disqus )
-          .container-fluid.py-5
-            #disqus_wrap
-              #disqus_thread
-
-        #footer_wrap.py-3
-          .container
-            .d-flex.justify-content-between.flex-wrap.small
-              div © 2018 #{site.author}
-
-              #updateTime.text-muted
-                | 更新日時 #{updateMoment.tz('Asia/Tokyo').format('lll z')}
-
-              div
-                a(href="https://github.com/syuilo/misskey" target="_blank" rel="noopener")
-                  +fa_fw('github', 'fab')
-                  span.sr-only GitHub
-                  | Misskey
-                | 
-                a(href="https://github.com/joinmisskey/joinmisskey.github.io" target="_blank" rel="noopener")
-                  +fa_fw('github', 'fab')
-                  span.sr-only GitHub
-                  | joinmisskey
-                | 
-                a(href="https://twitter.com/misskey_xyz" target="_blank" rel="noopener")
-                  +fa_fw('twitter', 'fab')
-                  span.sr-only Twitter
-                | 
-                a(href="/feed.rss" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span RSS
-                | 
-                a(href="/feed.json" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span JSON
-                | 
-                a(href="/feed.atom" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span Atom
-
-    block includes_foot
-      include ../includes/_includes_foot.pug
-
-    block js_foot
+        footer.w-100
+          .d-flex.flex-wrap.my-2.bg-light
+            if(page.attributes.next)
+              - const pageNext = pages.find(qpage => qpage.meta.permalink == `${page.attributes.next}`)
+                if(pageNext)
+                  a(href=`${site.url.path}${page.attributes.next}`)#next.p-3.flex-fill
+                    .container 次: #{pageNext.attributes.title}
+            if(page.attributes.prev)
+              - const pagePrev = pages.find(qpage => qpage.meta.permalink == `${page.attributes.prev}`)
+                if(pagePrev)
+                  a(href=`${site.url.path}${page.attributes.prev}`)#prev.p-3.flex-fill
+                    .container 前: #{pagePrev.attributes.title}
