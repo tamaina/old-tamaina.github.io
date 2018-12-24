@@ -1,0 +1,35 @@
+-
+  const blog_scheme = JSON.stringify({
+    "@context": "http://schema.org",
+    "@type": "BlogPosting" ,
+    "mainEntityOfPage": {
+      "@type": "WebPage" ,
+      "@id": `${urlPrefix}${page.meta.permalink}`
+    },
+    "headline": page.attributes.title,
+    "image": {
+      "@type": "ImageObject" ,
+      "url": `${urlPrefix}${thsrc}`,
+      "height": thheight,
+      "width": thwidth
+    },
+    "datePublished": page.meta.mtime,
+    "dateModified": page.meta.mtime,
+    "author": {
+      "@type": "Person" ,
+        "name": site.author
+    },
+    "publisher": {
+      "@type": "Organization" ,
+      "name": site.name,
+      "logo": {
+        "@type": "ImageObject" ,
+        "url": `${urlPrefix}${site.publisher_image_path}`,
+        "height": pheight,
+        "width": pwidth
+      }
+    },
+    "description": page.attributes.description
+  })
+
+script(type="application/ld+json")!=blog_scheme

@@ -1,0 +1,75 @@
+block script_preset
+
+block vals
+  -
+    //console.log(`${isAmp}, ${!!page}, ${!!page.meta}, ${page.meta.permalink}`)
+    const dirs = page.meta.dirs
+
+block requires
+  -
+    const pug_api = require("pug")
+    const htmlmin = require("html-minifier").minify
+    const kramed = require("kramed")
+    const $$ = (require("cafy")).default
+    const cheerio = require("cheerio")
+    const sizeOf = require("image-size")
+    const cleanCss = require("clean-css")
+    const path = require("path")
+    const fs = require("fs")
+    const numeral = require("numeral")
+    const moment = require("moment")
+    moment.locale('ja')
+    require('moment-timezone')
+
+    const updateMoment = moment(update)
+    const mfmf = require("mfmf")
+
+    const fontawesome = require("@fortawesome/fontawesome-svg-core")
+    fontawesome.library.add(
+      require("@fortawesome/free-solid-svg-icons").fas,
+      require("@fortawesome/free-regular-svg-icons").far,
+      require("@fortawesome/free-brands-svg-icons").fab
+    )
+    const falibs = require('./scripts/falibs')
+
+block messages
+  -
+    function messenger(type, text, fallback){
+      console.log(`${type}: ${text || fallback}`.yellow)
+      console.log(`in ${page.meta.permalink}`.gray)
+    }
+block functions
+  block getTL
+    -
+      function getTL(val){
+        let result
+        eval("result = `" + val + "`")
+        return result
+      }
+
+  block existFile
+    -
+      function existFile(file) {
+          try {
+              fs.statSync(file)
+              return true
+          } catch(e) {
+              if(e.code === 'ENOENT') return false
+          }
+      }
+
+  block search_sidebar
+    -
+      function searchSidebar(pathe){
+        let searchin
+        if(pathe.dir == "") searchin = `${pathe.dir}sidebar.pug`
+        else searchin = `${pathe.dir}/sidebar.pug`
+        if(existFile(searchin)){
+          return searchin
+        } else {
+          // const uppath = path.parse(pathe.dir)
+          // searchSidebar(uppath)
+          return "pages/ja/sidebar.pug"
+        }
+      }
+

@@ -1,0 +1,113 @@
+extends ../templates/default.pug
+
+append preset
+  - 
+    const indexPrefix = "blog"
+    const indexname = "ブログ"
+    const indexHeadline = "記事一覧"
+  -
+    pages.sort(function(a,b) {
+      if(( a.meta.mtime || a.meta.birthtime ) < ( b.meta.mtime || b.meta.birthtime )) { return 1 } else { return -1 }
+    });
+
+    let queries = [], qpages = []
+    
+    let rootpath = (() => {
+      if(page.attributes.query && page.attributes.query.root) return `/${page.attributes.query.root}`
+      else return page.meta.permalink
+    })()
+
+    // 「${indexname}」として表示するページの条件を指定し、Array.filter()関数でqpagesに代入します。
+
+    qpages = pages.filter(e => e.meta.permalink.indexOf(rootpath) == 0
+                            && e.attributes.layout == indexPrefix           // blogレイアウトが適用されている
+                            && e.attributes.draft != true              // 
+                            && e.attributes.published == true
+                          )
+
+    function addQuery(q, n){
+      if( typeof q === "string" ){ queries.push( {"type": n, "query": q} ) }
+      else if( typeof q === "object" && Array.isArray(q) ){
+        for( c = 0; c < q.length; c++ ){
+          queries.push( {"type": n, "query": q[c]} )
+        }
+      }
+    }
+
+    function pathFilter(q, qpages){
+      return qpages.filter(function(e,i,a){
+        if( typeof q === "string" ){
+          return e.meta.permalink.indexOf(`/${indexPrefix}/${q}/`) == 0
+        } else if (typeof q === "object" && Array.isArray(q) ){
+          for( c = 0; c < q.length; c++ ){
+            if( e.meta.permalink.indexOf(`/${indexPrefix}/${q[c]}/`) == 0 ) return true
+          }
+        }
+      })
+    }
+
+    if( page.attributes.query ) {
+
+      // front-matter のquery設定があれば適用します
+
+      if( page.attributes.query.path ) qpages = pathFilter(page.attributes.query.path, qpages)
+      if( page.attributes.query.directory ) qpages = pathFilter(page.attributes.query.directory, qpages)
+      if( page.attributes.query.directories ) qpages = pathFilter(page.attributes.query.directories, qpages)
+
+      if( page.attributes.query.category ) addQuery( page.attributes.query.category, "categories" )
+      if( page.attributes.query.categories ) addQuery( page.attributes.query.categories, "categories" )
+      if( page.attributes.query.tag ) addQuery( page.attributes.query.tag, "tags" )
+      if( page.attributes.query.tags ) addQuery( page.attributes.query.tags, "tags" )
+
+      if(queries != []){
+        qpages = qpages.filter(function(e,i,a){
+          for( m = 0; m < queries.length; m++ ){
+            if( !!e.attributes[queries[m].type] ){ if( e.attributes[queries[m].type].find(f => f === queries[m].query ) !== undefined ) { return true } }
+          }
+        })
+      }
+
+    }
+  -
+    // 見出しを設定します。
+    let headline = ""
+    let types = { "tags": "タグ", "categories": "カテゴリー" }
+    if( !page.attributes.query ){
+      headline = indexHeadline
+    } else {
+      headline = indexHeadline + " "
+      for( r = 0; r < queries.length; r++ ){
+        headline += `${types[queries[r].type]}:${queries[r].query}･`
+      }
+      headline = headline.slice(0,-1)
+    }
+
+    if(!page.attributes.title) page.attributes.title = headline
+
+block title
+  title ブログ: #{page.attributes.title} - #{site.name}
+
+block main
+
+  #main.padding
+    .container.py-5.bg-white.main-shadow
+      h1.pb-2 ブログ: #{page.attributes.title}
+      div
+        != getTL(main_html)
+      h2.font-weight-light.h3= headline
+
+      #blog_index.d-flex.flex-row.row.m-0
+        each thispage in qpages
+          a(href=`${site.url.path}${thispage.meta.permalink}`).blog-index-item
+            article.card
+              if ( thispage.meta.thumbnail )
+                img.card-img-top(alt="サムネイル", src=`${site.url.path}${thispage.meta.thumbnail.dir}/${thispage.meta.thumbnail.name}.720${thispage.meta.thumbnail.ext}`)
+              h4.card-title #{thispage.attributes.title}
+              p.card-text.px-3 #{thispage.attributes.description}
+              - let birthtime = new Date(thispage.meta.birthtime)
+              - let mtime = new Date(thispage.meta.mtime)
+              footer.card-footer
+                div.mr-2
+                  +fa_fw("clock")
+                  time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).tz('Asia/Tokyo').format('llll z')
+                +blog_badges(thispage)
