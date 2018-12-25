@@ -8,10 +8,11 @@
 2. 新しくフォルダーを作成します
 3. `git init`
 4. `git remote add origin https://github.com/tamaina/maqz.git`
-5. `git checkout src`
-6. `npm install`
-7. `npm install gulp -g`
-8. `git worktree add docs master; git worktree add pages pages`
+6. `git fetch`
+7. `git checkout src`
+8. `npm install`
+9. `npm install gulp -g`
+10. `git worktree add docs master; git worktree add pages pages`
 
 ### ビルド
 
