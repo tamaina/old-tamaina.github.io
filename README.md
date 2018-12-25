@@ -7,8 +7,8 @@
 1. Node.jsをインストールします
 2. 新しくフォルダーを作成します
 3. `git init`
-4. `git remote add origin https://github.com/tamaina/maqz.git`
-6. `git fetch`
+4. `git remote add upstream https://github.com/tamaina/maqz.git`
+6. `git fetch upstream`
 7. `git checkout src`
 8. `npm install`
 9. `npm install gulp -g`
