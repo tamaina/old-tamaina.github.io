@@ -2,21 +2,21 @@ name: "maqzテストリポジトリ"
 short_name: "maqz test"
 description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
 author: "aqz / tamaina"
-url: 
+url:
   path: "/maqz"
   host: "tamaina.github.io"
   scheme: https
-pages_src: 
+pages_src:
   path: "./pages/"
   src: "**/*.{html,htm,pug,md}"
 page_namingrule: name
-theme_color: 
+theme_color:
   primary: "#ffffff"
   secondary: "#000000"
-default: 
+default:
   template: default
-social_media: 
-  twitter: 
+social_media:
+  twitter:
     stalk: t_ma1n
     share: true
     card: true
@@ -36,7 +36,8 @@ social_media:
 rss: false
 disqus: false
 ga: false
-manifest: 
+sidebar: false
+manifest:
   start_url: "/"
   display: standalone
 sw: "js|css|png|jpeg|jpg|svg|svgz|woff2"

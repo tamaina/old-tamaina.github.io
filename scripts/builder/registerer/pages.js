@@ -16,6 +16,7 @@ module.exports = async (site, src, urlPrefix) => {
     let result = await Promise.all(promises)
     result = result.filter( (el, i, arr) => !!el )
     return result
+
     async function doit(val, i, arr, srcpath){
         let page = {}
         const src = path.parse(val)

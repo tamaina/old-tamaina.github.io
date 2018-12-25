@@ -233,7 +233,6 @@ function searchSidebar(pathe){
 gulp.task('pug', async () => {
     const streams = []
     for (const page of pages) {
-        if(!page) continue
         const puglocals = extend(true,
             {
                 page,
