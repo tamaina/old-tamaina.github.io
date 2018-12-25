@@ -36,7 +36,7 @@ social_media:
 rss: false
 disqus: false
 ga: false
-sidebar: false
+sidebar: true
 manifest:
   start_url: "/"
   display: standalone

@@ -10,4 +10,4 @@ git push -u origin master
 cd ..
 git add --all
 git commit -a -m %1
-git push
+git push -u origin src
