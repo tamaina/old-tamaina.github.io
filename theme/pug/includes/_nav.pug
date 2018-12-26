@@ -12,14 +12,14 @@ nav#mainnav.navbar.navbar-light.flex-row.p-0
 nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
   .container-fulid.px-1.px-lg-5
     ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0
-      if( dirs.length > 3 )
+      if( dirs.length > 2 )
         li.breadcrumb-item
           a(href=`${site.url.path}/`).py-1.text-primary
             +fa_fw("home","fas")
             span.sr-only
               | Top
         - let dirpl = `/`
-        - for( let i = 1; i < dirs.length - 1; i++ ){               // i = 3 の場合
+        - for( let i = 1; i < dirs.length; i++ ){               // i = 3 の場合
         -   let nowdir = dirs[i]                                    // "bar"
         -   dirpl = `${dirpl}${nowdir}/`                            // /foo/bar/
         -   let indexPage = pages.find(e => e.meta.permalink === dirpl)
