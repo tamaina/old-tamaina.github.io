@@ -82,7 +82,7 @@ mixin lis_of_dir(pathf, $option)
           div.small.lh-12=rpage.attributes.description
       if($option.s == true && rpage.attributes.has_child == true)
         ul.mt-1(clas=`${$option.unstyled ? 'list-unstyled' : ''}`)
-          +lis_of_dir(rpage.meta.permalink, {s: true})
+          +lis_of_dir(rpage.meta.permalink, {unstyled: $option.unstyled, self: $option.self, s: true, description: $option.description})
 
 mixin embed_video(url)
   .embed-responsive.embed-responsive-16by9.video-embed
