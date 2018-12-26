@@ -50,7 +50,15 @@ mixin toc( headings, n, tag, cl)
 mixin lis_of_dir(pathf, $option)
   -
     function pathME(e, pathf){
-      return e.meta.permalink.indexOf(`${pathf}`) == 0 && e.meta.permalink != '/404/' && ( $option.self ? true : e.meta.permalink.replace(`${pathf}`, "") != "" ) && e.meta.permalink.split('/').length == pathf.split('/').length + 1
+      if (!(e.meta.permalink.startsWith(pathf) && e.meta.permalink != '/404/')) return false
+      
+      const a = e.meta.permalink.split('/').length
+      const b = pathf.split('/').length
+      if ($option.self) {
+        return a == b || a == b + 1
+      } else {
+        return a == b + 1
+      }
     }
     function pathMFilter(pathf){
       return pages.filter(function(e,i,a){
@@ -67,7 +75,7 @@ mixin lis_of_dir(pathf, $option)
     bpages.sort( (a, b) => { return ( a.meta.permalink > b.meta.permalink ) ? 1 : -1 } )
     bpages.sort( (a, b) => a.attributes.rank - b.attributes.rank )
   each rpage in bpages
-    li.mb-1
+    li
       a.d-block(href=`${site.url.path}${rpage.meta.permalink}` class=(rpage.meta.permalink == page.meta.permalink ? 'font-weight-bold' : ''))
         div=rpage.attributes.title
         if($option.description)
