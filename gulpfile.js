@@ -28,6 +28,7 @@ $ = require('gulp-load-plugins')()
 // promisify
 
 const writeFile = promisify(fs.writeFile)
+const readFile = promisify(fs.readFile)
 
 // arg
 const argv = minimist(process.argv.slice(2))
@@ -151,51 +152,6 @@ gulp.task('config', () => {
     )
 })
 
-
-async function toamp(htm, base){
-    const sizeOf = require('image-size')
-    let $ = require('cheerio').load(htm, {decodeEntities: false})
-    const promises = []
-    $('img[src]').each(function(i, el){
-        promises.push(new Promise(async (resolve, reject) => {
-            let src    = $(el).attr('src')
-            let alt    = $(el).attr('alt')
-            let title  = $(el).attr('title')
-            let id     = $(el).attr('id')
-            let width  = $(el).attr('width')
-            let height = $(el).attr('height')
-            if( ( width === undefined || height === undefined ) && src.startsWith(`${urlPrefix}/files/`) ){
-                const dims = sizeOf( '.' + src.slice(urlPrefix.length) )
-                width = dims.width
-                height = dims.height
-                src = base.site.url.path + "/" + src
-            } else if ( ( width === undefined || height === undefined ) && ( src.startsWith('http') || src.startsWith('//') ) ){
-                const url = require('url').parse(src)
-                const filename = `${url.pathname.slice(1).replace(/\//g,'-')}`.slice(-36)
-                const temppath = `${temp_dir}amp/${url.hostname}/`
-                require('mkdirp').sync(temppath)
-                const v = await require('./scripts/downloadTemp')(filename, src, temppath, true)
-                glog(v)
-                if (!v || !existFile(`${temppath}${filename}.${v.ext}`)) {
-                    glog( `${messages.amp.invalid_imageUrl}:\n${src}` )
-                    return resolve()
-                }
-                const dims = sizeOf( `${temppath}${filename}.${v.ext}` )
-                width = dims.width
-                height = dims.height
-            } else {
-                glog( `${messages.amp.invalid_imageUrl}:\n${src}` )
-                return resolve()
-            }
-            $('img[src]').eq(i).after(`<amp-img src="${src}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
-            return resolve()
-        }))
-    })
-    if(promises.length > 0) await Promise.all(promises)
-    $('img').remove()
-    return $('body').html()
-}
-
 function regheadings(htm){
     let heading_html, headings = []
     const reg_heading = /<h([1-6])(.*?)>([^]*?)<\/h(\1)>/gi
@@ -232,6 +188,8 @@ function searchSidebar(pathe){
 
 gulp.task('pug', async () => {
     const streams = []
+    const sidebarcache = {}
+
     for (const page of pages) {
         const puglocals = extend(true,
             {
@@ -245,8 +203,10 @@ gulp.task('pug', async () => {
         else throw Error('default.pugが見つかりませんでした。')
 
         if(site.sidebar){
-            let sidebarHTML = pug.renderFile( searchSidebar(page.meta.src), puglocals)
-            puglocals.sidebarHTML = sidebarHTML
+            const sidebarpath = searchSidebar(page.meta.src)
+            if(!sidebarcache[sidebarpath]) sidebarcache[sidebarpath] = await readFile(sidebarpath, 'utf-8')
+            let sidebar_html = pug.render(`${puglocals.theme_pug.script}\n${puglocals.theme_pug.mixin}\n${sidebarcache[sidebarpath]}`, puglocals)
+            puglocals.sidebar_html = sidebar_html
         }
 
         page.main_html = require('./scripts/make_html')(page, puglocals, urlPrefix)
@@ -270,35 +230,6 @@ gulp.task('pug', async () => {
                     })
             })
         )
-        /*
-         *                            AMP処理部
-         *                                                                  */
-
-        if(page.attributes.amp){
-            if(existFile(`theme/pug/templates/amp_${layout}.pug`)) amptemplate += `theme/pug/templates/amp_${layout}.pug`
-            else if(existFile(`theme/pug/templates/amp_${site.default.template}.pug`)) amptemplate += `theme/pug/templates/amp_${site.default.template}.pug`
-            else throw Error('amp_default.pugが見つかりませんでした。')
-            streams.push(
-                new Promise(async (res, rej) => {
-                    const newoptions = extend(true,
-                        { isAmp: true, main_html: await toamp(puglocals.main_html, base) },
-                        puglocals
-                    )
-                    gulp.src(amptemplate)
-                        .pipe($.pug({ locals: newoptions }))
-                        .pipe($.rename(`${page.meta.permalink}amp.html`))
-                        .pipe(gulp.dest( dests.root ))
-                        .on('end',() => {
-                            // glog(colors.green(`✔ ${page.meta.permalink}amp.html`))
-                            res()
-                        })
-                        .on('error', (err) => {
-                            glog(colors.red(`✖ ${page.meta.permalink} (amp)`))
-                            rej(err)
-                        })
-                })
-            )
-        }
     }
 
     await Promise.all(streams)

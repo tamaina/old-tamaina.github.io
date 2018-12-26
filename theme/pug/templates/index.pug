@@ -2,8 +2,8 @@ extends ./plain.pug
 
 block main
   #main.padding
-    .container.py-5.bg-white.main-shadow
+    .container-fluid.py-3.bg-white
       h1= page.attributes.title
       !=main_html
       ul.simpleindex.list-unstyled
-        +lis_of_dir(page.meta.permalink, {s: true, unstyled: true})
+        +lis_of_dir(page.meta.permalink, {self: false, s: true, unstyled: true, description: (page.attributes.description !== undefined ? page.attributes.description : true)})

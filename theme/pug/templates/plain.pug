@@ -88,56 +88,31 @@ html
       block js_head
 
   body
-    block wo_footer
-      block nav
-        #nav
-          include ../includes/_nav.pug
+    #grid
+      block wo_footer
+        block nav
+          #nav
+            include ../includes/_nav.pug
 
-      block main
-        #main
-          != main_html
+        block sidebar
+          nav#sidebar
+            .sidebar-inner!=sidebar_html
 
-    block footer
-      #footer.bg-white
-        if( site.disqus )
-          .container-fluid.py-5
-            #disqus_wrap
-              #disqus_thread
+        block main
+          #main
+            != main_html
 
-        #footer_wrap.py-3
-          .container
-            .d-flex.justify-content-between.flex-wrap.small
-              div © 2018 #{site.author}
+      block footer
+        #footer.bg-white
+          if( site.disqus )
+            .container-fluid.py-5
+              #disqus_wrap
+                #disqus_thread
 
-              #updateTime.text-muted
-                | 更新日時 #{updateMoment.format('lll')}
-
-              div
-                a(href="https://github.com/syuilo/misskey" target="_blank" rel="noopener")
-                  +fa_fw('github', 'fab')
-                  span.sr-only GitHub
-                  | Misskey
-                | 
-                a(href="https://github.com/joinmisskey/joinmisskey.github.io" target="_blank" rel="noopener")
-                  +fa_fw('github', 'fab')
-                  span.sr-only GitHub
-                  | joinmisskey
-                | 
-                a(href="https://twitter.com/misskey_xyz" target="_blank" rel="noopener")
-                  +fa_fw('twitter', 'fab')
-                  span.sr-only Twitter
-                | 
-                a(href="/feed.rss" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span RSS
-                | 
-                a(href="/feed.json" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span JSON
-                | 
-                a(href="/feed.atom" target="_blank" rel="noopener")
-                  +fa_fw('rss')
-                  span Atom
+          #footer_wrap.py-3
+            .container
+              .d-flex.justify-content-center.flex-wrap.small
+                div © 2018 #{site.author}
 
     block includes_foot
       include ../includes/_includes_foot.pug

@@ -1,10 +1,10 @@
-name: "maqzテストリポジトリ"
-short_name: "maqz test"
-description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
-author: "aqz / tamaina"
+name: "うぇぶかのーと"
+short_name: "うぇぶかのーと"
+description: "第66回チーフが翠巒祭総務班Web課について色々書き連ねます。"
+author: "Chiefs of web partment"
 url:
-  path: "/maqz"
-  host: "tamaina.github.io"
+  path: ""
+  host: "note.suiranfes.com"
   scheme: https
 pages_src:
   path: "./pages/"
@@ -17,7 +17,7 @@ default:
   template: default
 social_media:
   twitter:
-    stalk: t_ma1n
+    stalk: suiranfes
     share: true
     card: true
   LINE:
@@ -30,7 +30,7 @@ social_media:
     stalk: false
     share: false
   github:
-    stalk: tamaina
+    stalk: suiranfes
     share: false
   share_button: true
 rss: false

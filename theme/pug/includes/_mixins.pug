@@ -49,13 +49,16 @@ mixin toc( headings, n, tag, cl)
 
 mixin lis_of_dir(pathf, $option)
   -
+    function pathME(e, pathf){
+      return e.meta.permalink.indexOf(`${pathf}`) == 0 && e.meta.permalink != '/404/' && ( $option.self ? true : e.meta.permalink.replace(`${pathf}`, "") != "" ) && e.meta.permalink.split('/').length == pathf.split('/').length + 1
+    }
     function pathMFilter(pathf){
       return pages.filter(function(e,i,a){
-        if( typeof pathf === "string" ){
-          return e.meta.permalink.indexOf(`${pathf}`) == 0 && e.meta.permalink.replace(`${pathf}`, "") != "" && e.meta.permalink.split('/').length == pathf.split('/').length + 1
+        if (typeof pathf === "string") {
+          return pathME(e, pathf)
         } else if (typeof pathf === "object" && Array.isArray(pathf) ){
-          for( c = 0; c < pathf.length; c++ ){
-            if( e.meta.permalink.indexOf(`${pathf[c]}`) == 0 && e.meta.permalink.replace(`${pathf[c]}`, "") != "" && e.meta.permalink.split('/').length == pathf.split('/').length + 1) return true
+          for (const c of pathf) {
+            if (pathME(e, c)) return true
           }
         }
       })
@@ -65,9 +68,10 @@ mixin lis_of_dir(pathf, $option)
     bpages.sort( (a, b) => a.attributes.rank - b.attributes.rank )
   each rpage in bpages
     li.mb-1
-      a.d-block(href=`${site.url.path}${rpage.meta.permalink}`)
+      a.d-block(href=`${site.url.path}${rpage.meta.permalink}` class=(rpage.meta.permalink == page.meta.permalink ? 'font-weight-bold' : ''))
         div=rpage.attributes.title
-        div.small.lh-12=rpage.attributes.description
+        if($option.description)
+          div.small.lh-12=rpage.attributes.description
       if($option.s == true && rpage.attributes.has_child == true)
         ul.mt-1(clas=`${$option.unstyled ? 'list-unstyled' : ''}`)
           +lis_of_dir(rpage.meta.permalink, {s: true})

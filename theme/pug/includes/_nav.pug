@@ -1,21 +1,10 @@
 //-
   ナビゲーションバー
 
-nav#mainnav.navbar.navbar-expand-md.navbar-light.flex-row
-  if(!isAmp)
-    button.navbar-toggler(data-toggle="collapse" data-target="#navtoggle" aria-controls="navtoggle" aria-expanded="false" aria-label="Toggle navigation")
-      +fa("bars", "fas")
-    a(href=`${site.url.path}/`).navbar-brand.mx-5 maqz
-    .collapse.navbar-collapse#navtoggle
-      ul.navbar-nav.ml-5.mt-lg-0.ml-3.ml-md-0
-        li.nav-item.px-md-3(class=( page.meta.permalink == `/` ? "active" : "" ))
-          a.nav-link(href=`${site.url.path}/`)
-            +fa_fw("home")
-            span.d-inline.d-md-none.d-lg-inline
-              |  Top
-  else
-    button.hamburger(on='tap:sidebar1.toggle')
-      +fa("bars", "fas")
+nav#mainnav.navbar.navbar-light.flex-row.p-0
+  button.sidebar-toggler.d-block.d-md-none
+    +fa("bars", "fas")
+  a(href=`${site.url.path}/`).navbar-brand.mx-5=site.short_name
 
 //-
   パンくずリスト

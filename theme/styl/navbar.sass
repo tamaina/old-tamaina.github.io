@@ -1,15 +1,6 @@
 #nav
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  z-index: 100
   background-color: #fff
-  box-shadow: rgba(0, 0, 0, .2) 0 0 8px
   border: none
-
-  @media (max-width: map-get($grid-breakpoints, md) - 0.02)
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .075)
 
   nav
     &#mainnav
@@ -17,7 +8,7 @@
       width: 100%
       border-bottom: 1px solid $gray-300
 
-      button.navbar-toggler,
+      button.sidebar-toggler,
       button.hamburger
         height: 48px
         width: 48px
@@ -34,22 +25,39 @@
           svg
             font-size: 22.4px
 
-      &:before
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        height: 48px
-        background-image: url('/files/images/title.light.svg')
-        background-size: 120px
-        background-position: center
-        background-repeat: no-repeat
-        opacity: 0.3
-        content: ""
-        z-index: -1
+      @media (min-width: map-get($grid-breakpoints, md))
+        #navtoggle
+          text-shadow: 1px 1px 0 #fff, 1px -1px 0 #fff,-1px 1px 0 #fff,-1px -1px 0 #fff
+
+          .nav-item
+            height: 48px
+            display: flex
+            font-size: .8125rem
+            font-variant: small-caps
+
+            a.nav-link
+              margin: auto
+
+            &.active
+              border-bottom: 3px solid $primary
+              border-top: 3px solid transparent
+
+      @media (max-width: map-get($grid-breakpoints, md) - 0.02)
+        #navtoggle
+          background-color: #fff
+          box-shadow: 0 1px 0 rgba(0, 0, 0, .075)
+
+          .nav-item
+            a.nav-link
+              color: rgba(0, 0, 0, 0.5)
+
+            &.active
+              a.nav-link
+                color: rgba(0, 0, 0, 0.9)
 
     &#breadcrumb
       height: 33px
+      border-bottom: 1px solid #dee2e6
 
       > div
         overflow-x: auto
@@ -58,16 +66,3 @@
           width: max-content
           width: -webkit-max-content
           width: -moz-max-content
-
-#main
-  margin: 81px 0 0 0
-  min-height: calc(100vh - 136.53px)
-
-  &.padding
-    @media (min-width: map-get($grid-breakpoints, sm))
-      margin-top: calc(81px + 1.6rem)
-      margin-bottom: 1.6rem
-      min-height: calc(100vh - 3.2rem - 136.53px)
-
-#footer
-  box-shadow: rgba(0,0,0,0.2) 0 0 8px
