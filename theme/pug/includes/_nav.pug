@@ -23,7 +23,6 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
         - for( let i = offset; i < dirs.length - offset; i++ ){               // i = 3 の場合
         -   let nowdir = dirs[i]                                    // "bar"
         -   dirpl = `${dirpl}${nowdir}/`                            // /foo/bar/
-        - console.log(dirpl)
         -   let indexPage = pages.find(e => e.meta.permalink === dirpl)
         -   if( indexPage != undefined && i < dirs.length - 2 ){
         -     const title = indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title
