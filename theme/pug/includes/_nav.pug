@@ -2,8 +2,13 @@
   ナビゲーションバー
 
 nav#mainnav.navbar.navbar-light.flex-row.p-0
-  button.sidebar-toggler.d-block.d-md-none
-    +fa("bars", "fas")
+  if(site.sidebar)
+    if(!isAmp)
+      button.sidebar-toggler.d-block.d-md-none
+        +fa("bars", "fas")
+    else
+      button.hamburger(on='tap:sidebar.toggle')
+        +fa("bars", "fas")
   a(href=`${site.url.path}/`).navbar-brand.mx-5=site.short_name
 
 //-

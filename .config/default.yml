@@ -1,10 +1,10 @@
-name: "うぇぶかのーと"
-short_name: "うぇぶかのーと"
-description: "第66回チーフが翠巒祭総務班Web課について色々書き連ねます。"
-author: "Chiefs of web partment"
+name: "maqzテストリポジトリ"
+short_name: "maqz test"
+description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
+author: "aqz / tamaina"
 url:
-  path: ""
-  host: "note.suiranfes.com"
+  path: "/maqz"
+  host: "tamaina.github.io"
   scheme: https
 pages_src:
   path: "./pages/"
@@ -17,7 +17,7 @@ default:
   template: default
 social_media:
   twitter:
-    stalk: suiranfes
+    stalk: t_ma1n
     share: true
     card: true
   LINE:
@@ -30,13 +30,13 @@ social_media:
     stalk: false
     share: false
   github:
-    stalk: suiranfes
+    stalk: tamaina
     share: false
   share_button: true
 rss: false
 disqus: false
 ga: false
-sidebar: true
+sidebar: false
 manifest:
   start_url: "/"
   display: standalone

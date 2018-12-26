@@ -87,8 +87,8 @@ html
 
       block js_head
 
-  body
-    #grid
+  body(class=(site.sidebar ? 'with-sidebar' : ''))
+    #grid(class=(site.sidebar ? 'with-sidebar' : ''))
       block wo_footer
         block nav
           #nav

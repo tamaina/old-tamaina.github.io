@@ -25,36 +25,6 @@
           svg
             font-size: 22.4px
 
-      @media (min-width: map-get($grid-breakpoints, md))
-        #navtoggle
-          text-shadow: 1px 1px 0 #fff, 1px -1px 0 #fff,-1px 1px 0 #fff,-1px -1px 0 #fff
-
-          .nav-item
-            height: 48px
-            display: flex
-            font-size: .8125rem
-            font-variant: small-caps
-
-            a.nav-link
-              margin: auto
-
-            &.active
-              border-bottom: 3px solid $primary
-              border-top: 3px solid transparent
-
-      @media (max-width: map-get($grid-breakpoints, md) - 0.02)
-        #navtoggle
-          background-color: #fff
-          box-shadow: 0 1px 0 rgba(0, 0, 0, .075)
-
-          .nav-item
-            a.nav-link
-              color: rgba(0, 0, 0, 0.5)
-
-            &.active
-              a.nav-link
-                color: rgba(0, 0, 0, 0.9)
-
     &#breadcrumb
       height: 33px
       border-bottom: 1px solid #dee2e6
