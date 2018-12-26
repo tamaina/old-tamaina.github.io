@@ -20,11 +20,11 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
             span.sr-only
               | Top
         - let dirpl = `/`
-        - for( let i = offset + 1; i < dirs.length - offset; i++ ){               // i = 3 の場合
+        - for( let i = offset + 1; i < dirs.length - 2; i++ ){               // i = 3 の場合
         -   let nowdir = dirs[i]                                    // "bar"
         -   dirpl = `${dirpl}${nowdir}/`                            // /foo/bar/
         -   let indexPage = pages.find(e => e.meta.permalink === dirpl)
-        -   if( indexPage != undefined && i < dirs.length - offset - 1 ){
+        -   if( indexPage != undefined && i < dirs.length - 2 ){
         -     const title = indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title
         -     if (!!title) {
               li.breadcrumb-item
@@ -33,9 +33,9 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
           li.breadcrumb-item
             a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{nowdir}
         -     }
-        -   } else if( indexPage == undefined && i < dirs.length - offset - 1 ){
+        -   } else if( indexPage == undefined && i < dirs.length - 2 ){
           li.breadcrumb-item(aria-current="page").text-primary #{nowdir}
-        -   } else if( i == dirs.length - offset - 1 ){
+        -   } else if( i == dirs.length - 2 ){
         -     const title = indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title
           li.breadcrumb-item.active
             a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-dark.font-weight-bold.trigger-gototop.button-like-anchor #{title ? title : nowdir}
