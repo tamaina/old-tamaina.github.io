@@ -29,8 +29,8 @@ mixin toc(headings, n, tag, cl)
       }
     }
     let o = `<${tag} class="${cl} m-0 p-0">`
-    for(const now of headings){
-      let prev
+    for(let i = 0; headings.length > i; i++){
+      let now = headings[i], prev
       if (now.number < n)
         continue
       if (i == 0)
