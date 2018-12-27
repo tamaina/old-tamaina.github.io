@@ -100,7 +100,6 @@ let dests = {
     'info': './dist/docs/info.json'
 }
 
-
 let manifest = {},
     pages = [],
     base,
