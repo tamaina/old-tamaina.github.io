@@ -1,3 +1,5 @@
+import onReady from "./onReady";
+
 function gototo(){
   window.scroll({
     top: 0,
@@ -11,5 +13,5 @@ function gototop(){
   }
 }
 
-window.addEventListener('DOMContentLoaded', gototop)
+onReady(gototop)
 document.addEventListener('pjax:content', gototop)

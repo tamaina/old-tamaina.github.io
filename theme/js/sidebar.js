@@ -1,10 +1,12 @@
+import onReady from "./onReady";
+
 class Sidebar {
     constructor(){
         this.opened = false
         this.startX = 0
         this.diffX = 0
 
-        window.addEventListener('DOMContentLoaded', this.registerOnReady.bind(this))
+        onReady(this.registerOnReady.bind(this))
 
         document.addEventListener('pjax:content', this.registerClick.bind(this))
         window.addEventListener('pjax:fetch', this.sidebarClose.bind(this))

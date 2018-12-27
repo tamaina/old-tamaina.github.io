@@ -1,4 +1,5 @@
-const { getNode } = require('../../scripts/falib')
+import { getNode } from '../../scripts/falib'
+import onReady from './onReady'
 
 function fainit(){
     for( let el of Array.from(document.getElementsByTagName('i')) ){
@@ -18,5 +19,5 @@ function fainit(){
     }
 }
 
-window.addEventListener('DOMContentLoaded', fainit)
+onReady(fainit)
 document.addEventListener('pjax:content', fainit)

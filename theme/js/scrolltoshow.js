@@ -1,3 +1,5 @@
+import onReady from "./onReady";
+
 function scrolltoshow(){
     const els = Array.from(document.getElementsByClassName('scrollts'))
     if(IntersectionObserver !== undefined){
@@ -35,5 +37,5 @@ function scrolltoshow(){
     }
 }
 
-window.addEventListener('DOMContentLoaded', scrolltoshow)
+onReady(scrolltoshow)
 document.addEventListener('pjax:content', scrolltoshow)
