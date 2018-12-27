@@ -24,23 +24,26 @@ mixin fa_fw( $icon, $prefix )
 mixin toc(headings, n, tag, cl)
   -
     function lv(a, b, ht){
-      for(let j = 0; a - b > j; j++){
-        o += ht
+      let r = a - b
+      let ans = ''
+      for(let j=0; r > j; j++){
+        ans += ht
       }
+      return ans
     }
     let o = `<${tag} class="${cl} m-0 p-0">`
     for(let i = 0; headings.length > i; i++){
       let now = headings[i], prev
-      if (now.number < n)
-        continue
-      if (i == 0)
-        prev = {number: n}
-      else
-        prev = headings[i - 1]
-      if ( i == 0 || now.number > prev.number )
-        lv(now.number, prev.number, `<${tag} class="${cl}">`)
-      else if ( now.number < prev.number )
-        lv(prev.number, now.number, `</${tag}>`)
+      if (now.number < n) continue
+
+      if (i == 0) prev = {number: n}
+      else prev = headings[i - 1]
+
+      if ( i == 0 || now.number > prev.number ) {
+        o += lv(now.number, prev.number, `<li><${tag} class="${cl}">`)
+      } else if ( now.number < prev.number ) {
+        o += lv(prev.number, now.number, `</${tag}></li>`)
+      }
       o += `<li><a href="#${now.id}">${now.text}</a></li>`
     }
     o += `</${tag}>`

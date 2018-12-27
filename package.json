@@ -52,6 +52,7 @@
     "gulp-image-resize": "^0.13.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-rename": "^1.4.0",
@@ -76,6 +77,8 @@
     "node-sass": "^4.10.0",
     "numeral": "^2.0.6",
     "pjax-api": "^3.24.1",
+    "postcss-extract-media-query": "^1.1.0",
+    "postcss-sorting": "^4.0.1",
     "pug": "^2.0.3",
     "pump": "^3.0.0",
     "punycode": "^2.1.1",
@@ -89,8 +92,6 @@
   "dependencies": {
     "autoprefixer": "^9.4.3",
     "gulp": "^4.0.0",
-    "gulp-postcss": "^8.0.0",
-    "npm": "^6.5.0",
-    "postcss-extract-media-query": "^1.1.0"
+    "npm": "^6.5.0"
   }
 }

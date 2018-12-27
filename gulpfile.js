@@ -162,6 +162,7 @@ gulp.task('css', (cb) => {
         gulp.src('theme/styl/main.sass'),
         $.sass( { sourceMap: true, outputStyle: 'compressed' } ),
         $.postcss([
+            require('postcss-sorting')(),
             require('autoprefixer')({ browsers: 'defaults' }),
             require('postcss-extract-media-query')({
                 output: {
