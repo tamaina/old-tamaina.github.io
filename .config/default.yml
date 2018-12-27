@@ -3,9 +3,13 @@ short_name: "maqz test"
 description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
 author: "aqz / tamaina"
 url:
-  path: "/maqz"
-  host: "tamaina.github.io"
-  scheme: https
+# `${scheme}://${host}${path}/`    
+# デフォルト例: https://tamaina.github.io/maqz/
+#           ↓                  # 右コメント例: https://maqz.example.com/
+  path: "/maqz"                 # ""
+  host: "tamaina.github.io"     # "maqz.example.com"    
+  scheme: https                 # "https"
+language: ja
 pages_src:
   path: "./pages/"
   src: "**/*.{html,htm,pug,md}"
@@ -13,9 +17,11 @@ page_namingrule: name
 theme_color:
   primary: "#ffffff"
   secondary: "#000000"
+# theme_colorはmanifest用なのでスタイルシートのprimaryなどとは別
 default:
   template: default
 social_media:
+# social_mediaは過去の遺物
   twitter:
     stalk: t_ma1n
     share: true
@@ -34,10 +40,19 @@ social_media:
     share: false
   share_button: true
 rss: false
+# rss: true にしたいとき下記のように
+#   root: "/blog/"      # blogフォルダの記事を配信(pages直下(ルート)は"/")
+#   template: "blog"    # blogテンプレートを指定している記事を配信
+# 並べかえのために各ページのFrontMatterにdate: (JSON日時)を指定する必要があります
 disqus: false
+# 有効にしたいときdisqusの番号を入れる
 ga: false
+# 有効にしたいときトラッキングIDを入れる
 sidebar: true
+# サイドバーは無効にできる
 manifest:
   start_url: "/"
   display: standalone
+meta_pages: ['404', 'offline']
+# システムで利用するページを列挙
 sw: "js|css|png|jpeg|jpg|svg|svgz|woff2"

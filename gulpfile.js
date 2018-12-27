@@ -601,7 +601,7 @@ gulp.task('make-manifest', (cb) => {
 
 gulp.task('make-rss', (cb) => {
     if(site.rss){
-        const feed = require('./scripts/builder/registerer/rss')(base, pages, site.rss.root, site.rss.theme)
+        const feed = require('./scripts/builder/registerer/rss')(base, pages, site.rss.root, site.rss.template)
         return Promise.all([
             writeFile( `dist/docs/feed.rss`, feed.rss2())
             .then(

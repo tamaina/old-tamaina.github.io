@@ -1,4 +1,8 @@
 git fetch
+
+git add --all
+git commit -a -m %1
+git push -u origin src
 cd pages
 git add --all
 git commit -a -m %1
@@ -8,6 +12,3 @@ git add --all
 git commit -a -m %1
 git push -u origin master
 cd ..
-git add --all
-git commit -a -m %1
-git push -u origin src

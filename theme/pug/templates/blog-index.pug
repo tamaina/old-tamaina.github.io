@@ -1,4 +1,4 @@
-extends ./plain.pug
+extends ./default.pug
 
 append preset
   - 
@@ -87,27 +87,24 @@ append preset
 block title
   title ブログ: #{page.attributes.title} - #{site.name}
 
-block main
+block article_header
+  header.w-100
+    h1 ブログ: #{page.attributes.title}
 
-  #main.padding
-    .container-fluid.py-3.bg-white
-      h1.pb-2 ブログ: #{page.attributes.title}
-      div
-        != getTL(main_html)
-      h2.font-weight-light.h3= headline
-
-      #blog_index.d-flex.flex-row.row.m-0
-        each thispage in qpages
-          a(href=`${site.url.path}${thispage.meta.permalink}`).blog-index-item
-            article.card
-              if ( thispage.meta.thumbnail )
-                img.card-img-top(alt="サムネイル", src=`${site.url.path}${thispage.meta.thumbnail.dir}/${thispage.meta.thumbnail.name}.720${thispage.meta.thumbnail.ext}`)
-              h4.card-title #{thispage.attributes.title}
-              p.card-text.px-3 #{thispage.attributes.description}
-              - let birthtime = new Date(thispage.meta.birthtime)
-              - let mtime = new Date(thispage.meta.mtime)
-              footer.card-footer
-                div.mr-2
-                  +fa_fw("clock")
-                  time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).tz('Asia/Tokyo').format('llll z')
-                +blog_badges(thispage)
+append article_body
+  h2.font-weight-light.h3= headline
+  #blog_index.d-flex.flex-row.row.m-0
+    each thispage in qpages
+      a(href=`${site.url.path}${thispage.meta.permalink}`).blog-index-item
+        article.card
+          if ( thispage.meta.thumbnail )
+            img.card-img-top(alt="サムネイル", src=`${site.url.path}${thispage.meta.thumbnail.dir}/${thispage.meta.thumbnail.name}.720${thispage.meta.thumbnail.ext}`)
+          h4.card-title #{thispage.attributes.title}
+          p.card-text.px-3 #{thispage.attributes.description}
+          - let birthtime = new Date(thispage.meta.birthtime)
+          - let mtime = new Date(thispage.meta.mtime)
+          footer.card-footer
+            div.mr-2
+              +fa_fw("clock")
+              time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).format('llll z')
+            +blog_badges(thispage)

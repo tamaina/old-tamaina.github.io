@@ -6,7 +6,7 @@ block _mixin
   include ../includes/_mixins.pug
 block preset
 
-html
+html(lang=site.language)
   head
     block meta
       block must
@@ -19,7 +19,7 @@ html
         //
           *
           *
-          * GitHub: https://github.com/joinmisskey
+          * #{package.repository.url}
           *
           *
       block canonical

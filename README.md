@@ -1,10 +1,10 @@
 # maqz
-サイトビルダー「maqz」です。な
+サイトビルダー「maqz」です。
 
 ## 使い方
 ### 1. GitHubからクローン
 
-1. Node.jsをインストールします
+1. Node.js、Gitをインストールします。VS CodeなどのIDEのインストールもお勧めします。
 2. 新しくフォルダーを作成します
 3. `git init`
 4. `git remote add upstream https://github.com/tamaina/maqz.git`
@@ -17,7 +17,7 @@
 ### ビルド
 
 1. `gulp prebuild-files`  
-   画像を直接files以下に追加した場合、このコマンドを実行します。少し重いと思います。  
+   画像を直接files以下に追加した場合、このコマンドを実行します。少し重いと思います。   
    詳細は後述。
 2. `gulp`
 
@@ -27,7 +27,19 @@
 ### ローカルで確認
 ローカルサーバーを立てて内容を事前に確認できます。`.config/debug-override.yml`で設定できます。
 
-`gulp local-server`を実行し、
+`gulp local-server`を実行し、緑色で表示されたlocalhostを含むアドレスにアクセスします。
+
+### 公開する
+GitHub Pagesを使って自分のサイトとして公開してみましょう。
+
+1. GitHubでリポジトリを作成します。
+2. `.config/default.yml`を編集し、自分のサイトの設定に合わせます。 
+3. `package.json`も編集します。
+4. `git remote add origin (git url).git`
+5. **独自ドメインにする場合、**`theme/static`に`CNAME`という名前のファイル(拡張子なし)を作成し、中身は自分が公開したいドメインを書きます(例: `maqz.example.com`)
+6. ビルド
+7. `.\pushAll.bat 'コミットコメント'` (コミットコメントにはわかりやすいものに)
+8. 実際にアクセスして確認してみましょう。 
 
 ### 画像の登録(圧縮)
 maqzでは、画像は原則縮小・圧縮することになっています。

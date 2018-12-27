@@ -16,22 +16,21 @@ mixin fa( $icon, $prefix, $option )
       } catch(e2) {
         console.log(`Can't pick up icon: ${$icon}, ${style}`) 
       }
-    | !{fahtml}
+    !=fahtml
 
 mixin fa_fw( $icon, $prefix )
   +fa( $icon, $prefix, {classes: ['fa-fw']})
 
-mixin toc( headings, n, tag, cl)
+mixin toc(headings, n, tag, cl)
   -
     function lv(a, b, ht){
-      let r = a - b
-      for(let j=0; r > j; j++){
+      for(let j = 0; a - b > j; j++){
         o += ht
       }
     }
     let o = `<${tag} class="${cl} m-0 p-0">`
-    for(let i = 0; headings.length > i; i++){
-      let now = headings[i], prev
+    for(const now of headings){
+      let prev
       if (now.number < n)
         continue
       if (i == 0)
@@ -50,7 +49,7 @@ mixin toc( headings, n, tag, cl)
 mixin lis_of_dir(pathf, $option)
   -
     function pathME(e, pathf){
-      if (!(e.meta.permalink.startsWith(pathf) && e.meta.permalink != '/404/')) return false
+      if (!(e.meta.permalink.startsWith(pathf) && !e.meta.isMetaPage)) return false
       
       const a = e.meta.permalink.split('/').length
       const b = pathf.split('/').length
