@@ -185,7 +185,6 @@ gulp.task('register-csses', (cb) => {
     const glob = promisify(require('glob'))
     glob(`${argv._.some(v => v == 'pages') ? './docs/assets/styles' : cssDestpath}/${cssExtrprefix}*.css`)
     .then(async files => {
-        console.log(files)
         const contents = await Promise.all(files.map((name, i, arr) => readFile(name, 'utf-8')))
         extractedCsses = files.map((name, i, arr) => {
             const res = /@media (.*?){/i.exec(contents[i])
