@@ -9,8 +9,10 @@ library.add(
 )
 
 import {
+    faHome
 } from '@fortawesome/free-solid-svg-icons'
 library.add(
+    faHome
 )
 
 export const getHTML = (query, option) => {

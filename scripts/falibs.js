@@ -5,9 +5,11 @@ const {
 } = require('@fortawesome/free-brands-svg-icons')
 
 const {
+    faHome
 } = require('@fortawesome/free-solid-svg-icons')
 
 module.exports = {
     icons: [
+        faHome
     ]
 }

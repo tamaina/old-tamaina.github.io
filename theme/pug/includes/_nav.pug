@@ -4,13 +4,11 @@
 nav#mainnav.navbar.navbar-light.flex-row.p-0
   if(site.sidebar)
     if(!isAmp)
-      button.sidebar-toggler.d-block.d-md-none
+      button.sidebar-toggler.d-block.d-md-none(aria-label="メニューを開く")
         +fa("bars", "fas")
-        span.sr-only メニューを開く
     else
-      button.hamburger(on='tap:sidebar.toggle')
+      button.hamburger(on='tap:sidebar.toggle' aria-label="メニューを開く")
         +fa("bars", "fas")
-        span.sr-only メニューを開く
   a(href=`${site.url.path}/`).navbar-brand.mx-5=site.short_name
 
 //-
@@ -19,11 +17,11 @@ nav#mainnav.navbar.navbar-light.flex-row.p-0
 nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
   .container-fulid.px-1.px-lg-5
     ol.breadcrumb.bg-transparent.text-primary.my-0.mx-md-5.mx-1.py-1.px-0
+      - const topPage = pages.find(e => e.meta.permalink === '/')
       if( dirs.length > 2 )
         li.breadcrumb-item
-          a(href=`${site.url.path}/`).py-1.text-primary
-            +fa_fw("home","fas")
-            span.sr-only Top
+          a(href=`${site.url.path}/` aria-label=topPage.attributes['title-breadcrumb'] || topPage.attributes.title).py-1.text-primary
+            +fa_fw("home", "fas")
         - let dirpl = `/`
         - const offset = dirpl.split('/').length - 1
         - for( let i = offset; i < dirs.length - offset; i++ ){               // i = 3 の場合
@@ -49,6 +47,5 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
         - }
       else
         li.breadcrumb-item.active
-          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-primary.font-weight-bold.trigger-gototop.button-like-anchor
-            +fa_fw("home","fas")
-            span.sr-only Top
+          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`  aria-label=topPage.attributes['title-breadcrumb'] || topPage.attributes.title).text-primary.font-weight-bold.trigger-gototop.button-like-anchor
+            +fa_fw("home", "fas")
