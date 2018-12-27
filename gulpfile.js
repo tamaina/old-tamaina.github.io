@@ -152,26 +152,51 @@ gulp.task('config', () => {
     )
 })
 
-function regheadings(htm){
-    let heading_html, headings = []
-    const reg_heading = /<h([1-6])(.*?)>([^]*?)<\/h(\1)>/gi
-    while((heading_html = reg_heading.exec(htm)) !== null){
-        let heading = {},
-            idmatch = []
-        idmatch = heading_html[2].match(/id=(["'])(.*?)(\1)/)
-        classmatch = heading_html[2].match(/class=(["'])(.*?)(\1)/)
-        if(idmatch == null)
-            heading.id = null
-        else
-            heading.id = idmatch[2]
-        heading.html     = heading_html[0]
-        heading.number   = heading_html[1]
-        heading.attr     = heading_html[2]
-        heading.text     = heading_html[3]
-        if ( classmatch == null || classmatch[2].indexOf('noindex') == -1 ) headings.push(heading)
-    }
-    return headings
-}
+
+const cssDestpath = dests.root + '/assets/styles'
+const cssExtrprefix = 'extracted-'
+
+gulp.task('css', (cb) => {
+
+    pump([
+        gulp.src('theme/styl/main.sass'),
+        $.sass( { sourceMap: true, outputStyle: 'compressed' } ),
+        $.postcss([
+            require('autoprefixer')({ browsers: 'defaults' }),
+            require('postcss-extract-media-query')({
+                output: {
+                    path: cssDestpath,
+                    name: `${cssExtrprefix}[query].[ext]`
+                }
+            })
+        ]),
+        $.rename('common.css'),
+        gulp.dest(cssDestpath)
+    ], async (e) => {
+        if(e) glog(colors.red("Error(css)\n" + e))
+        else glog(colors.green(`✔ assets/style/common.css`))
+        cb()
+    })
+})
+
+let extractedCsses
+
+gulp.task('register-csses', (cb) => {
+    const glob = promisify(require('glob'))
+    glob(`${argv._.some(v => v == 'pages') ? './docs/assets/styles' : cssDestpath}/${cssExtrprefix}*.css`)
+    .then(async files => {
+        console.log(files)
+        const contents = await Promise.all(files.map((name, i, arr) => readFile(name, 'utf-8')))
+        extractedCsses = files.map((name, i, arr) => {
+            const res = /@media (.*?){/i.exec(contents[i])
+            return {
+                name: path.parse(name).name,
+                mquery: res ? res[1] : null
+            }
+        })
+    })
+    .then(cb)
+})
 
 function searchSidebar(pathe){
     let searchin
@@ -185,6 +210,7 @@ function searchSidebar(pathe){
         return "pages/sidebar.pug"
     }
 }
+
 async function toamp(htm, base){
     const sizeOf = require('image-size')
     let $ = require('cheerio').load(htm, {decodeEntities: false})
@@ -237,7 +263,8 @@ gulp.task('pug', async () => {
         const puglocals = extend(true,
             {
                 page,
-                filters: pugfilters
+                filters: pugfilters,
+                extractedCsses
             }, base)
         let layout = page.attributes.layout
         let template = '', amptemplate = ''
@@ -252,10 +279,8 @@ gulp.task('pug', async () => {
             puglocals.sidebar_html = sidebar_html
         }
 
-        page.main_html = require('./scripts/make_html')(page, puglocals, urlPrefix)
-
-        puglocals.main_html = page.main_html
-        puglocals.headings = regheadings(page.main_html)
+        puglocals.main_html = page.main_html = require('./scripts/make_html')(page, puglocals, urlPrefix)
+        puglocals.headings = require('./scripts/regheadings')(page.main_html)
 
         streams.push(
             new Promise((res, rej) => {
@@ -307,20 +332,6 @@ gulp.task('pug', async () => {
     await Promise.all(streams)
     glog(colors.green(`✔ all html produced`))
     return void(0)
-})
-
-gulp.task('css', (cb) => {
-    pump([
-        gulp.src('theme/styl/main.sass'),
-        $.sass( { sourceMap: true, outputStyle: 'compressed' } ),
-        $.autoprefixer( { browsers: 'last 3 versions' } ),
-        $.rename('style.min.css'),
-        gulp.dest(dests.root + '/assets')
-    ], (e) => {
-        if(e) glog(colors.red("Error(css)\n" + e))
-        else glog(colors.green(`✔ assets/style.min.css`))
-        cb()
-    })
 })
 
 gulp.task('fa-css', (cb) => {
@@ -704,7 +715,8 @@ gulp.task('make-subfiles',
 
 gulp.task('core',
     gulp.series(
-        gulp.parallel('js', 'css', 'fa-css', 'pug'),
+        'css', 'register-csses',
+        gulp.parallel('js', 'fa-css', 'pug'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }
@@ -724,6 +736,7 @@ gulp.task('pages',
     gulp.series(
         'register',
         'config',
+        'register-csses', 
         'pug',
         gulp.parallel('copy-prebuildFiles', 'make-subfiles'),
         'copy-f404',
@@ -743,7 +756,8 @@ gulp.task('prebuild-files',
 
 gulp.task('core-with-pf',
     gulp.series(
-        gulp.parallel('js', 'css', 'fa-css', 'pug', 'prebuild-files'),
+        'css', 'register-csses',
+        gulp.parallel('js', 'fa-css', 'pug', 'prebuild-files'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }

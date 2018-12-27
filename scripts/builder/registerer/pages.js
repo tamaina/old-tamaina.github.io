@@ -10,6 +10,7 @@ function isMetaPage(site, permalink) {
     return site.meta_pages.some((i) => permalink == `/${i}/`)
 }
 
+
 module.exports = async (site, src, urlPrefix) => {
     let promises = []
     const srcs = require('glob').sync(src.pages)

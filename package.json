@@ -87,7 +87,10 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "autoprefixer": "^9.4.3",
     "gulp": "^4.0.0",
-    "npm": "^6.5.0"
+    "gulp-postcss": "^8.0.0",
+    "npm": "^6.5.0",
+    "postcss-extract-media-query": "^1.1.0"
   }
 }
