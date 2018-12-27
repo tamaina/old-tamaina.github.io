@@ -1,4 +1,4 @@
-/* workbox 2018-12-27T17:24:52.755Z */
+/* workbox 2018-12-27T19:53:46.604Z */
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 workbox.routing.registerRoute(
     /.*.(?:js|css|png|jpeg|jpg|svg|svgz|woff2)/,
@@ -9,7 +9,7 @@ workbox.routing.registerRoute(
 workbox.precaching.precacheAndRoute([
     {
         url: '/offline/',
-        revision: '1545931492755',
+        revision: '1545940426604',
     }
 ]);
 self.addEventListener('fetch', function(event) {
