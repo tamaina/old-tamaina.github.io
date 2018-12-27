@@ -6,7 +6,7 @@ const extend = require('extend')
 const getHash = require('../../gethash')
 
 
-function isMetaPage(permalink) {
+function isMetaPage(site, permalink) {
     return site.meta_pages.some((i) => permalink == `/${i}/`)
 }
 
@@ -63,7 +63,7 @@ module.exports = async (site, src, urlPrefix) => {
 
         page.meta.dirs = page.meta.permalink.split("/")
         page.meta.url = require('url').parse(`${urlPrefix}${page.meta.permalink}`)
-        page.meta.isMetaPage = isMetaPage(page.meta.permalink)
+        page.meta.isMetaPage = isMetaPage(site, page.meta.permalink)
 
         if( page.attributes.layout === undefined || page.attributes.layout === null ) page.attributes.layout = 'default'
         if( page.attributes.published === undefined || page.attributes.published === null ) page.attributes.published = true
