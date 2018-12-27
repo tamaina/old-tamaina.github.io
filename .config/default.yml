@@ -51,7 +51,6 @@ ga: false
 sidebar: true
 # サイドバーは無効にできる
 manifest:
-  start_url: "/"
   display: standalone
 meta_pages: ['404', 'offline']
 # システムで利用するページを列挙
