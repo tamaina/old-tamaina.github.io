@@ -160,38 +160,15 @@ gulp.task('css', (cb) => {
         $.postcss([
             require('postcss-sorting')(),
             require('autoprefixer')({ browsers: 'defaults' }),
-            require('postcss-extract-media-query')({
-                output: {
-                    path: cssDestpath,
-                    name: `${cssExtrprefix}[query].[ext]`
-                }
-            })
+            require('css-mqpacker')()
         ]),
-        $.rename('common.css'),
+        $.rename('main.css'),
         gulp.dest(cssDestpath)
     ], async (e) => {
         if(e) glog(colors.red("Error(css)\n" + e))
-        else glog(colors.green(`✔ assets/style/common.css`))
+        else glog(colors.green(`✔ assets/style/main.css`))
         cb()
     })
-})
-
-let extractedCsses
-
-gulp.task('register-csses', (cb) => {
-    const glob = promisify(require('glob'))
-    glob(`${argv._.some(v => v == 'pages') ? './docs/assets/styles' : cssDestpath}/${cssExtrprefix}*.css`)
-    .then(async files => {
-        const contents = await Promise.all(files.map((name, i, arr) => readFile(name, 'utf-8')))
-        extractedCsses = files.map((name, i, arr) => {
-            const res = /@media (.*?){/i.exec(contents[i])
-            return {
-                name: path.parse(name).name,
-                mquery: res ? res[1] : null
-            }
-        })
-    })
-    .then(cb)
 })
 
 gulp.task('js', (cb) => {
@@ -291,8 +268,7 @@ gulp.task('pug', async () => {
         const puglocals = extend(true,
             {
                 page,
-                filters: pugfilters,
-                extractedCsses
+                filters: pugfilters
             }, base)
         let layout = page.attributes.layout
         let template = '', amptemplate = ''
@@ -693,7 +669,8 @@ gulp.task('core',
     gulp.series(
         gulp.parallel(
             'config',
-            gulp.series('css', 'register-csses', 'pug'),
+            'css',
+            'pug',
             'js'
         ),
         gulp.parallel('copy-publish', 'make-subfiles'),
@@ -713,8 +690,7 @@ gulp.task('default',
 gulp.task('pages',
     gulp.series(
         'register',
-        gulp.parallel('config', 'register-csses'), 
-        'pug',
+        gulp.parallel('config', 'pug'),
         gulp.parallel('copy-prebuildFiles', 'make-subfiles'),
         'copy-f404',
         'copy-docs',
@@ -733,8 +709,8 @@ gulp.task('prebuild-files',
 
 gulp.task('core-with-pf',
     gulp.series(
-        'css', 'register-csses',
-        gulp.parallel('js', 'pug', 'prebuild-files'),
+        'prebuild-files',
+        gulp.parallel('css', 'js', 'pug'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }
