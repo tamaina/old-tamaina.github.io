@@ -22,7 +22,7 @@ sw()
 document.addEventListener('pjax:content', sw)
 
 new Sidebar()
-onReady(pjaxinit)
+pjaxinit()
 
 detectOldBrowser()
 
