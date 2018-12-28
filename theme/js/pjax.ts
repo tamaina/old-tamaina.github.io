@@ -7,7 +7,8 @@ export const pjaxinit = async (): Promise<void> => {
             'body'
         ],
         update: {
-            head: 'meta'
+            head: 'meta',
+            css: false
         }
     })
     return
