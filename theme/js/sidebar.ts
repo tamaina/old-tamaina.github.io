@@ -1,10 +1,32 @@
+/* @flow */
+
 import onReady from "./onReady";
 
+type sidebarOption = {
+    thresholdToDetectPx: number,
+    thresholdToOpenPx: number,
+    sidebarTogglerClassName: string,
+    wrapperId: string
+}
+
 class Sidebar {
-    constructor(){
+    opened: boolean
+    startX: number
+    diffX: number
+    option: sidebarOption
+    wrapper: HTMLElement
+    backdrop: HTMLElement
+
+    constructor(option: sidebarOption = {
+        thresholdToDetectPx: window.innerWidth * 0.2,
+        thresholdToOpenPx: window.innerWidth * 0.6,
+        sidebarTogglerClassName: 'sidebar-toggler',
+        wrapperId: 'grid'
+    }) {
         this.opened = false
         this.startX = 0
         this.diffX = 0
+        this.option = option
 
         onReady(this.registerOnReady.bind(this))
 
@@ -14,16 +36,13 @@ class Sidebar {
         window.addEventListener('resize', this.sidebarClose.bind(this))
     }
 
-    registerOnReady() {
+    private registerOnReady() {
         const backdrop = document.createElement('div')
         backdrop.setAttribute('id', 'backdrop')
 
         this.wrapper = document.getElementById('grid')
         this.backdrop = this.wrapper.appendChild(backdrop)
-        this.backdrop.addEventListener('click', backdropf.bind(this))
-        function backdropf() {
-            if(this.opened) this.sidebarClose()
-        }
+        this.backdrop.addEventListener('click', this.backdropf.bind(this))
 
         document.body.addEventListener('touchstart', this.touchstart.bind(this))
         document.body.addEventListener('touchmove', this.touchmove.bind(this))
@@ -31,7 +50,11 @@ class Sidebar {
         this.registerClick()
     }
 
-    sidebarOpen() {
+    private backdropf() {
+        if(this.opened) this.sidebarClose()
+    }
+
+    private sidebarOpen() {
         this.wrapper.style.left = '0'
         this.backdrop.style.opacity = '0.2'
         this.backdrop.style.pointerEvents = 'auto'
@@ -39,7 +62,7 @@ class Sidebar {
         this.opened = true
     }
 
-    sidebarClose() {
+    private sidebarClose() {
         this.wrapper.style.left = ''
         this.backdrop.style.opacity = ''
         this.backdrop.style.pointerEvents = ''
@@ -47,20 +70,20 @@ class Sidebar {
         this.opened = false
     }
 
-    registerClick() {
+    private registerClick() {
         for (const el of Array.from(document.getElementsByClassName('sidebar-toggler'))) {
             el.addEventListener('click', this.sidebarToggle.bind(this))
         }
     }
-    sidebarToggle(e) {
+    private sidebarToggle() {
         if (!this.opened) this.sidebarOpen()
         else this.sidebarClose()
     }
 
-    touchstart(e) {
+    private touchstart(e: TouchEvent) {
         this.startX = e.changedTouches[0].pageX
     }
-    touchmove(e) {
+    private touchmove(e: TouchEvent) {
         this.diffX = e.changedTouches[0].pageX - this.startX
         if (this.diffX >= 120) {
             if(this.startX < 100 && !this.opened) this.sidebarOpen()
@@ -72,7 +95,7 @@ class Sidebar {
             if(this.startX >= 100 && this.opened) this.sidebarClose()
         }
     }
-    touchend(e) {
+    private touchend() {
         this.startX = 0
         this.diffX = 0
         if (this.opened) this.sidebarOpen()

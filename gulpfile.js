@@ -151,7 +151,6 @@ gulp.task('config', () => {
     )
 })
 
-
 const cssDestpath = dests.root + '/assets/styles'
 const cssExtrprefix = 'extracted-'
 
@@ -193,6 +192,50 @@ gulp.task('register-csses', (cb) => {
                 mquery: res ? res[1] : null
             }
         })
+    })
+    .then(cb)
+})
+
+gulp.task('js', (cb) => {
+    const webpackStream = require('webpack-stream')
+    const webpack = require('webpack')
+    const wpackconf = {
+        entry: ['./theme/js/main.ts'],
+        output: {
+            filename: "main.js",
+            publicPath: "/assets/scripts/"
+        },
+        resolve: {
+            extensions: [".ts", ".tsx", ".js"],
+            modules: ["node_modules"]
+        },
+        module: {
+            rules: [
+                { test: /\.tsx?$/, loader: "ts-loader" }
+
+            ]
+        },
+        mode: 'production',
+    }
+
+    webpackStream(wpackconf, webpack)
+    .pipe(gulp.dest(dests.root + '/assets/scripts'))
+    .on('end',() => {
+        glog(colors.green(`✔ assets/main.js`))
+        cb()
+    })
+    .on('error', (err) => {
+        cb(err)
+    })
+})
+
+let extractedScriptsNumber
+
+gulp.task('register-scripts', (cb) => {
+    const glob = promisify(require('glob'))
+    glob(`${argv._.some(v => v == 'pages') ? './docs' : dests.root}/assets/scripts/*.main.js`)
+    .then(files => {
+        extractedScriptsNumber = files.length
     })
     .then(cb)
 })
@@ -263,7 +306,8 @@ gulp.task('pug', async () => {
             {
                 page,
                 filters: pugfilters,
-                extractedCsses
+                extractedCsses,
+                extractedScriptsNumber
             }, base)
         let layout = page.attributes.layout
         let template = '', amptemplate = ''
@@ -344,51 +388,6 @@ gulp.task('fa-css', (cb) => {
         else glog(colors.green(`✔ assets/style.min.css`))
         cb()
     })
-})
-
-gulp.task('js', () => {
-    const webpackStream = require('webpack-stream')
-    const webpack = require('webpack')
-    let streams = []
-
-    const a = webpackStream(require("./webpack.config"), webpack)
-    streams.push(new Promise((res, rej) => {
-        a
-        .pipe($.terser(
-            {
-                ecma: 8,
-                compress: true,
-                output: {
-                    comments: false,
-                    beautify: false
-                }
-            }
-        ))
-        .pipe($.rename('main.min.js'))
-        .pipe(gulp.dest(dests.root + '/assets'))
-        .on('end',() => {
-            glog(colors.green(`✔ assets/main.min.js`))
-            res()
-        })
-        .on('error', (err) => {
-            rej(err)
-        })
-    }))
-    
-    streams.push(new Promise((res, rej) => {
-        a
-        .pipe($.rename('main.js'))
-        .pipe(gulp.dest(dests.root + '/assets'))
-        .on('end',() => {
-            glog(colors.green(`✔ assets/main.js`))
-            res()
-        })
-        .on('error', (err) => {
-            rej(err)
-        })
-    }))
-
-    return Promise.all(streams)
 })
 
 gulp.task('copy-docs', (cb) => {
@@ -714,8 +713,12 @@ gulp.task('make-subfiles',
 
 gulp.task('core',
     gulp.series(
-        'css', 'register-csses',
-        gulp.parallel('js', 'fa-css', 'pug'),
+        gulp.parallel(
+            'config',
+            gulp.series('css', 'register-csses'),
+            gulp.series('js', 'register-scripts'),
+        ),
+        gulp.parallel('fa-css', 'pug'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }
@@ -725,7 +728,6 @@ gulp.task('core',
 gulp.task('default',
     gulp.series(
         'register',
-        'config',
         'core',
         (cb) => { cb() }
     )
@@ -734,8 +736,7 @@ gulp.task('default',
 gulp.task('pages',
     gulp.series(
         'register',
-        'config',
-        'register-csses', 
+        gulp.parallel('config', 'register-csses','register-scripts'), 
         'pug',
         gulp.parallel('copy-prebuildFiles', 'make-subfiles'),
         'copy-f404',
@@ -795,7 +796,6 @@ gulp.task('connect', () => {
 gulp.task('server',
     gulp.series(
         'register',
-        'config',
         'core',
         (cb) => { cb() } 
     )
@@ -804,7 +804,6 @@ gulp.task('server',
 gulp.task('local-server',
     gulp.series(
         'register',
-        'config',
         'core',
         gulp.parallel('connect', 'watch'),
         (cb) => { cb() } 
