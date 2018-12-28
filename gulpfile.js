@@ -228,17 +228,6 @@ gulp.task('js', (cb) => {
     })
 })
 
-let extractedScriptsNumber
-
-gulp.task('register-scripts', (cb) => {
-    const glob = promisify(require('glob'))
-    glob(`${argv._.some(v => v == 'pages') ? './docs' : dests.root}/assets/scripts/*.main.js`)
-    .then(files => {
-        extractedScriptsNumber = files.length
-    })
-    .then(cb)
-})
-
 function searchSidebar(pathe){
     let searchin
     if(pathe.dir == "") searchin = `${pathe.dir}sidebar.pug`
@@ -714,10 +703,10 @@ gulp.task('core',
     gulp.series(
         gulp.parallel(
             'config',
-            gulp.series('css', 'register-csses'),
-            gulp.series('js', 'register-scripts'),
+            gulp.series('css', 'register-csses', 'pug'),
+            'js',
+            'fa-css'
         ),
-        gulp.parallel('fa-css', 'pug'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }
@@ -735,7 +724,7 @@ gulp.task('default',
 gulp.task('pages',
     gulp.series(
         'register',
-        gulp.parallel('config', 'register-csses','register-scripts'), 
+        gulp.parallel('config', 'register-csses'), 
         'pug',
         gulp.parallel('copy-prebuildFiles', 'make-subfiles'),
         'copy-f404',
