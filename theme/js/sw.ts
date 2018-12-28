@@ -12,8 +12,8 @@ export const sw = (): void => {
             .then(registration => {
                 console.log('Service Worker: 登録: ', registration.scope)
                 registration.onupdatefound = () => {
-                    registration.installing.onstatechange = () => {
-                        if(!registration.installing && registration.waiting){
+                    registration.waiting.onstatechange = () => {
+                        if(!registration.waiting && registration.active){
                             console.log('Service Worker: バージョンアップします...')
                             location.reload(true)
                         }
