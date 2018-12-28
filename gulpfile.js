@@ -203,7 +203,7 @@ gulp.task('js', (cb) => {
         entry: ['./theme/js/main.ts'],
         output: {
             filename: "main.js",
-            publicPath: "/assets/scripts/"
+            publicPath: `${site.url.path}/assets/scripts/`
         },
         resolve: {
             extensions: [".ts", ".tsx", ".js"],
@@ -212,7 +212,6 @@ gulp.task('js', (cb) => {
         module: {
             rules: [
                 { test: /\.tsx?$/, loader: "ts-loader" }
-
             ]
         },
         mode: 'production',
