@@ -1,6 +1,6 @@
 git fetch
 
-echo 'リモートと競合した場合はpullAll.batを同様に実行してみてください。'
+echo '�����[�g�Ƌ��������ꍇ��pullAll.bat�𓯗l�Ɏ��s���Ă݂Ă��������B'
 
 git add --all
 git commit -a -m %1

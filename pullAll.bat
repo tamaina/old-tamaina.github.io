@@ -1,6 +1,6 @@
 git fetch
 
-echo 'ã€Œmerge conflictã€ã—ãŸå ´åˆã¯ç«¶åˆã‚’è§£æ±ºã—ã¾ã—ã‚‡ã†ã€‚'
+echo 'umerge conflictv‚µ‚½ê‡‚Í‹£‡‚ğ‰ğŒˆ‚µ‚Ü‚µ‚å‚¤B'
 
 git add --all
 git commit -a -m %1
