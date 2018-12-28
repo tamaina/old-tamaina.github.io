@@ -11,16 +11,14 @@ export const sw = (): void => {
             navigator.serviceWorker.register(window.jm_pathToWorker)
             .then(registration => {
                 console.log('Service Worker: 登録: ', registration.scope)
-                registration.onupdatefound = () => {
-                    registration.waiting.onstatechange = () => {
-                        if(!registration.waiting && registration.active){
-                            console.log('Service Worker: バージョンアップします...')
-                            location.reload(true)
-                        }
-                    }
-                }
             }).catch(err => {
-                console.log('Service Worker: 登録時にエラー発生しました: ', err)
+                console.log('Service Worker: 登録時にエラーが発生しました: ', err)
+            })
+
+            navigator.serviceWorker.ready
+            .then(() => location.reload(true))
+            .catch(err => {
+                console.log('error on navigator.serviceWorker.ready', err)
             })
         }
     }
