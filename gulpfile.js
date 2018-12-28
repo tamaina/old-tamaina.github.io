@@ -294,8 +294,7 @@ gulp.task('pug', async () => {
             {
                 page,
                 filters: pugfilters,
-                extractedCsses,
-                extractedScriptsNumber
+                extractedCsses
             }, base)
         let layout = page.attributes.layout
         let template = '', amptemplate = ''
