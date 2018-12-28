@@ -9,7 +9,7 @@ type sidebarOption = {
     wrapperId: string
 }
 
-class Sidebar {
+export class Sidebar {
     opened: boolean
     startX: number
     diffX: number
@@ -102,5 +102,3 @@ class Sidebar {
         else this.sidebarClose()
     }
 }
-
-new Sidebar()

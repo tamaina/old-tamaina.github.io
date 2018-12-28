@@ -1,8 +1,9 @@
 interface Window {
     jm_pathToWorker: any
 }
+declare var window: Window
 
-function sw(){
+export const sw = (): void => {
     if(typeof window.jm_pathToWorker === 'string') {
         // twbs/bootstrap build/sw.jsより借用
         if ('serviceWorker' in navigator) {
@@ -23,5 +24,3 @@ function sw(){
         }
     }
 }
-sw()
-document.addEventListener('pjax:content', sw)

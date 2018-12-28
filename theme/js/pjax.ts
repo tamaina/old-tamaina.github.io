@@ -1,7 +1,7 @@
 import onReady from './onReady';
 
-import('pjax-api')
-.then(({ Pjax }) => {
+export const pjaxinit = async (): Promise<void> => {
+    const { Pjax } = await import('pjax-api')
     onReady(() => {
         new Pjax({
             areas: [
@@ -14,4 +14,5 @@ import('pjax-api')
             }
         })
     })
-})
+    return
+}

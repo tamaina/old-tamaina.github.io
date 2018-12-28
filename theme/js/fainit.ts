@@ -1,8 +1,7 @@
 import { getNode } from '../../scripts/falib'
-import onReady from './onReady'
 import { IconPrefix, IconName, IconParams } from '@fortawesome/fontawesome-svg-core';
 
-function fainit(){
+export const fainit = (): void => {
     for( let el of Array.from(document.getElementsByTagName('i')) ){
         if(!el.hasChildNodes()){
             try {
@@ -22,6 +21,3 @@ function fainit(){
         }
     }
 }
-
-onReady(fainit)
-document.addEventListener('pjax:content', fainit)

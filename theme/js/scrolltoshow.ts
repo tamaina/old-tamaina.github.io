@@ -1,6 +1,4 @@
-import onReady from "./onReady";
-
-function scrolltoshow(){
+export const scrolltoshow = (): void => {
     const els = Array.from(document.getElementsByClassName('scrollts'))
     if(IntersectionObserver !== undefined){
         const observer = new IntersectionObserver((entries, observer) => {
@@ -36,6 +34,3 @@ function scrolltoshow(){
         }
     }
 }
-
-onReady(scrolltoshow)
-document.addEventListener('pjax:content', scrolltoshow)

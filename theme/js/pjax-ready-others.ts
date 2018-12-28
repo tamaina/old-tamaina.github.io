@@ -5,8 +5,10 @@ interface Window {
     }
     disqus_config: any
 }
+declare var window: Window
 
-window.addEventListener('pjax:load', function(){
+
+export const pjaxLoaded = (): void => {
     if(window.gtag){
         window.gtag('event', 'page_view')
     }
@@ -16,4 +18,4 @@ window.addEventListener('pjax:load', function(){
             config: window.disqus_config
         })
     }
-})
+}
