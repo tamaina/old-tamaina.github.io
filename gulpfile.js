@@ -15,8 +15,6 @@ const glog = require('fancy-log')
 const colors = require('colors')
 const readyaml = require('js-yaml').safeLoad
 
-const fontawesome = require("@fortawesome/fontawesome-svg-core")
-fontawesome.library.add(require("@fortawesome/free-solid-svg-icons").fas, require("@fortawesome/free-regular-svg-icons").far, require("@fortawesome/free-brands-svg-icons").fab)
 $ = require('gulp-load-plugins')()
 
 // const exec = require('child_process').exec
@@ -364,19 +362,6 @@ gulp.task('pug', async () => {
     return void(0)
 })
 
-gulp.task('fa-css', (cb) => {
-    pump([
-        gulp.src('node_modules/@fortawesome/fontawesome-svg-core/styles.css'),
-        $.cleanCss(),
-        $.rename('fontawesome.min.css'),
-        gulp.dest(dests.root + '/assets')
-    ], (e) => {
-        if(e) glog(colors.red("Error(fa-css)\n" + e))
-        else glog(colors.green(`✔ assets/style.min.css`))
-        cb()
-    })
-})
-
 gulp.task('copy-docs', (cb) => {
     pump([
         gulp.src('dist/docs/**/*', {dot: true}),
@@ -703,8 +688,7 @@ gulp.task('core',
         gulp.parallel(
             'config',
             gulp.series('css', 'register-csses', 'pug'),
-            'js',
-            'fa-css'
+            'js'
         ),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
@@ -744,7 +728,7 @@ gulp.task('prebuild-files',
 gulp.task('core-with-pf',
     gulp.series(
         'css', 'register-csses',
-        gulp.parallel('js', 'fa-css', 'pug', 'prebuild-files'),
+        gulp.parallel('js', 'pug', 'prebuild-files'),
         gulp.parallel('copy-publish', 'make-subfiles'),
         'make-sw', 'last',
         (cb) => { cb() }
