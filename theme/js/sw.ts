@@ -5,6 +5,7 @@ declare var window: Window
 
 export const sw = (): void => {
     if(typeof window.jm_pathToWorker === 'string') {
+        let state = 'active'
         // twbs/bootstrap build/sw.jsより借用
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register(window.jm_pathToWorker)
@@ -12,7 +13,7 @@ export const sw = (): void => {
                 console.log('Service Worker: 登録: ', registration.scope)
                 registration.onupdatefound = () => {
                     registration.installing.onstatechange = () => {
-                        if(registration.installing.state == 'installed' && navigator.serviceWorker.controller){
+                        if(!registration.installing && registration.waiting){
                             console.log('Service Worker: バージョンアップします...')
                             location.reload(true)
                         }
