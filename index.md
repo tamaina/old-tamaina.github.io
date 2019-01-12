@@ -1,5 +1,5 @@
 ---
-title: aqz/tamainaのWebサイト
+title: Front Page
 description: aqz/tamainaによるWebサイトです。
 layout: index
 ---
