@@ -2,7 +2,7 @@
   "name": "maqz_test",
   "version": "1.0.0",
   "main": "docs/index.html",
-  "description": "maqzテストリポジトリ",
+  "description": "aqz/tamaina's Web site",
   "scripts": {
     "build-files": "gulp prebuild-files",
     "build2deploy": "gulp",

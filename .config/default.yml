@@ -1,6 +1,6 @@
-name: "maqzテストリポジトリ"
-short_name: "maqz test"
-description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
+name: "aqz/tamaina's Web site"
+short_name: "aqz/tamaina"
+description: "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。"
 author: "aqz / tamaina"
 url:
 # pages以下をどのようなURLで公開するか指定
