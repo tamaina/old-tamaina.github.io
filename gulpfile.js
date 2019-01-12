@@ -15,7 +15,7 @@ const glog = require('fancy-log')
 const colors = require('colors')
 const readyaml = require('js-yaml').safeLoad
 
-$ = require('gulp-load-plugins')()
+const $ = require('gulp-load-plugins')()
 
 // const exec = require('child_process').exec
 // const join = path.join
@@ -150,7 +150,6 @@ gulp.task('config', () => {
 })
 
 const cssDestpath = dests.root + '/assets/styles'
-const cssExtrprefix = 'extracted-'
 
 gulp.task('css', (cb) => {
 
@@ -166,7 +165,7 @@ gulp.task('css', (cb) => {
         gulp.dest(cssDestpath)
     ], async (e) => {
         if(e) glog(colors.red("Error(css)\n" + e))
-        else glog(colors.green(`✔ assets/style/main.css`))
+        else glog(colors.green(`✔ assets/styles/main.css`))
         cb()
     })
 })
@@ -228,7 +227,7 @@ async function toamp(htm, base){
             let id     = $(el).attr('id')
             let width  = $(el).attr('width')
             let height = $(el).attr('height')
-            if( ( width === undefined || height === undefined ) && src.startsWith(`${urlPrefix}/files/`) ){
+            if ( ( width === undefined || height === undefined ) && src.startsWith(`${urlPrefix}/files/`) ){
                 const dims = sizeOf( '.' + src.slice(urlPrefix.length) )
                 width = dims.width
                 height = dims.height
@@ -272,11 +271,11 @@ gulp.task('pug', async () => {
             }, base)
         let layout = page.attributes.layout
         let template = '', amptemplate = ''
-        if(existFile(`theme/pug/templates/${layout}.pug`)) template += `theme/pug/templates/${layout}.pug`
-        else if(existFile(`theme/pug/templates/${site.default.template}.pug`)) template += `theme/pug/templates/${site.default.template}.pug`
+        if (existFile(`theme/pug/templates/${layout}.pug`)) template += `theme/pug/templates/${layout}.pug`
+        else if (existFile(`theme/pug/templates/${site.default.template}.pug`)) template += `theme/pug/templates/${site.default.template}.pug`
         else throw Error('default.pugが見つかりませんでした。')
 
-        if(site.sidebar){
+        if (site.sidebar) {
             const sidebarpath = searchSidebar(page.meta.src)
             if(!sidebarcache[sidebarpath]) sidebarcache[sidebarpath] = await readFile(sidebarpath, 'utf-8')
             let sidebar_html = pug.render(`${puglocals.theme_pug.script}\n${puglocals.theme_pug.mixin}\n${sidebarcache[sidebarpath]}`, puglocals)
@@ -306,7 +305,7 @@ gulp.task('pug', async () => {
          *                            AMP処理部
          *                                                                  */
 
-        if(page.attributes.amp){
+        if (page.attributes.amp) {
             if(existFile(`theme/pug/templates/amp_${layout}.pug`)) amptemplate += `theme/pug/templates/amp_${layout}.pug`
             else if(existFile(`theme/pug/templates/amp_${site.default.template}.pug`)) amptemplate += `theme/pug/templates/amp_${site.default.template}.pug`
             else throw Error('amp_default.pugが見つかりませんでした。')

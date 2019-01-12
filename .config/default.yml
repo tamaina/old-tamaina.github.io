@@ -3,10 +3,11 @@ short_name: "maqz test"
 description: "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。"
 author: "aqz / tamaina"
 url:
+# pages以下をどのようなURLで公開するか指定
 # `${scheme}://${host}${path}/`    
-# デフォルト例: https://tamaina.github.io/maqz/
-#           ↓                  # 右コメント例: https://maqz.example.com/
-  path: "/maqz"                 # ""
+# デフォルト例: https://tamaina.github.io/
+#           ↓                  # 右コメント例: https://maqz.example.com/maqz/
+  path: ""                      # "/maqz"
   host: "tamaina.github.io"     # "maqz.example.com"    
   scheme: https                 # "https"
 language: ja
@@ -39,15 +40,15 @@ social_media:
     stalk: tamaina
     share: false
   share_button: true
-rss: false
-# rss: true にしたいとき下記のように
-#   root: "/blog/"      # blogフォルダの記事を配信(pages直下(ルート)は"/")
-#   template: "blog"    # blogテンプレートを指定している記事を配信
+rss: true
+  root: "/blog/"      # blogフォルダの記事を配信(pages直下(ルート)は"/")
+  template: "blog"    # blogテンプレートを指定している記事を配信
 # 並べかえのために各ページのFrontMatterにdate: (JSON日時)を指定する必要があります
-disqus: false
-# 有効にしたいときdisqusの番号を入れる
-ga: false
-# 有効にしたいときトラッキングIDを入れる
+# 無効にしたかったらfalseにしてroot:,template:の行頭に#
+disqus: tminghio
+# 無効にしたかったらfalse
+ga: UA-132310962-1
+# 無効にしたかったらfalse
 sidebar: true
 # サイドバーは無効にできる
 manifest:

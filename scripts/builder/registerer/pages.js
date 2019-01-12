@@ -14,7 +14,7 @@ function isMetaPage(site, permalink) {
 module.exports = async (site, src, urlPrefix) => {
     let promises = []
     const srcs = require('glob').sync(src.pages)
-    for(p = 0; p < srcs.length; p++){
+    for (p = 0; p < srcs.length; p++) {
         promises.push(
             doit(srcs[p], p, srcs, path.parse(site.pages_src.path))
         )
@@ -27,10 +27,10 @@ module.exports = async (site, src, urlPrefix) => {
         let page = {}
         const src = path.parse(val)
 
-        if(src.name == "sidebar") return false   // - - - - - - - -  名前がsidebarのとき弾く */ 
+        if (src.name == "sidebar") return false   // - - - - - - - -  名前がsidebarのとき弾く */ 
         let subdir = src.dir.replace(srcpath.base, '')
-        if(subdir.indexOf('/') == 0) subdir = subdir.slice(1)
-        if ( !subdir ) subdir = ''
+        if (subdir.indexOf('/') == 0) subdir = subdir.slice(1)
+        if (!subdir) subdir = ''
 
         let file = await promisify(fs.readFile)( val, 'utf-8' )
         page = extend(true,page,require('front-matter')(file))
@@ -54,8 +54,8 @@ module.exports = async (site, src, urlPrefix) => {
 
         page.meta.thumbnail = page.attributes.thumbnail ? path.parse(page.attributes.thumbnail) : null
 
-        if( page.attributes.permalink === undefined || page.attributes.permalink === null ) {
-            if(subdir != '') page.meta.permalink = `/${subdir}/${page.meta.src.name}`
+        if ( page.attributes.permalink === undefined || page.attributes.permalink === null ) {
+            if (subdir != '') page.meta.permalink = `/${subdir}/${page.meta.src.name}`
             else page.meta.permalink = `/${page.meta.src.name}`
         } else { page.meta.permalink = page.attributes.permalink }
         if( page.meta.permalink.indexOf('/') != 0 ) page.meta.permalink = '/' + page.meta.permalink
