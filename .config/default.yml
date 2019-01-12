@@ -40,7 +40,7 @@ social_media:
     stalk: tamaina
     share: false
   share_button: true
-rss: true
+rss:
   root: "/blog/"      # blogフォルダの記事を配信(pages直下(ルート)は"/")
   template: "blog"    # blogテンプレートを指定している記事を配信
 # 並べかえのために各ページのFrontMatterにdate: (JSON日時)を指定する必要があります
