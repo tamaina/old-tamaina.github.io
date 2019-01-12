@@ -104,12 +104,12 @@ html(lang=site.language)
 
       block footer
         #footer.bg-white
-          if( site.disqus )
-            .container-fluid.py-5
-              #disqus_wrap
-                #disqus_thread
-
           #footer_wrap.py-3
+            if(site.disqus)
+              .container.pb-5
+                .h4 コメント
+                #disqus_wrap
+                  #disqus_thread
             .container
               .d-flex.justify-content-center.flex-wrap.small
                 div © 2018 #{site.author}
