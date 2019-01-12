@@ -106,5 +106,5 @@ append article_body
           footer.card-footer
             div.mr-2
               +fa_fw("clock")
-              time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).format('llll z')
+              time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).format('lll')
             +blog_badges(thispage)

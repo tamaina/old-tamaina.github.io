@@ -1,4 +1,5 @@
 extends ./default.pug
+
 append preset
   include ../includes/_blog_preset
 
@@ -9,7 +10,7 @@ append article_header
   div.d-flex.flex-wrap.small
     div.mr-2
       +fa_fw("clock")
-      time(datetime=page.meta.mtime)=moment(page.meta.mtime).tz('Asia/Tokyo').format('llll z')
+      time(datetime=page.meta.mtime)=moment(page.meta.mtime).format('lll')
     +blog_badges(page)
     if(page.attributes.author)
       address.mb-0: a.d-block(href=page.attributes.author.url target="_blank" rel="noopener") Author: #{page.attributes.author.name}
