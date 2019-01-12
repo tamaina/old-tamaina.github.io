@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id></id>
-    <title>maqzテストリポジトリ</title>
-    <updated>2019-01-12T16:17:44.084Z</updated>
+    <title>aqz/tamaina&apos;s Web site</title>
+    <updated>2019-01-12T16:43:41.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tamaina.github.io"/>
     <link rel="self" href="https://tamaina.github.io/feed.atom"/>
-    <subtitle>maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。</subtitle>
+    <subtitle>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</subtitle>
     <icon>https://tamaina.github.io/favicon.ico</icon>
     <rights>© aqz / tamaina</rights>
     <entry>

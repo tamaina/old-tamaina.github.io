@@ -1,9 +1,9 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "maqzテストリポジトリ",
+    "title": "aqz/tamaina's Web site",
     "home_page_url": "https://tamaina.github.io",
     "feed_url": "https://tamaina.github.io/feed.json",
-    "description": "maqzのテストリポジトリです。maqzは簡単にモダンなサイトを作成できるサイトビルダーです。",
+    "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
             "id": "https://tamaina.github.io/blog/0-x/",
