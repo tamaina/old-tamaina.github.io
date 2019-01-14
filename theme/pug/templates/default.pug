@@ -8,12 +8,13 @@ block main
             h1= page.attributes.title
 
         block article_body
-          if(headings.length > 2)
-            #article_sidenav.my-2.p-3.bg-light
-              details
-                summary.font-weight-bold 目次
-                +toc( headings, 2, "ul", "list-unstyled ml-3 page-index")
-          section.pt-2.pb-4!= main_html
+          .mw-70em
+            if(headings.length > 2)
+              #article_sidenav.my-2.p-3.bg-light
+                details
+                  summary.font-weight-bold 目次
+                  +toc( headings, 2, "ul", "list-unstyled ml-3 page-index")
+            section.pt-2.pb-4!= main_html
 
         block article_footer
           footer.w-100
