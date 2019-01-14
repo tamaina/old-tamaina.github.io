@@ -1,9 +1,5 @@
-extends ./plain.pug
+extends ./default.pug
 
-block main
-  #main.padding
-    .container-fluid.py-3.bg-white
-      h1= page.attributes.title
-      !=main_html
-      ul.simpleindex.list-unstyled
-        +lis_of_dir(page.meta.permalink, {self: false, s: true, unstyled: true, description: (page.attributes.description !== undefined ? page.attributes.description : true)})
+append article_body_inner
+  ul.simpleindex.list-unstyled
+    +lis_of_dir(page.meta.permalink, {self: false, s: true, unstyled: true, description: (page.attributes.description !== undefined ? page.attributes.description : true)})
