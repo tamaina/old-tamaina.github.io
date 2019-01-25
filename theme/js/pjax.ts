@@ -2,7 +2,7 @@ export const pjaxinit = async (): Promise<void> => {
     const { Pjax } = await import('pjax-api')
     new Pjax({
         areas: [
-            '#main, #breadcrumb, #mainnav, #updateTime, #sidebar, #footer',
+            '#main, #breadcrumb, #mainnav, #sidebar',
             '#grid',
             'body'
         ],

@@ -50,5 +50,5 @@ icons:
   - path: "/files/images/icons/icon.png"
     sizes: 700x700
     type: "image/png"
-site_card_path: "/files/images/icons/thumb.png"
+site_card_path: "/files/images/icons/thumb0.png"
 publisher_image_path: "/files/images/icons/publisher.png"
