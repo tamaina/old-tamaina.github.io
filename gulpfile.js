@@ -14,6 +14,7 @@ const pug = require('pug')
 const glog = require('fancy-log')
 const colors = require('colors')
 const readyaml = require('js-yaml').safeLoad
+const through2 = require('through2')
 
 const $ = require('gulp-load-plugins')()
 
@@ -369,6 +370,76 @@ gulp.task('copy-f404', (cb) => {
     ], cb)
 })
 
+function svgo(option){
+    const SVGOp = require('svgo')
+    const osvg = new SVGOp(option)
+    return through2.obj(
+        async (file, encode, cb) => {
+            if(!file) {
+                this.push(file)
+                return cb(null, file)
+            } else if (file.isBuffer()) {
+                const svg = await osvg.optimize(file.contents.toString())
+                file.contents = Buffer.from(svg.data)
+                return cb(null, file)
+            } else if (file.isStream()) {
+                return cb(this.emit('error', new Error('maqz:svgo', 'Streaming not supported')))
+            }
+        }
+    )
+}
+if (!Array.isArray) {
+    Array.isArray = function(arg) {
+        return Object.prototype.toString.call(arg) === '[object Array]'
+    }
+}
+function inkscape(option){
+    const spawn = require('child_process').spawn
+    const temp = require('temp')
+    let nargs = []
+    if(option.args) {
+        if(typeof option.args === 'string') nargs = nargs.concat(option.args.split(' '))
+        else if (Array.isArray(option.args)) nargs = nargs.concat(option.args)
+        else throw Error('maqz:inkscape : argsは文字列か配列にしましょう。')
+    }
+    console.log(nargs)
+    return through2.obj(
+        (file, encode, cb) => {
+            if(!file) {
+                this.push(file)
+                return cb(null, file)
+            } else if (file.isBuffer()) {
+                temp.track();
+                temp.open({suffix: '.svg'}, (err, info) => {
+                    if(err) cb(new Error('maqz:inkscape(temp-open)', err))
+                    console.log(info.path)
+                    fs.write(info.fd, file.contents, () => { return });
+                    fs.close(info.fd, (err) => {
+                        if(err) cb(new Error('maqz:inkscape(temp-write)', err))
+                        nargs = nargs.concat(['-z', '-f', info.path,`--export-${option.exportType || 'plain-svg'}=-`])
+                        const dois = spawn('inkscape', nargs)
+                        let res = []
+                        dois.stdout.on('data', (chunk) => {
+                            res = res.concat(chunk)
+                        })
+                        dois.stderr.on('data', (data) => {
+                            new Error('maqz:inkscape', stderr.toString())
+                        })
+                        dois.on('close', () => {
+                            file.contents = Buffer.concat(res)
+                            cb(null, file)
+                        })
+                        dois.stdin.write(file.contents.toString())
+                        dois.stdin.end()
+                    })
+                })
+            } else if (file.isStream()) {
+                return cb(this.emit('error', new Error('maqz:inkscape', 'Streaming not supported')))
+            }
+        }
+    )
+}
+
 const images_allFalse = {
     optipng: false,
     pngquant: false,
@@ -387,7 +458,8 @@ const gm_autoOrient = $.gm((gmfile) => { return gmfile.autoOrient() }, { imageMa
 
 gulp.task('image-prebuildFiles', () => {
     const raster = 'files/**/*.{png,jpg,jpeg}'
-    const vector = 'files/**/*.{gif,svg}'
+    const gif = 'files/**/*.gif'
+    const svg = 'files/**/*.svg'
     const sizes = site.images.files.sizes
     const streamsrc = gulp.src(raster).pipe(gm_autoOrient)
     const streams = []
@@ -406,11 +478,20 @@ gulp.task('image-prebuildFiles', () => {
     }
     streams.push(
         new Promise((res, rej) => {
-            gulp.src(vector)
+            gulp.src(gif)
             .pipe($.image(extend(true, images_base(), {
-                "gifsicle": true,
-                "svgo": true
+                "gifsicle": true
             })))
+            .pipe(gulp.dest('dist/files'))
+            .on('end', res)
+            .on('error', rej)
+        })
+    )
+    streams.push(
+        new Promise((res, rej) => {
+            gulp.src(svg)
+            .pipe(inkscape({ args: ['-T'] }))
+            .pipe(svgo())
             .pipe(gulp.dest('dist/files'))
             .on('end', res)
             .on('error', rej)
@@ -426,26 +507,29 @@ gulp.task('image', () => {
     const sizes = site.images.files.sizes
     const streams = []
     const date = new Date()
-    let gifsvg, others
+    let gif, svg, others
     const dirname = `${date.getFullYear()}/${("0" + (date.getMonth() + 1)).slice(-2)}`
     if(parsed.ext == "") {
         glog(`image will be saved like as "files/imports/${dirname}/filename.ext"`)
-        gifsvg = gulp.src(argv.i + '/**/*.{gif,svg}')
+        gif = gulp.src(argv.i + '/**/*.gif')
+        svg = gulp.src(argv.i + '/**/*.svg')
         others = gulp.src(argv.i + '/**/*.{png,jpg,jpeg}')
-    } else if(parsed.ext == ".gif" || parsed.ext == ".svg") {
+    } else if(parsed.ext == ".svg") {
         glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
-        gifsvg = gulp.src(argv.i)
+        svg = gulp.src(argv.i)
+    } else if(parsed.ext == ".gif") {
+        glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
+        gif = gulp.src(argv.i)
     } else {
         glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
         others = gulp.src(argv.i).pipe(gm_autoOrient)
     }
-    if(gifsvg){
+    if(gif){
         streams.push(
             new Promise((res, rej) => {
-                gifsvg
+                gif
                 .pipe($.image(extend(true, images_base(), {
-                    "gifsicle": true,
-                    "svgo": true
+                    "gifsicle": true
                 })))
                 .pipe($.rename({dirname: dirname} || {}))
                 .pipe(gulp.dest('dist/files/images/imports'))
@@ -455,7 +539,29 @@ gulp.task('image', () => {
         )
         streams.push(
             new Promise((res, rej) => {
-                gifsvg
+                gif
+                .pipe($.rename({dirname: dirname} || {}))
+                .pipe(gulp.dest('files/images/imports'))
+                .on('end', res)
+                .on('error', rej)
+            })
+        )
+    }
+    if(svg){
+        streams.push(
+            new Promise((res, rej) => {
+                svg
+                .pipe(inkscape({args: ['-T']}))
+                .pipe(svgo())
+                .pipe($.rename({dirname: dirname} || {}))
+                .pipe(gulp.dest('dist/files/images/imports'))
+                .on('end', res)
+                .on('error', rej)
+            })
+        )
+        streams.push(
+            new Promise((res, rej) => {
+                svg
                 .pipe($.rename({dirname: dirname} || {}))
                 .pipe(gulp.dest('files/images/imports'))
                 .on('end', res)

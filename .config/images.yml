@@ -1,4 +1,4 @@
-imageMagick: true
+imageMagick: false
 images: 
   files: 
     all: 
