@@ -17,10 +17,17 @@ append article_header
 
 block article_footer
   footer.w-100
+    a(href="/blog/").btn.btn-link.btn-block
+      +fa_fw('angle-double-right')
+      | ブログ記事一覧へ
     .d-flex.flex-wrap.my-2.bg-light
-      if(pageNext) 
-        a(href=`${site.url.path}${pageNext.meta.permalink}`)#next.p-3.flex-fill
-          .container 次: #{pageNext.attributes.title}
       if(pagePrev)
         a(href=`${site.url.path}${pagePrev.meta.permalink}`)#prev.p-3.flex-fill
-          .container 前: #{pagePrev.attributes.title}
+          .container
+            +fa_fw('chevron-circle-left')
+            | 前: #{pagePrev.attributes.title}
+      if(pageNext) 
+        a(href=`${site.url.path}${pageNext.meta.permalink}`)#next.p-3.flex-fill
+          .container
+            +fa_fw('chevron-circle-right')
+            | 次: #{pageNext.attributes.title}

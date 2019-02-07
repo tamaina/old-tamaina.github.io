@@ -1,12 +1,11 @@
-/* @flow */
-
 import onReady from "./onReady";
 
 type sidebarOption = {
     thresholdToDetectPx: number,
     thresholdToOpenPx: number,
     sidebarTogglerClassName: string,
-    wrapperId: string
+    targetsClassName: string,
+    backdropWrapperId: string
 }
 
 export class Sidebar {
@@ -14,14 +13,16 @@ export class Sidebar {
     startX: number
     diffX: number
     option: sidebarOption
-    wrapper: HTMLElement
+    targets: HTMLElement[]
+    grid: HTMLElement
     backdrop: HTMLElement
 
     constructor(option: sidebarOption = {
         thresholdToDetectPx: window.innerWidth * 0.2,
         thresholdToOpenPx: window.innerWidth * 0.6,
         sidebarTogglerClassName: 'sidebar-toggler',
-        wrapperId: 'grid'
+        targetsClassName: 'sidebar-target',
+        backdropWrapperId: 'grid'
     }) {
         this.opened = false
         this.startX = 0
@@ -40,8 +41,9 @@ export class Sidebar {
         const backdrop = document.createElement('div')
         backdrop.setAttribute('id', 'backdrop')
 
-        this.wrapper = document.getElementById('grid')
-        this.backdrop = this.wrapper.appendChild(backdrop)
+        this.targets = Array.from(document.getElementsByClassName(this.option.targetsClassName) as HTMLCollectionOf<HTMLElement>)
+        this.grid = document.getElementById(this.option.backdropWrapperId)
+        this.backdrop = this.grid.appendChild(backdrop)
         this.backdrop.addEventListener('click', this.backdropf.bind(this))
 
         document.body.addEventListener('touchstart', this.touchstart.bind(this))
@@ -51,22 +53,24 @@ export class Sidebar {
     }
 
     private backdropf() {
-        if(this.opened) this.sidebarClose()
+        if (this.opened) this.sidebarClose()
     }
 
     private sidebarOpen() {
-        this.wrapper.style.left = '0'
+        for (const target of this.targets) target.style.left = '0'
         this.backdrop.style.opacity = '0.2'
         this.backdrop.style.pointerEvents = 'auto'
         this.backdrop.style.visibility = 'visible'
+        document.getElementsByTagName('html').item(0).style.overflowY = 'hidden'
         this.opened = true
     }
 
     private sidebarClose() {
-        this.wrapper.style.left = ''
+        for (const target of this.targets) target.style.left = ''
         this.backdrop.style.opacity = ''
         this.backdrop.style.pointerEvents = ''
         this.backdrop.style.visibility = ''
+        document.getElementsByTagName('html').item(0).style.overflowY = ''
         this.opened = false
     }
 
@@ -86,13 +90,19 @@ export class Sidebar {
     private touchmove(e: TouchEvent) {
         this.diffX = e.changedTouches[0].pageX - this.startX
         if (this.diffX >= 120) {
-            if(this.startX < 100 && !this.opened) this.sidebarOpen()
+            if(this.startX < 20 && !this.opened) this.sidebarOpen()
         } else if (this.diffX > 0) {
-            if(this.startX < 100 && !this.opened) this.wrapper.style.left = `calc(-70vw + ${this.diffX}px)`
+            if (this.startX < 20 && !this.opened) {
+                document.getElementsByTagName('html').item(0).style.overflowY = 'hidden'
+                for (const target of this.targets) target.style.left = `calc(-70vw + ${this.diffX}px)`
+            }
         } else if (this.diffX > -120) {
-            if(this.startX >= 100 && this.opened) this.wrapper.style.left = `${this.diffX}px`
+            if (this.opened) {
+                document.getElementsByTagName('html').item(0).style.overflowY = ''
+                for (const target of this.targets) target.style.left = `${this.diffX}px`
+            }
         } else if (this.diffX <= -120) {
-            if(this.startX >= 100 && this.opened) this.sidebarClose()
+            if (this.opened) this.sidebarClose()
         }
     }
     private touchend() {

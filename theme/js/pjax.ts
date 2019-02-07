@@ -1,6 +1,7 @@
-export const pjaxinit = async (): Promise<void> => {
-    const { Pjax } = await import('pjax-api')
-    new Pjax({
+import { Pjax } from 'pjax-api'
+
+export const pjaxinit = (): Pjax => {
+    return new Pjax({
         areas: [
             '#main, #breadcrumb, #mainnav, #sidebar',
             '#grid',
@@ -11,5 +12,4 @@ export const pjaxinit = async (): Promise<void> => {
             css: false
         }
     })
-    return
 }
