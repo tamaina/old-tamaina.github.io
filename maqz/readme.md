@@ -86,7 +86,7 @@ pugファイルであれば、自身のFrontMatterは`page.attributes`から参�
 この中にあるどのファイル名のpugを利用するかをFrontMatterの`theme`で決定することができます。  
 指定しなければ、または存在しなければ`default.pug`で処理を行います。  
 ampはamp_を付加したものを利用します。  
-ページをhtml化したものは`main_html`として格納されています。
+ページをhtml化したものは`mainHtml`として格納されています。
 
 `includes/_mixins.pug`, `includes/_script.pug`はページのpugをHTMLにするときに先頭に付加されます。
 
