@@ -92,7 +92,7 @@ html(amp)
   body
 
     if(site.sidebar)
-      amp-sidebar(id="sidebar" layout="nodisplay" side="left")!=sidebar_html
+      amp-sidebar(id="sidebar" layout="nodisplay" side="left")!=sidebarHtml
 
     #ampGrid
       block wo_footer
@@ -101,7 +101,7 @@ html(amp)
             include ../includes/_nav.pug
         block main
           #main
-            != main_html
+            != mainHtml
 
       block footer
         #footer.bg-white

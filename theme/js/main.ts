@@ -1,29 +1,29 @@
-import onReady from './onReady'
-import { fainit } from './fainit'
-import { scrolltoshow } from './scrolltoshow'
-import { gototop } from './gototop'
+import { fainit } from "./fainit"
+import { gototop } from "./gototop"
+import onReady from "./onReady"
+import { scrolltoshow } from "./scrolltoshow"
 
-import { Sidebar } from './sidebar'
-import { sw } from './sw';
-import { pjaxinit } from './pjax';
-import { detectOldBrowser } from './old-browsers';
-import { pjaxLoaded } from './pjax-ready-others';
+import { detectOldBrowser } from "./old-browsers"
+import { pjaxinit } from "./pjax"
+import { pjaxLoaded } from "./pjax-ready-others"
+import { Sidebar } from "./sidebar"
+import { sw } from "./sw"
 
-function contentLoaded(){
-    fainit()
-    scrolltoshow()
-    gototop()
+function contentLoaded() {
+  fainit()
+  scrolltoshow()
+  gototop()
 }
 
 onReady(contentLoaded)
-document.addEventListener('pjax:content', contentLoaded)
+document.addEventListener("pjax:content", contentLoaded)
 
 sw()
-document.addEventListener('pjax:content', sw)
+document.addEventListener("pjax:content", sw)
 
 new Sidebar()
 pjaxinit()
 
 detectOldBrowser()
 
-window.addEventListener('pjax:load', pjaxLoaded)
+window.addEventListener("pjax:load", pjaxLoaded)

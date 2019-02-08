@@ -1,14 +1,12 @@
-import onReady from "./onReady";
-
-function gototo(){
-    window.scroll({
-        top: 0,
-        behavior: "smooth"
-    })
-    return false
+function gototo() {
+  window.scroll({
+    behavior: "smooth",
+    top: 0
+  })
+  return false
 }
 export const gototop = (): void => {
-    for(let el of Array.from(document.getElementsByClassName('trigger-gototop'))){
-        el.addEventListener('click', gototo)
-    }
+  for (const el of Array.from(document.getElementsByClassName("trigger-gototop"))) {
+    el.addEventListener("click", gototo)
+  }
 }
