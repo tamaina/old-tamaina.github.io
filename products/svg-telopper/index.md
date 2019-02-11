@@ -4,6 +4,8 @@ description: SVGを読み込んでOBSに良い感じのテロップを出した�
 layout: index
 rank: 1
 ---
+**[リポジトリ https://github.com/tamaina/svg-telopper](https://github.com/tamaina/svg-telopper)**
+
 ## ToDo
 - 現在のクエリによる方式に代わって、管理画面の操作によって内容や書式を定義できるようにできればいいなと思っています。
 
