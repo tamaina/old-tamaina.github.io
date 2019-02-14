@@ -20,11 +20,14 @@ const webpack = require("webpack")
 const postcssSorting = require("postcss-sorting")
 const autoprefixer = require("autoprefixer")
 const cssMqpacker = require("css-mqpacker")
+const cssnano = require("cssnano")
 
 const sizeOf = require("image-size")
 const cheerio = require("cheerio")
 
 const url = require("url")
+
+const { dom } = require("@fortawesome/fontawesome-svg-core")
 
 const $ = require("gulp-load-plugins")()
 
@@ -35,6 +38,7 @@ const regheadings = require("./scripts/regheadings")
 const inkscape = require("./scripts/builder/registerer/gulp-inkscape")
 const svgo = require("./scripts/builder/registerer/gulp-svgo")
 const makeRss = require("./scripts/builder/registerer/rss")
+
 
 // const exec = require("child_process").exec
 // const join = path.join
@@ -78,7 +82,6 @@ let site = extend(
 )
 
 if (argv._.some(e => e === "local-server")) site = extend(this, site, readyaml(fs.readFileSync("./.config/debug-override.yml")))
-
 
 const keys = (() => {
   if (existFile("./.config/keys.yml")) {
@@ -187,10 +190,12 @@ gulp.task("css", (cb) => {
   pump([
     gulp.src("theme/styl/main.sass"),
     $.sass({ sourceMap: true, outputStyle: "compressed" }),
+    $.header(dom.css()),
     $.postcss([
       postcssSorting(),
       autoprefixer({ browsers: "defaults" }),
-      cssMqpacker()
+      cssMqpacker(),
+      cssnano()
     ]),
     $.rename("main.css"),
     gulp.dest(cssDestpath)
