@@ -39,7 +39,6 @@ const inkscape = require("./scripts/builder/registerer/gulp-inkscape")
 const svgo = require("./scripts/builder/registerer/gulp-svgo")
 const makeRss = require("./scripts/builder/registerer/rss")
 
-
 // const exec = require("child_process").exec
 // const join = path.join
 // const moment = require("moment")
@@ -170,7 +169,6 @@ gulp.task("register", async (cb) => {
 
   cb()
 })
-
 
 gulp.task("config", () => {
   let resultObj = { options: "" }
