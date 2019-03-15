@@ -35,7 +35,7 @@ ActivityPubの通信では、ほかのサーバーのユーザーをフォロー
 ActivityPub規格は[W3Cが勧告している](https://www.w3.org/TR/activitypub/)規格であるため、連合型SNSソフトは多く存在します。その中から日本で主要なソフトをご紹介します。
 
 - [**Mastodon**](https://joinmastodon.org/)  
-  Twitter/Facebookタイプ。[mstdn.jp](https://mstdn.jp), [pawoo.net](https://pawoo.net), [friends.nico](https://friends.nico)といった大規模インスタンスはMastodonで動いていｍなす。連合型SNSの中ではもっとも普及しており、モバイルアプリなど多くの資産もあります。開発者は[Eugen Rochko (Gargron)氏](https://mastodon.social/@Gargron)。
+  Twitter/Facebookタイプ。[mstdn.jp](https://mstdn.jp), [pawoo.net](https://pawoo.net), [friends.nico](https://friends.nico)といった大規模インスタンスはMastodonで動いています。連合型SNSの中ではもっとも普及しており、モバイルアプリなど多くの資産もあります。開発者は[Eugen Rochko (Gargron)氏](https://mastodon.social/@Gargron)。
 - [**Pleroma**](https://pleroma.social/)  
   Twitterタイプ。インスタンス数や日本で有名なインスタンスはあまり見かけませんが、連合型SNSの中では2番目に普及しているようです。開発者は[lain氏](https://pleroma.soykaf.com/users/lain)。
 - [**Misskey**](https://joinmisskey.github.io/)  
