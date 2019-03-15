@@ -37,7 +37,7 @@ ActivityPub規格は[W3Cが勧告している](https://www.w3.org/TR/activitypub
 - [**Mastodon**](https://joinmastodon.org/)  
   Twitter/Facebookタイプ。[mstdn.jp](https://mstdn.jp), [pawoo.net](https://pawoo.net), [friends.nico](https://friends.nico)といった大規模インスタンスはMastodonで動いています。連合型SNSの中ではもっとも普及しており、モバイルアプリなど多くの資産もあります。開発者は[Eugen Rochko (Gargron)氏](https://mastodon.social/@Gargron)。
 - [**Pleroma**](https://pleroma.social/)  
-  Twitterタイプ。インスタンス数や日本で有名なインスタンスはあまり見かけませんが、連合型SNSの中では2番目に普及しているようです。開発者は[lain氏](https://pleroma.soykaf.com/users/lain)。
+  Twitterタイプ。日本で有名なインスタンスはあまり見かけませんが、連合型SNSの中では2番目に普及しているようです。開発者は[lain氏](https://pleroma.soykaf.com/users/lain)。
 - [**Misskey**](https://joinmisskey.github.io/)  
   国産のTwitterライクな連合型SNS。[misskey.xyz](https://misskey.xyz)は、開発者が運営するMisskeyでもっとも大きなインスタンスです。他のソフトに比べ、見た目や機能が優れています。2014年から存在し、近年ActivityPubが実装されました。開発者は[しゅいろ氏](https://misskey.xyz/@syuilo)。
 - [**PixelFed**](https://pixelfed.org/)  
