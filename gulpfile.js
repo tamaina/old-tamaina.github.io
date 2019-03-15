@@ -35,8 +35,6 @@ const donloadTemp = require("./scripts/downloadTemp")
 const makeHtml = require("./scripts/makeHtml")
 const regheadings = require("./scripts/regheadings")
 
-const inkscape = require("./scripts/builder/registerer/gulp-inkscape")
-const svgo = require("./scripts/builder/registerer/gulp-svgo")
 const makeRss = require("./scripts/builder/registerer/rss")
 
 // const exec = require("child_process").exec
@@ -526,8 +524,8 @@ gulp.task("image-prebuildFiles", () => {
   streams.push(
     new Promise((res, rej) => {
       gulp.src(svg)
-        .pipe(inkscape({ args: ["-T"] }))
-        .pipe(svgo())
+        .pipe($.inkscape({ args: ["-T"] }))
+        .pipe($.svgmin())
         .pipe(gulp.dest("dist/files"))
         .on("end", res)
         .on("error", rej)
@@ -546,18 +544,18 @@ gulp.task("image", () => {
   let gif; let svg; let others
   const dirname = `${date.getFullYear()}/${(`0${date.getMonth() + 1}`).slice(-2)}`
   if (parsed.ext === "") {
-    glog(`image will be saved like as "files/imports/${dirname}/filename.ext"`)
+    glog(`image will be saved like as "files/images/imports/${dirname}/filename.ext"`)
     gif = gulp.src(`${argv.i}/**/*.gif`)
     svg = gulp.src(`${argv.i}/**/*.svg`)
     others = gulp.src(`${argv.i}/**/*.{png,jpg,jpeg}`)
   } else if (parsed.ext === ".svg") {
-    glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
+    glog(`image will be saved like as "files/images/imports/${dirname}/${parsed.name}${parsed.ext}"`)
     svg = gulp.src(argv.i)
   } else if (parsed.ext === ".gif") {
-    glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
+    glog(`image will be saved like as "files/images/imports/${dirname}/${parsed.name}${parsed.ext}"`)
     gif = gulp.src(argv.i)
   } else {
-    glog(`image will be saved like as "files/imports/${dirname}/${parsed.name}${parsed.ext}"`)
+    glog(`image will be saved like as "files/images/imports/${dirname}/${parsed.name}${parsed.ext}"`)
     others = gulp.src(argv.i).pipe(gmAutoOrient)
   }
   if (gif) {
@@ -587,8 +585,8 @@ gulp.task("image", () => {
     streams.push(
       new Promise((res, rej) => {
         svg
-          .pipe(inkscape({ args: ["-T"] }))
-          .pipe(svgo())
+          .pipe($.inkscape({ args: ["-T"] }))
+          .pipe($.svgmin())
           .pipe($.rename({ dirname } || {}))
           .pipe(gulp.dest("dist/files/images/imports"))
           .on("end", res)
