@@ -10,6 +10,6 @@ aqz/tamainaが色々やるWebサイトです。
 ## 支援
 もし私の活動がお役に立てたのなら、ぜひ支援をお願いします。
 
-[Patreon](https://www.patreon.com/aqz) / [Wishlist (ほしいものリスト)](http://amzn.asia/1Xa1Qa0)  / Kyash ID: tmin （送金）
+[pixivFANBOX](https://www.pixiv.net/fanbox/creator/31992369) / [Patreon](https://www.patreon.com/aqz) / [Wishlist (ほしいものリスト)](http://amzn.asia/1Xa1Qa0)  / Kyash ID: tmin （送金）
 
 ## CONTENTS
