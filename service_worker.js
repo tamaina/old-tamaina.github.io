@@ -1,5 +1,10 @@
-/* workbox 2019-03-15T04:27:16.786Z */
+/* workbox 2019-03-24T10:06:29.704Z */
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
+self.addEventListener("install", function(event) {
+  workbox.skipWaiting();
+  workbox.clientsClaim();
+})
 
 workbox.routing.registerRoute(
     /.*.(?:js|css|png|jpeg|jpg|svg|svgz|woff2)/,
@@ -10,7 +15,7 @@ workbox.routing.registerRoute(
 workbox.precaching.precacheAndRoute([
     {
         url: "/offline/",
-        revision: "1552624036786",
+        revision: "1553421989704",
     }
 ]);
 workbox.skipWaiting();
@@ -25,7 +30,3 @@ self.addEventListener("fetch", function(event) {
         })
     );
 });
-self.addEventListener("install", function(event) {
-    workbox.skipWaiting();
-    workbox.clientsClaim();
-})
