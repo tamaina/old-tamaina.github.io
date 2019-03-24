@@ -27,7 +27,13 @@ const cheerio = require("cheerio")
 
 const url = require("url")
 
-const { dom } = require("@fortawesome/fontawesome-svg-core")
+const { dom, library, icon } = require("@fortawesome/fontawesome-svg-core")
+
+library.add(
+  require("@fortawesome/free-solid-svg-icons").fas,
+  require("@fortawesome/free-regular-svg-icons").far,
+  require("@fortawesome/free-brands-svg-icons").fab
+)
 
 const $ = require("gulp-load-plugins")()
 
@@ -248,14 +254,16 @@ function searchSidebar(pathe) {
 }
 
 // eslint-disable-next-line no-shadow
-async function toamp(htm, base) {
+async function toamp(htm) {
   // eslint-disable-next-line no-shadow
   const $ = cheerio.load(htm, { decodeEntities: false })
   const promises = []
   $("img[src]").each((i, el) => {
     promises.push(new Promise(async (resolve) => {
       // eslint-disable-next-line no-shadow
-      let src = $(el).attr("src")
+      // console.log("IMAGE")
+      // eslint-disable-next-line no-shadow
+      const src = $(el).attr("src")
       const alt = $(el).attr("alt")
       const title = $(el).attr("title")
       const id = $(el).attr("id")
@@ -267,7 +275,6 @@ async function toamp(htm, base) {
         width = dims.width
         // eslint-disable-next-line prefer-destructuring
         height = dims.height
-        src = `${base.site.url.path}/${src}`
       } else if ((width === undefined || height === undefined) && (src.startsWith("http") || src.startsWith("//"))) {
         const Url = url.parse(src)
         const filename = `${Url.pathname.slice(1).replace(/\//g, "-")}`.slice(-36)
@@ -288,13 +295,19 @@ async function toamp(htm, base) {
         glog(`${messages.amp.invalid_imageUrl}:\n${src}`)
         return resolve()
       }
-      $("img[src]").eq(i).after(`<amp-img src="${src}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
+      $(el).replaceWith(`<amp-img src="${src}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
       return resolve()
     }))
   })
   if (promises.length > 0) await Promise.all(promises)
-  $("img").remove()
-  return $("body").html()
+  $("i").each((i, el) => {
+    $(el).replaceWith(icon(
+      { iconName: $(el).attr("data-fa-icon-name"), prefix: $(el).attr("data-fa-prefix") },
+      JSON.parse($(el).attr("data-fa-option").replace(/'/g, "\""))
+    ).html[0])
+  })
+
+  return $.html()
 }
 
 gulp.task("pug", async () => {
@@ -389,8 +402,8 @@ gulp.task("pug", async () => {
             ampHtml => new Promise((res, rej) => {
               const newoptions = extend(
                 true,
-                { isAmp: true, mainHtml: ampHtml },
-                puglocals
+                puglocals,
+                { isAmp: true, mainHtml: ampHtml }
               )
               gulp.src(amptemplate)
                 .pipe($.pug({ locals: newoptions }))
