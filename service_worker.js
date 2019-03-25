@@ -1,4 +1,4 @@
-/* workbox 2019-03-24T10:06:29.704Z */
+/* workbox 2019-03-25T23:13:24.015Z */
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 self.addEventListener("install", function(event) {
@@ -15,7 +15,7 @@ workbox.routing.registerRoute(
 workbox.precaching.precacheAndRoute([
     {
         url: "/offline/",
-        revision: "1553421989704",
+        revision: "1553555604015",
     }
 ]);
 workbox.skipWaiting();
