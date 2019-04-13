@@ -29,7 +29,7 @@ ActivityPubの通信では、ほかのサーバーのユーザーをフォロー
 
 ### 用語
 連合型SNSソフトがインストールされたサーバーは**インスタンス**と呼ばれます。  
-無数のインスタンスが関係しあって形成される連合型SNSの世界は**Fediverse（フェディバース）**と呼ばれます。FediverseはFederate(連合)とUniverse(宇宙)を組み合わせた造語です。
+無数のインスタンスが関係しあって形成される連合型SNSの世界は**Fediverse（フェディバース）**と呼ばれます。FediverseはFederate（連合）とUniverse（宇宙）を組み合わせた造語です。
 
 ### 連合型SNSソフトの例
 ActivityPub規格は[W3Cが勧告している](https://www.w3.org/TR/activitypub/)規格であるため、連合型SNSソフトは多く存在します。その中から日本で主要なソフトをご紹介します。
