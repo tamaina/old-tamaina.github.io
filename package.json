@@ -84,7 +84,7 @@
     "node-sass": "^4.10.0",
     "npm": "^6.9.0",
     "numeral": "^2.0.6",
-    "pjax-api": "^3.27.0",
+    "pjax-api": "^3.29.2",
     "postcss-sorting": "^4.1.0",
     "pug": "^2.0.3",
     "pump": "^3.0.0",
