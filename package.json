@@ -19,7 +19,9 @@
     "url": "https://github.com/tamaina/maqz/issues"
   },
   "homepage": "https://tamaina.github.io/maqz/",
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {},
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -29,13 +31,13 @@
     "@types/ua-parser-js": "^0.7.32",
     "autoprefixer": "^9.5.0",
     "bootstrap": "^4.3.1",
-    "cafy": "^12.1.1",
+    "cafy": "^15.1.1",
     "cheerio": "^1.0.0-rc.2",
     "clean-css": "^4.2.1",
     "colors": "^1.3.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
-    "del": "^3.0.0",
+    "del": "^5.0.0",
     "download": "^7.1.0",
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -43,7 +45,7 @@
     "extend": "^3.0.2",
     "fancy-log": "^1.3.3",
     "feed": "^2.0.4",
-    "file-type": "^10.9.0",
+    "file-type": "^12.1.0",
     "front-matter": "^3.0.1",
     "glob": "^7.1.3",
     "gulp": "^4.0.0",
