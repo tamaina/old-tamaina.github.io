@@ -3,9 +3,12 @@
 ul.list-unstyled.sidebarstyle-list
   +lis_of_dir('/', {self: true, s: false, unstyled: true, description: false})
 
-.sidebarstyle-h1 外部リンク
+.sidebarstyle-h1 アカウント
 
 ul.list-unstyled.sidebarstyle-list
+  li
+    a.d-block(href="https://misskey.io/@aqz" target="_blank" rel="noreferrer")
+      | @aqz@misskey.io
   li
     a.d-block(href="https://github.com/tamaina" target="_blank" rel="noreferrer")
       +fa_fw('github', 'fab')

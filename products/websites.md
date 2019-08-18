@@ -4,7 +4,7 @@ description: Webサイトをいくつか作っています。
 layout: index
 rank: 98
 ---
-maqzを使用していたり同じ人が作ったりしているのでかなり似ています。
+同じ人が作っているため同じ感じになっています。
 
 ## [joinmisskey.github.io](https://joinmisskey.github.io)
 [Misskey](https://github.com/syuilo/misskey)を紹介するサイト。
