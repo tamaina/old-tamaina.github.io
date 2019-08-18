@@ -1286,10 +1286,10 @@ cacheable-request@^2.1.1:
     normalize-url "2.0.1"
     responselike "1.0.2"
 
-cafy@^12.1.1:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/cafy/-/cafy-12.1.1.tgz#efd9561db4030d4b7df16afbb9a3c6f847266a58"
-  integrity sha512-mETJI+8dw7tQQrPWQbj/W10SLhSR+V0D2VEUA9pWw8neOpfgT6cuJnvQb9A+p594Nq/eUjQDiISEelaUv162YQ==
+cafy@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/cafy/-/cafy-15.1.1.tgz#565c7e4331c0335f9de67946fc9e1fa366a310e1"
+  integrity sha512-iq/+Xte81FJyW9zMiv8aSQ9oYP3jdSJlBT4B0aEuIRKOuO38RB6us0qPdGQnZJ0ZDx6vfhk38VAeHCG4fQOyag==
 
 call-limit@^1.1.1:
   version "1.1.1"
