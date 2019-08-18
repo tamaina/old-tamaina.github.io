@@ -1,6 +1,5 @@
 const kramed = require("kramed")
 const { minify } = require("html-minifier")
-const mfmf = require("mfmf")
 const readyaml = require("js-yaml").safeLoad
 const fs = require("fs")
 
@@ -23,9 +22,5 @@ module.exports = {
     return htm
   },
   markdown: str => kramed(str),
-  mfm: (str) => {
-    const htm = mfmf.render(str, {})
-    return htm
-  },
   oneline: str => str.replace(/\r?\n/g, "")
 }

@@ -63,7 +63,8 @@ export class Sidebar {
     this.backdrop.style.opacity = "0.2"
     this.backdrop.style.pointerEvents = "auto"
     this.backdrop.style.visibility = "visible"
-    document.getElementsByTagName("html").item(0).style.overflowY = "hidden"
+    // document.getElementsByTagName("html").item(0).style.overflowY = "hidden"
+    document.body.style.overflowY = "hidden"
     this.opened = true
   }
 
@@ -72,7 +73,8 @@ export class Sidebar {
     this.backdrop.style.opacity = ""
     this.backdrop.style.pointerEvents = ""
     this.backdrop.style.visibility = ""
-    document.getElementsByTagName("html").item(0).style.overflowY = ""
+    // document.getElementsByTagName("html").item(0).style.overflowY = ""
+    document.body.style.overflowY = ""
     this.opened = false
   }
 
@@ -95,12 +97,12 @@ export class Sidebar {
       if (this.startX < 20 && !this.opened) this.sidebarOpen()
     } else if (this.diffX > 0) {
       if (this.startX < 20 && !this.opened) {
-        document.getElementsByTagName("html").item(0).style.overflowY = "hidden"
+        document.body.style.overflowY = "hidden"
         for (const target of this.targets) target.style.left = `calc(-70vw + ${this.diffX}px)`
       }
     } else if (this.diffX > -120) {
       if (this.opened) {
-        document.getElementsByTagName("html").item(0).style.overflowY = ""
+        document.body.style.overflowY = ""
         for (const target of this.targets) target.style.left = `${this.diffX}px`
       }
     } else if (this.diffX <= -120) {

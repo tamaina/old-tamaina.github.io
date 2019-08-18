@@ -195,7 +195,7 @@ gulp.task("css", (cb) => {
     $.header(dom.css()),
     $.postcss([
       postcssSorting(),
-      autoprefixer({ browsers: "defaults" }),
+      autoprefixer(),
       cssMqpacker(),
       cssnano()
     ]),
