@@ -8,6 +8,7 @@ author:
   name: aqz
   url: https://twitter.com/aqzvy
   avatar: aqz
+amp: true
 ---
 おことわり: この記事では、周知の事実やいちからおよびにじさんじの公式サイトで得られる情報もしくはWikipediaですでに出典が明記してある事実について、出典を書かないことで省力化を行っています。
 

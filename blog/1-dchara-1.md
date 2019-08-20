@@ -8,6 +8,7 @@ author:
   name: aqz
   url: https://twitter.com/aqzvy
   avatar: aqz
+amp: true
 ---
 ブログの2番目の記事にいきなり文体の読みにくい妄言が書かれることについて謝罪したい。しかしながら、基本的な思考を共有したいため、この記事をまず初めに書きたいと思う。
 

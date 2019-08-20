@@ -8,6 +8,7 @@ author:
   name: aqz
   url: https://twitter.com/aqzvy
   avatar: aqz
+amp: true
 ---
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>VTuberが出演するアニメ「バーチャルさんはみている」だが、なぜ「きつい」という意見が続出するのか考えてみたい。
 

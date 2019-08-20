@@ -1,6 +1,6 @@
 ---
 title: Fediverseへのいざない――自分だけのSNSを持ってみないか？
-description: 自分でSNSを持ってみるのはどうでしょうか？MastodonやMisskeyを自分で持ってみましょう！VTuberさんにもお勧めかも？
+description: MastodonやMisskeyを自分で持ってみませんか。VTuberさんなどのコミュニティにお勧めかも？
 layout: blog
 category: Misskey
 thumbnail: /files/images/imports/2019/03/FEDIVERSE.png
@@ -9,20 +9,21 @@ author:
   name: aqz
   url: https://twitter.com/aqzvy
   avatar: aqz
+amp: true
 ---
 MastodonやMisskeyなどの連合型SNSについて、その仕組みと利点を簡潔に紹介したいと思います。  
 連合型SNSは分散型SNSとも呼ばれます。
 
-## まとめ
+## 記事の概要
 - 自分でSNSを運営しながら、その中で外部との交流もできる。
 - Twitterより優れている機能がある。
 
-興味が湧きましたか？それなら、詳しく見ていきましょう。
+興味が湧いた方は最後までお付き合いください。
 
 ## 「連合」とは？
 ![Fediverseのイメージ](/files/images/imports/2019/03/FEDIVERSE.svg)
 
-連合型SNSのイメージはだいたい上図のような感じです（少し適当に描きすぎた感はあります）。  
+連合型SNSのイメージはだいたい上図のような感じです（少し適当に描きすぎた感）。  
 MastodonやMisskeyなどの連合型SNSソフトは、「ActivityPub」という標準規格に準じてほかのサーバーと通信を行います。  
 ActivityPubの通信では、ほかのサーバーのユーザーをフォローしたり、ほかのサーバーの投稿を取得したりできます。  
 連合型SNSでは、他のサーバーに登録することなく、他のサーバーの投稿を見て反応したりユーザーをフォローしたりできるのです。
@@ -35,11 +36,11 @@ ActivityPubの通信では、ほかのサーバーのユーザーをフォロー
 ActivityPub規格は[W3Cが勧告している](https://www.w3.org/TR/activitypub/)規格であるため、連合型SNSソフトは多く存在します。その中から日本で主要なソフトをご紹介します。
 
 - [**Mastodon**](https://joinmastodon.org/)  
-  Twitter/Facebookタイプ。[mstdn.jp](https://mstdn.jp), [pawoo.net](https://pawoo.net), [friends.nico](https://friends.nico)といった大規模インスタンスはMastodonで動いています。連合型SNSの中ではもっとも普及しており、モバイルアプリなど多くの資産もあります。開発者は[Eugen Rochko (Gargron)氏](https://mastodon.social/@Gargron)。
+  Twitter/Facebookタイプ。[mstdn.jp](https://mstdn.jp), [pawoo.net](https://pawoo.net), [best-friends.chat](https://best-friends.chat)といった大規模インスタンスはMastodonで動いています。連合型SNSの中ではもっとも普及しており、モバイルアプリなど多くの資産もあります。開発者は[Eugen Rochko (Gargron)氏](https://mastodon.social/@Gargron)。
 - [**Pleroma**](https://pleroma.social/)  
   Twitterタイプ。日本で有名なインスタンスはあまり見かけませんが、連合型SNSの中では2番目に普及しているようです。開発者は[lain氏](https://pleroma.soykaf.com/users/lain)。
 - [**Misskey**](https://joinmisskey.github.io/)  
-  国産のTwitterライクな連合型SNS。[misskey.xyz](https://misskey.xyz)は、開発者が運営するMisskeyでもっとも大きなインスタンスです。他のソフトに比べ、見た目や機能が優れています。2014年から存在し、近年ActivityPubが実装されました。開発者は[しゅいろ氏](https://misskey.xyz/@syuilo)。
+  国産のTwitterライクな連合型SNS。[misskey.io](https://misskey.io)は、開発者が運営するMisskeyでもっとも大きなインスタンスです。他のソフトに比べ、見た目や機能が優れています。2014年から存在し、近年ActivityPubが実装されました。開発者は[しゅいろ氏](https://misskey.xyz/@syuilo)。
 - [**PixelFed**](https://pixelfed.org/)  
   Instagramタイプ。開発者は[Dansup氏](https://mastodon.social/@dansup)。
 - [**PeerTube**](https://joinpeertube.org/)  
@@ -81,8 +82,8 @@ Twitterではなくなってしまったストリーミングを利用できま�
 自分でSNSを運営できるということは、そのすべてを自分で判断できるということです。  
 TwitterやFacebook、YouTubeなどの運営方針や時に理不尽な決定に左右されず、あなたの思想や作品を自由に公表できます。より自由なAPIを活用し、さらに便利な連携アプリも作成できます。
 
-しかし、サーバーを維持するために少なくない対価を払う必要がありますし、自由になる代わりに自分の判断に責任をもつ必要があります。  
-安心してください。そのために、連合型SNSは管理者を十分に補助する管理・モデレーション機能を持っています。
+反面、サーバーを維持するために少なくない対価を払う必要がありますし、自由になる代わりに自分の判断に責任をもつ必要があります。  
+でも安心してください。連合型SNSは管理者を十分に補助する管理・モデレーション機能を持っています。
 
 ## 自分自身のSNSを持つ喜び
 連合型SNSを使うと、より便利に、より楽しくインターネットで活動できることがお分かりいただけたでしょうか。
