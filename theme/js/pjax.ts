@@ -1,6 +1,5 @@
-import { Pjax } from "pjax-api"
-
-export const pjaxinit = (): Pjax => {
+export const pjaxinit = async () => {
+  const { Pjax } = await import("pjax-api")
   return new Pjax({
     areas: [
       "#main, #breadcrumb, #mainnav, #sidebar",
