@@ -94,9 +94,9 @@ export class Sidebar {
   private touchmove(e: TouchEvent) {
     this.diffX = e.changedTouches[0].pageX - this.startX
     if (this.diffX >= 180) {
-      if (this.startX < 8 && !this.opened) this.sidebarOpen()
+      if (this.startX < 12 && !this.opened) this.sidebarOpen()
     } else if (this.diffX > 0) {
-      if (this.startX < 8 && !this.opened) {
+      if (this.startX < 12 && !this.opened) {
         document.body.style.overflowY = "hidden"
         for (const target of this.targets) target.style.left = `calc(-70vw + ${this.diffX}px)`
       }
