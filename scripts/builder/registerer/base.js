@@ -30,7 +30,7 @@ async function getAmpCss() {
 }
 
 module.exports = async () => {
-  const [ampcss] = await Promise.all([getAmpCss])
+  const [ampcss] = await Promise.all([getAmpCss()])
   return {
     ampcss
   }
