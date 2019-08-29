@@ -219,12 +219,26 @@ gulp.task("js", (cb) => {
       publicPath: `${site.url.path}/assets/scripts/`
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".js"],
+      extensions: [".ts", ".tsx", ".js", ".sass", ".scss", ".css"],
       modules: ["node_modules"]
     },
     module: {
       rules: [
-        { test: /\.tsx?$/, loader: "ts-loader" }
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+          ]
+        },
+        {
+          test: /\.tsx?$/,
+          loader: "ts-loader",
+          options: {
+            appendTsSuffixTo: [/\.s[ac]ss$/]
+          }
+        }
       ]
     },
     mode: "production"
@@ -233,7 +247,7 @@ gulp.task("js", (cb) => {
   webpackStream(wpackconf, webpack)
     .pipe(gulp.dest(`${dests.root}/assets/scripts`))
     .on("end", () => {
-      glog(colors.green("✔ assets/main.js"))
+      glog(colors.green("✔ scripts"))
       cb()
     })
     .on("error", (err) => {
