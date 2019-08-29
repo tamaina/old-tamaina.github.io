@@ -8,7 +8,8 @@ export const pjaxinit = async () => {
     ],
     update: {
       css: false,
-      head: "meta"
+      head: "meta",
+      script: false
     }
   })
 }
