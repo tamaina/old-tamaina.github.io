@@ -4,11 +4,21 @@
         <title>aqz/tamaina&apos;s Web site</title>
         <link>https://tamaina.github.io</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Thu, 29 Aug 2019 05:31:47 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Sep 2019 05:29:41 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
         <atom:link href="https://tamaina.github.io/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[家計簿アプリの話]]></title>
+            <link>https://tamaina.github.io/blog/7-kakeibo-app/?rel=rss</link>
+            <guid>https://tamaina.github.io/blog/7-kakeibo-app/?rel=rss</guid>
+            <pubDate>Thu, 29 Aug 2019 09:00:00 GMT</pubDate>
+            <description><![CDATA[とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。]]></description>
+            <content:encoded><![CDATA[<p>高校卒業したてニートなのでクレカは持ってないしまだあんまりお金の回りは良くないのですが、ネットのお金周りを自動でやってくれる家計簿アプリって結構使えるのでは？ということで、とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。</p><p>結論から言うと、私はZaimを使うことにしました。</p><h2 id="Zaim" class="blogstyle">Zaim</h2><p>Amazon.co.jpとKyashを連携してみたところ、<strong>Kyashで支払ったAmazonでの購入が、KyashとAmazon分重複して計上されてしまいました。</strong>手動で計上しないことにできますが、あんまりよくありません。</p><p>アマギフ残高はポイントとして表示されます。本当はKyashと同じような電子マネーとして表示してほしいのですが。</p><p>UIは好みです。</p><h2 id="MoneyForward" class="blogstyle">MoneyForward</h2><p>Amazon.co.jpとKyashを連携してみたところ、<strong>Kyashで支払ったものはKyash→Amazonの振替となり、KyashとAmazon分重複して計上されません。</strong>かしこい。</p><p>ただ、Amazonギフト券の残高は表示されず、商品購入ごとに都度都度湧いてくるような感じになっています。</p><p>UIはそんなに好きじゃないタイプでした。</p><h2 id="aqz%E3%81%93%E3%81%93%E3%81%A7%E6%B0%97%E3%81%A5%E3%81%8F" class="blogstyle">aqzここで気づく</h2><p>ZaimでもMoneyForwardと同じようにKyash→Amazonの振替としてカテゴリ変更しちゃえばいいのでは？</p><p>　で　き　ま　し　た</p><p>暇なときぽちぽちするのはそんなに苦労じゃないのでUIが素敵なZaimを使うことにします。おわり。</p>]]></content:encoded>
+            <enclosure url="https://tamaina.github.io/files/images/imports/2019/09/P_20190906_183148.jpg">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[C96 4日目に行ってきてみた]]></title>
             <link>https://tamaina.github.io/blog/6-shash-junbikai/?rel=rss</link>
