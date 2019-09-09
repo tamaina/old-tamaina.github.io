@@ -2,7 +2,7 @@
 title: C96 4日目に行ってきてみた
 description: 群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。
 layout: blog
-category: Misskey
+#category: Misskey
 thumbnail: /files/images/imports/2019/08/P_20190812_141001.jpg
 date: 2019-08-20T14:30:00+09:00
 author:
