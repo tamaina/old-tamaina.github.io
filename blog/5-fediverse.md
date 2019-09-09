@@ -7,7 +7,7 @@ thumbnail: /files/images/imports/2019/03/FEDIVERSE.png
 date: 2019-03-15T13:15:00+09:00
 author:
   name: aqz
-  url: https://twitter.com/aqzvy
+  url: https://yuzulia.xyz/@aqz
   avatar: aqz
 amp: true
 ---

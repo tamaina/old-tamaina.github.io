@@ -4,10 +4,10 @@ description: とりあえずKyashを連携できるZaimとMoneyForwardを連携�
 layout: blog
 #category: Misskey
 thumbnail: /files/images/imports/2019/09/P_20190906_183148.jpg
-date: 2019-08-29T18:00:00+09:00
+date: 2019-09-09T15:00:00+09:00
 author:
   name: aqz
-  url: https://twitter.com/aqzvy
+  url: https://yuzulia.xyz/@aqz
   avatar: aqz
 amp: true
 ---
