@@ -1,14 +1,14 @@
 name: "aqz/tamaina's Web site"
-short_name: "aqz/tamaina"
+short_name: "a9z.dev"
 description: "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。"
 author: "aqz / tamaina"
 url:
 # pages以下をどのようなURLで公開するか指定
 # `${scheme}://${host}${path}/`    
-# デフォルト例: https://tamaina.github.io/
+# デフォルト例: https://a9z.dev/
 #           ↓                  # 右コメント例: https://maqz.example.com/maqz/
   path: ""                      # "/maqz"
-  host: "tamaina.github.io"     # "maqz.example.com"    
+  host: "a9z.dev"               # "maqz.example.com"    
   scheme: https                 # "https"
 language: ja
 pages_src:
