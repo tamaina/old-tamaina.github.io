@@ -1,6 +1,6 @@
 ---
-title: Webサイト
-description: Webサイトをいくつか作っています。
+title: Webサイト（static）
+description: 静的なWebサイトをいくつか作っています。
 layout: index
 rank: 98
 ---
