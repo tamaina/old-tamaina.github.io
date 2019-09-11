@@ -1,7 +1,6 @@
 ---
 title: Webサイト（static）
 description: 静的なWebサイトをいくつか作っています。
-layout: index
 rank: 98
 ---
 同じ人が作っているため同じ感じになっています。

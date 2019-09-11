@@ -1,7 +1,6 @@
 ---
 title: npmパッケージ
 description: npmパッケージをいくつか公開しています。
-layout: index
 rank: 99
 ---
 ## サポート中
