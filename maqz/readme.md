@@ -88,8 +88,9 @@ gulp image -i <glob-readable-path>
 
 ラスター画像（png, jpegなどのビットマップ画像）は以下のようになります（設定で変更可）。  
 - `/files/images/imports/yyyy/mm/{name}.{ext}` - 長辺が1600px以下で同系式（圧縮はする）
-- `/files/images/imports/yyyy/mm/{name}.720.{ext}` - 長辺が720px以下で同系式（圧縮はする）
-- `/files/images/imports/yyyy/mm/{name}.720c.jpeg` - 短編が720pxのjpeg
+- `/files/images/imports/yyyy/mm/{name}.webp` - 長辺が1600px以下でwebp
+- `/files/images/imports/yyyy/mm/{name}.720.{ext}` - 横幅が720px以下で同系式（圧縮はする）
+- `/files/images/imports/yyyy/mm/{name}.720.webp` - 横幅が720pxのwebp
 
 SVGも圧縮しますが、png化などは行いません。
 
