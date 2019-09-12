@@ -17,7 +17,17 @@ images:
           upscale: false
           interlace: line
           cover: false
-          sharpen: "0x0.75+0.75+0.008"
+        image: 
+      - rename: 
+          extname: ".webp"
+        resize: 
+          width: 1600
+          height: 1600
+          crop: false
+          upscale: false
+          interlace: line
+          cover: false
+          format: webp
         image: 
       - rename: 
           suffix: ".720"
@@ -31,24 +41,24 @@ images:
           sharpen: "0x0.75+0.75+0.008"
         image: 
       - rename: 
-          suffix: ".720c"
-          extname: ".jpeg"
+          suffix: ".720"
+          extname: ".webp"
         resize: 
           width: 720
           height: 720
           crop: false
-          upscale: true
+          upscale: false
           interlace: line
-          cover: true
-          format: jpeg
+          cover: false
+          format: webp
           sharpen: "0x0.75+0.75+0.008"
         image: 
 icons: 
-  - path: "/files/images/icons/icon.svg"
+  - path: "/files/images/icons/icon-2.svg"
     sizes: 700x700
     type: "image/svg+xml"
-  - path: "/files/images/icons/icon.png"
-    sizes: 700x700
+  - path: "/files/images/icons/icon-2.png"
+    sizes: 512x512
     type: "image/png"
-site_card_path: "/files/images/icons/thumb0.png"
-publisher_image_path: "/files/images/icons/publisher.png"
+site_card_path: "/files/images/icons/thumb-1.png"
+publisher_image_path: "/files/images/icons/publisher-2.png"

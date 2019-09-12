@@ -19,7 +19,7 @@ $enable-transitions: false
 @import "../../node_modules/bootstrap/scss/variables"
 
 // ブレークポイントを減らすことで50kb以下への減量を実現
-$grid-breakpoints: map-remove($grid-breakpoints, xl, lg)
+$grid-breakpoints: map-remove($grid-breakpoints, xl, lg, md)
 
 $breadcrumb-divider-color: #ddd
 $breadcrumb-divider: "/"
@@ -69,6 +69,8 @@ $breadcrumb-divider: "/"
 @import "../../node_modules/bootstrap/scss/utilities/visibility"
 @import "../../node_modules/bootstrap/scss/utilities/spacing"
 @import "../../node_modules/bootstrap/scss/utilities/flex"
+
+$grid-breakpoints: map-merge($grid-breakpoints, (md: 768px));
 
 @import "material"
 
