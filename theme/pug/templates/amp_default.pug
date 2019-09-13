@@ -105,7 +105,7 @@ html(amp)
 
       block footer
         #footer.bg-white
-          if( site.disqus )
+          //- if( site.disqus )
             .container.py-5
               amp-iframe(width="600" height="140" layout="responsive" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
                 src=`https://tmin.cf/amp.html?shortname=${site.disqus}&url=${encodeURIComponent(`${urlPrefix}${page.meta.permalink}`)}&identifier=${encodeURIComponent(`${site.url.host}${site.url.path}${page.meta.permalink}`)}`)
@@ -114,7 +114,7 @@ html(amp)
           #footer_wrap.py-3
             .container
               .d-flex.justify-content-between.flex-wrap.small
-                div © 2018 #{site.author}
+                div © 2018 - 2019 #{site.author}
 
     block gtag
       if(site.ga)
