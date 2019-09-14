@@ -16,6 +16,7 @@ const readyaml = require("js-yaml").safeLoad
 const mkdirp = require("mkdirp")
 const webpackStream = require("webpack-stream")
 const webpack = require("webpack")
+const Sitemap = require("sitemap")
 
 const postcssSorting = require("postcss-sorting")
 const autoprefixer = require("autoprefixer")
@@ -84,7 +85,7 @@ let site = extend(
   loadyaml("./.config/images.yml")
 )
 
-if (argv._.some(e => e === "local-server")) site = extend(this, site, readyaml(fs.readFileSync("./.config/debug-override.yml")))
+if (argv._.some((e) => e === "local-server")) site = extend(this, site, readyaml(fs.readFileSync("./.config/debug-override.yml")))
 
 const keys = (() => {
   if (existFile("./.config/keys.yml")) {
@@ -229,7 +230,7 @@ gulp.task("js", (cb) => {
           use: [
             "style-loader",
             "css-loader",
-            "sass-loader"
+            { loader: "sass-loader", options: { injectType: "lazyStyleTag" } }
           ]
         },
         {
@@ -273,7 +274,7 @@ async function toamp(htm) {
   const $ = cheerio.load(htm, { decodeEntities: false })
   const promises = []
   $("img[src]").each((i, el) => {
-    promises.push(new Promise(async (resolve) => {
+    promises.push(async () => {
       // eslint-disable-next-line no-shadow
       // console.log("IMAGE")
       // eslint-disable-next-line no-shadow
@@ -298,7 +299,7 @@ async function toamp(htm) {
         glog(v)
         if (!v || !existFile(`${temppath}${filename}.${v.ext}`)) {
           glog(`${messages.amp.invalid_imageUrl}:\n${src}`)
-          return resolve()
+          return
         }
         const dims = sizeOf(`${temppath}${filename}.${v.ext}`)
         // eslint-disable-next-line prefer-destructuring
@@ -307,11 +308,10 @@ async function toamp(htm) {
         height = dims.height
       } else {
         glog(`${messages.amp.invalid_imageUrl}:\n${src}`)
-        return resolve()
+        return
       }
       $(el).replaceWith(`<amp-img src="${src}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
-      return resolve()
-    }))
+    })
   })
   if (promises.length > 0) await Promise.all(promises)
   $("i").each((i, el) => {
@@ -343,7 +343,7 @@ gulp.task("pug", async () => {
     if (site.sidebar) {
       const sidebarpath = searchSidebar(page.meta.src) || "pages/sidebar.pug"
       puglocals.sidebarpath = sidebarpath
-      if (!sidebarPaths.some(e => e === sidebarpath)) {
+      if (!sidebarPaths.some((e) => e === sidebarpath)) {
         sidebarPaths.push(sidebarpath)
         sidebarReadPromises.push(
           readFile(sidebarpath, "utf-8")
@@ -413,7 +413,7 @@ gulp.task("pug", async () => {
       streams.push(
         toamp(puglocals.mainHtml, base)
           .then(
-            ampHtml => new Promise((res, rej) => {
+            (ampHtml) => new Promise((res, rej) => {
               const newoptions = extend(
                 true,
                 puglocals,
@@ -478,7 +478,7 @@ gulp.task("copy-f404", (cb) => {
 })
 
 if (!Array.isArray) {
-  Array.isArray = arg => Object.prototype.toString.call(arg) === "[object Array]"
+  Array.isArray = (arg) => Object.prototype.toString.call(arg) === "[object Array]"
 }
 
 const imagesAllFalse = {
@@ -500,7 +500,7 @@ function imagesBase() {
 }
 
 const gmAutoOrient = $.gm(
-  gmfile => gmfile.autoOrient(),
+  (gmfile) => gmfile.autoOrient(),
   {
     imageMagick: site.imageMagick
   }
@@ -693,7 +693,7 @@ workbox.routing.registerRoute(
     })
 );
 `
-  const offline = pages.some(e => e.meta.permalink === "/offline/")
+  const offline = pages.some((e) => e.meta.permalink === "/offline/")
   if (offline) {
     res += `workbox.precaching.precacheAndRoute([
     {
@@ -781,6 +781,22 @@ gulp.task("make-browserconfig", (cb) => {
   })
 })
 
+gulp.task("make-sitemap", (cb) => {
+  const urls = pages.filter((e) => e.meta.locale).map((e) => ({
+    url: e.meta.permalink,
+    links: site.locales.map((lang) => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
+  }))
+
+  const sitemap = Sitemap.createSitemap({
+    hostname: urlPrefix,
+    urls
+  })
+
+  fs.writeFile("dist/docs/sitemap.xml", sitemap.toString(), () => {
+    glog(colors.green("✔ sitemap.xml")); cb()
+  })
+})
+
 function wait4(cb, psec) {
   let sec = psec
   let interval = null
@@ -831,7 +847,8 @@ gulp.task("make-subfiles",
     gulp.parallel(
       "make-manifest",
       "make-rss",
-      "make-browserconfig"
+      "make-browserconfig",
+      "make-sitemap"
     ),
     (cb) => { cb() }
   ))
