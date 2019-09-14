@@ -782,9 +782,8 @@ gulp.task("make-browserconfig", (cb) => {
 })
 
 gulp.task("make-sitemap", (cb) => {
-  const urls = pages.filter((e) => e.meta.locale).map((e) => ({
-    url: e.meta.permalink,
-    links: site.locales.map((lang) => ({ lang, url: `/${lang}/${e.meta.dirs.slice(2).join("/")}` }))
+  const urls = pages.map((page) => ({
+    url: page.meta.permalink
   }))
 
   const sitemap = Sitemap.createSitemap({
