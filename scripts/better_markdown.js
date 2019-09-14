@@ -34,7 +34,7 @@ module.exports = (htm, urlprefix) => {
       })()
       if (imgurl) {
         const iu = path.parse(imgurl)
-        return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.720.webp 720w, ${urlprefix}${iu.dir}/${iu.name}.webp" type="image/webp"><source srcset="${urlprefix}${iu.dir}/${iu.name}.720${iu.ext} 720w, ${urlprefix}${iu.dir}/${iu.base}">${$.html($(el))}</picture>`
+        return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.720.webp 720w, ${urlprefix}${iu.dir}/${iu.name}.webp 1600w" type="image/webp"><source srcset="${urlprefix}${iu.dir}/${iu.name}.720${iu.ext} 720w, ${urlprefix}${iu.dir}/${iu.base}">${$.html($(el))}</picture>`
       }
       return $.html($(el))
     })()
