@@ -8,6 +8,6 @@ export default () => {
 
   if (p === "/") top.use()
   else if (top.unuse) top.unuse()
-  if (p.startsWith("/")) tjwf.use()
+  if (p.startsWith("/The-Japanese-Web-Fonts/")) tjwf.use()
   else if (tjwf.unuse) tjwf.unuse()
 }
