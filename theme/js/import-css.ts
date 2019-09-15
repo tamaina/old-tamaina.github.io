@@ -5,7 +5,7 @@ export default () => {
   const p = window.location.pathname
 
   if (p === "/") top.use()
-  else top.unuse()
+  else if (top.unuse) top.unuse()
   if (p.startsWith("/")) tjwf.use()
-  else top.unuse()
+  else if (tjwf.unuse) top.unuse()
 }
