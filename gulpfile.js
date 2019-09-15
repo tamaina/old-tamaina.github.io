@@ -228,9 +228,9 @@ gulp.task("js", (cb) => {
         {
           test: /\.s[ac]ss$/i,
           use: [
-            "style-loader",
+            { loader: "style-loader", options: { injectType: "lazyStyleTag" } },
             "css-loader",
-            { loader: "sass-loader", options: { injectType: "lazyStyleTag" } }
+            "sass-loader"
           ]
         },
         {
