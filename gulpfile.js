@@ -682,8 +682,8 @@ gulp.task("make-sw", (cb) => {
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener("install", function(event) {
-  workbox.skipWaiting();
-  workbox.clientsClaim();
+  self.skipWaiting();
+  self.clients.claim();
 })
 
 workbox.routing.registerRoute(
@@ -701,7 +701,6 @@ workbox.routing.registerRoute(
         revision: "${base.update.getTime()}",
     }
 ]);
-workbox.skipWaiting();
 self.addEventListener("fetch", function(event) {
     event.respondWith(
         caches.match(event.request)
