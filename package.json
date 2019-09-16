@@ -74,7 +74,7 @@
     "gulp-watch": "^5.0.1",
     "html-minifier": "^4.0.0",
     "image-size": "^0.7.4",
-    "inquirer": "^6.2.2",
+    "inquirer": "^7.0.0",
     "js-yaml": "^3.13.0",
     "jstransformer-clean-css": "^2.1.0",
     "jstransformer-highlight": "^2.0.0",
