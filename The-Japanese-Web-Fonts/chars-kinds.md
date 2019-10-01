@@ -24,7 +24,7 @@ the Japanese Web Fonts v7.0.1現在の文字種と文字一覧。
   * JISX0208第一水準漢字 (dai1suijunKanji)
   * JISX0208第二水準漢字 (dai2suijunKanji)
 6. 
-  * 補助的な漢字
+  * 補助的な漢字（supportKanji）
 
 ### 非漢字順位
 1. 
