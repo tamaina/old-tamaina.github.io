@@ -10,8 +10,8 @@ export default () => {
   else if (top.unuse) top.unuse()
   if (p.startsWith("/The-Japanese-Web-Fonts/")) {
     const fonts = [
-      "SourceHanSans",
       "SourceHanSansHW",
+      "SourceHanSerif",
       "mplus-1",
       "mplus-S",
       "irohakakuC",
