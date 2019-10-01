@@ -9,7 +9,7 @@ const highl = require("./scripts/highl")
 function loadyaml(filepath) {
   return readyaml(fs.readFileSync(filepath))
 }
-const site = loadyaml("./.config/messages.yml")
+const site = Object.assign(loadyaml("./.config/messages.yml"), loadyaml("./.config/default.yml"))
 
 module.exports = {
   md: (str) => {
