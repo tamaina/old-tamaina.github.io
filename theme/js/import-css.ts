@@ -26,6 +26,7 @@ export default () => {
       "GenEiLateGo-N",
       "GenEiNuGothic",
       "GenEiUniverSans",
+      "GenEiRomanNotes",
       "Nasu",
       "NasuM"
     ]
