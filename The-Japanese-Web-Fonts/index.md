@@ -13,7 +13,8 @@ the Japanese Web Fontsは、日本語フリーフォントを集めたWebフォ�
 日本語に適したサブセットにしています。
 
 - unicode-range指定
--
+- 細かいサブセット
+- CDN配信
 
 ## 使い方
 
