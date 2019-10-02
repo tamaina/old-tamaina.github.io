@@ -6,6 +6,7 @@ rank: 5
 ---
 aqz/tamainaが作り出した何かについて、目的と使い方を簡潔に説明します。
 
-[maqzについてはこちら](/maqz/)
+[maqzについてはこちら](/maqz/)  
+[The Japanese Web Fontsについてはこちら](/The-Japanese-Web-Fonts/)
 
 ## 一覧
