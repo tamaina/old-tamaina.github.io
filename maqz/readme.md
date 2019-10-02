@@ -28,7 +28,7 @@ brew install libjpeg libpng
 apt-get install -y libjpeg libpng
 ```
 
-#### 2. npmとgitで導入
+#### 2. yarnとgitで導入
 新しいフォルダーを作成し、以下の操作をしてください。
 
 ```
@@ -36,24 +36,30 @@ git init
 git remote add upstream https://github.com/tamaina/tamaina.github.io.git
 git fetch upstream
 git checkout src
-npm install
-npm install gulp -g
+npx yarn install
 git worktree add docs master; git worktree add pages pages
 ```
 
 ### 2. ビルド
 
 ### 普通のビルド
-`gulp`
+```
+npx gulp
+```
+
 一般的なビルドです。
 
 ### ページのみビルド
-ページのみを変更した場合は`gulp pages`をします。distの一掃やスタイルやスクリプトの生成・更新をしないので、速くビルドできます。
+```
+npx gulp pages
+```
+
+ページのみを変更した場合は`npx gulp pages`をします。distの一掃やスタイルやスクリプトの生成・更新をしないので、速くビルドできます。
 
 ### ローカルで確認
 ローカルサーバーを立てて内容を事前に確認できます。`.config/debug-override.yml`で設定できます。
 
-`gulp local-server`を実行し、緑色で表示されたlocalhostを含むアドレスにアクセスします。
+`npx gulp local-server` を実行し、緑色で表示されたlocalhostを含むアドレスにアクセスします。
 
 ### 公開する
 GitHub Pagesを使って自分のサイトとして公開してみましょう。
@@ -63,7 +69,7 @@ GitHub Pagesを使って自分のサイトとして公開してみましょう�
 3. `package.json`も編集します。
 4. `git remote add origin (git url).git`
 5. **独自ドメインにする場合、**`theme/static`に`CNAME`という名前のファイル（拡張子なし）を作成し、中身は自分が公開したいドメインを書きます（例: `maqz.example.com`）
-6. ビルド `npm run build`
+6. ビルド `npx gulp`
 7. `.\pushAll.bat "コミットコメント"`（コミットコメントにはわかりやすいものに）
 8. 実際にアクセスして確認してみましょう。 
 
