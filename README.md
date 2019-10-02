@@ -1,3 +1,3 @@
-## [maqz](//tamaina.github.io/maqz/)
+## [maqz](//a9z.dev/maqz/)
 
-https://tamaina.github.io/
+https://a9z.dev/
