@@ -6,11 +6,23 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/9-tjwf-v7/",
+            "content_html": "<p><a href=\"/The-Japanese-Web-Fonts/\">The Japanese Web Fonts</a>のバージョン7をリリースしました。</p><p>バージョン7では諸々を見直し、またビルドスクリプトもちゃんと組みました。</p><p>The Japanese Web Fonts v7では、以下のような機能を備えています。</p><ul><li>細かいサブセット（ラテン、ラテン拡張、記号、ひらがな、カタカナ、小学校で習う漢字、常用漢字、表外漢字、etc.）</li><li>unicode-rangeを記載</li><li>M+ Fontは1,2,c,p,m,mn,S（記号）で別のフォントに分割</li><li>CDN（jsdelivr使用）</li></ul><p>ビルド量の関係上、形式はwoff2しか用意していませんので、Internet Explorerでは表示できません。</p><p>詳細は<a href=\"/The-Japanese-Web-Fonts/\">The Japanese Web Fonts</a>のページをご覧ください。</p>",
+            "url": "https://a9z.dev/blog/9-tjwf-v7/?rel=rss",
+            "title": "The Japanese Web Fonts v7リリース",
+            "summary": "The Japanese Web Fonts v7をリリースしました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg",
+            "date_modified": "2019-10-02T03:45:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/8-a9zdev/",
             "content_html": "<p>ドメイン<strong>a9z.dev</strong>（アキウス・デヴ）をGoogle Domainsで購入しました。<br>このサイトは今後このドメインでの公開となります。</p><p>また、Misskeyインスタンス<strong><a href=\"https://mk.a9z.dev\" target=\"_blank\" rel=\"noopener\">mk.a9z.dev<i class=\"fa fas external-link-alt\" data-fa-prefix=\"fas\" data-fa-icon-name=\"external-link-alt\" data-fa-option=\"{'classes':['fa-fw', 'fa-sm']}\"></i></a></strong>を立ち上げました。メンテ多めになると思いますが、現時点では登録を開放していますのでご自由にご登録ください。<br>自宅サーバーで運用中で、現時点は10年前ぐらいのノートPCで動作させています。Raspberry Pi 4 Model Bが発売されれば、今後はそれを購入してそちらで運用しようかと思っています。<br>v6プラスに加入している回線での運用のため、IPv6に対応していないインスタンスとは疎通できないかもしれません。CloudFlare経由での通信はIPv4にも対応しておりますので、IPv4からのご利用については問題ありません。</p>",
             "url": "https://a9z.dev/blog/8-a9zdev/?rel=rss",
             "title": "ドメインを買ってMisskeyインスタンスを立てました",
-            "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.dev",
+            "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。",
             "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg",
             "date_modified": "2019-09-10T11:30:00.000Z",
             "author": {

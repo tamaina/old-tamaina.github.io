@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>aqz/tamaina's Web site</title>
-    <updated>2019-10-02T01:47:11.312Z</updated>
+    <updated>2019-10-02T04:00:11.195Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://a9z.dev"/>
     <link rel="self" href="https://a9z.dev/feed.atom"/>
@@ -10,11 +10,24 @@
     <icon>https://a9z.dev/favicon.ico</icon>
     <rights>© aqz / tamaina</rights>
     <entry>
+        <title type="html"><![CDATA[The Japanese Web Fonts v7リリース]]></title>
+        <id>https://a9z.dev/blog/9-tjwf-v7/</id>
+        <link href="https://a9z.dev/blog/9-tjwf-v7/?rel=rss"/>
+        <updated>2019-10-02T03:45:00.000Z</updated>
+        <summary type="html"><![CDATA[The Japanese Web Fonts v7をリリースしました。]]></summary>
+        <content type="html"><![CDATA[<p><a href="/The-Japanese-Web-Fonts/">The Japanese Web Fonts</a>のバージョン7をリリースしました。</p><p>バージョン7では諸々を見直し、またビルドスクリプトもちゃんと組みました。</p><p>The Japanese Web Fonts v7では、以下のような機能を備えています。</p><ul><li>細かいサブセット（ラテン、ラテン拡張、記号、ひらがな、カタカナ、小学校で習う漢字、常用漢字、表外漢字、etc.）</li><li>unicode-rangeを記載</li><li>M+ Fontは1,2,c,p,m,mn,S（記号）で別のフォントに分割</li><li>CDN（jsdelivr使用）</li></ul><p>ビルド量の関係上、形式はwoff2しか用意していませんので、Internet Explorerでは表示できません。</p><p>詳細は<a href="/The-Japanese-Web-Fonts/">The Japanese Web Fonts</a>のページをご覧ください。</p>]]></content>
+        <author>
+            <name>aqz</name>
+            <email/>
+            <uri/>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[ドメインを買ってMisskeyインスタンスを立てました]]></title>
         <id>https://a9z.dev/blog/8-a9zdev/</id>
         <link href="https://a9z.dev/blog/8-a9zdev/?rel=rss"/>
         <updated>2019-09-10T11:30:00.000Z</updated>
-        <summary type="html"><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.dev]]></summary>
+        <summary type="html"><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。]]></summary>
         <content type="html"><![CDATA[<p>ドメイン<strong>a9z.dev</strong>（アキウス・デヴ）をGoogle Domainsで購入しました。<br>このサイトは今後このドメインでの公開となります。</p><p>また、Misskeyインスタンス<strong><a href="https://mk.a9z.dev" target="_blank" rel="noopener">mk.a9z.dev<i class="fa fas external-link-alt" data-fa-prefix="fas" data-fa-icon-name="external-link-alt" data-fa-option="{'classes':['fa-fw', 'fa-sm']}"></i></a></strong>を立ち上げました。メンテ多めになると思いますが、現時点では登録を開放していますのでご自由にご登録ください。<br>自宅サーバーで運用中で、現時点は10年前ぐらいのノートPCで動作させています。Raspberry Pi 4 Model Bが発売されれば、今後はそれを購入してそちらで運用しようかと思っています。<br>v6プラスに加入している回線での運用のため、IPv6に対応していないインスタンスとは疎通できないかもしれません。CloudFlare経由での通信はIPv4にも対応しておりますので、IPv4からのご利用については問題ありません。</p>]]></content>
         <author>
             <name>aqz</name>
