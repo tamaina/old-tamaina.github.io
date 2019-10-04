@@ -1,11 +1,11 @@
 ---
 title: フォント一覧
-description: the Japanese Web Fonts v7.0.2現在のフォント一覧。
+description: The Japanese Web Fonts v7.0.2現在のフォント一覧。
 layout: default
 rank: 2
 improve: true
 ---
-p the Japanese Web Fonts v7.0.2現在のフォント一覧。
+p The Japanese Web Fonts v7.0.2現在のフォント一覧。
 
 h2 ベースフォント
 
@@ -34,6 +34,7 @@ section(style="font-family: SourceHanSans-w")
     | Bold | 700 |
     | Heavy | 800 |
 
+  input.test
 
 section(style="font-family: SourceHanSansHW-w")
   h3.blogstyle(style="font-family: SourceHanSansHW-w") Source Han Sans HW
@@ -111,6 +112,8 @@ section(style="font-family: mplus-c-w, mplus-1-w, mplus-S-w")
 
 h2 アドオンフォント
 
+p アドオンフォントはベースフォントと違う部分だけ収録しているため、ベースフォントを別途追加で指定する必要があります。（NasuとNasuMは例外）
+
 section(style="font-family: irohakakuC-w, SourceHanSans-w; font-weight:400")
   h3.blogstyle いろは角クラシック
   :md
@@ -155,7 +158,7 @@ section(style="font-family: corporateLogo-w, SourceHanSans-w; font-weight: 500")
 section(style="font-family: LiNovePOP-w, SourceHanSans-w; font-weight: 800")
   h3.blogstyle(style="font-family: LiNovePOP-w, SourceHanSans-w; font-weight: 800") ラノベPOP
   :md
-    ポップ体
+    ポップ体（ウェイトは800を指定）
 
     |||
     |:----:|:-----|
@@ -167,7 +170,7 @@ section(style="font-family: LiNovePOP-w, SourceHanSans-w; font-weight: 800")
 section(style="font-family: KeiFont-w, SourceHanSans-w; font-weight: 800")
   h3.blogstyle(style="font-family: KeiFont-w, SourceHanSans-w; font-weight: 800") けいふぉんと
   :md
-    ポップ体
+    ポップ体（ウェイトは800を指定）
 
     |||
     |:----:|:-----|
@@ -211,7 +214,7 @@ section(style="font-family: BokuGothic-w, SourceHanSans-w")
 section(style="font-family: GenEiAntique-w, GenEiAntique-N-w, SourceHanSans-w; font-weight: 500")
   h3.blogstyle(style="font-family: GenEiAntique-w, GenEiAntique-N-w, SourceHanSans-w; font-weight: 500") 源瑛アンチック
   :md
-    漫画の本文で使われるアンチゴチ体
+    漫画の本文で使われるアンチゴチ体（ウェイトは500を指定）
 
     |||
     |:----:|:-----|
@@ -223,7 +226,7 @@ section(style="font-family: GenEiAntique-w, GenEiAntique-N-w, SourceHanSans-w; f
 section(style="font-family: GenEiLateGo-w, GenEiLateGo-N-w, SourceHanSans-w; font-weight: 500")
   h3.blogstyle(style="font-family: GenEiLateGo-w, GenEiLateGo-N-w, SourceHanSans-w; font-weight: 500") 源瑛ラテゴ
   :md
-    漫画の放送用セリフで使われそうなフォント。
+    漫画の放送用セリフで使われそうなフォント。（ウェイトは500を指定）
 
     |||
     |:----:|:-----|
@@ -235,7 +238,7 @@ section(style="font-family: GenEiLateGo-w, GenEiLateGo-N-w, SourceHanSans-w; fon
 section(style="font-family: GenEiNuGothic-w, SourceHanSans-w; font-weight: 800")
   h3.blogstyle(style="font-family: GenEiNuGothic-w, SourceHanSans-w; font-weight: 800") 源瑛Nuゴシック
   :md
-    仮名を大振りにするなどした、漫画向けの太ゴシック
+    仮名を大振りにするなどした、漫画向けの太ゴシック（ウェイトは800を指定）
 
     |||
     |:----:|:-----|
@@ -247,7 +250,7 @@ section(style="font-family: GenEiNuGothic-w, SourceHanSans-w; font-weight: 800")
 section(style="font-family: GenEiUniverSans-w, SourceHanSans-w; font-weight: 400")
   h3.blogstyle(style="font-family: GenEiUniverSans-w, SourceHanSans-w; font-weight: 200") GenEi Univer Sans
   :md
-    日本語フォントと混植しても違和感がないようにしたHindベースの英数ゴシックフォント。
+    日本語フォントと混植しても違和感がないようにしたHindベースの英数ゴシックフォント
 
     |||
     |:----:|:-----|
@@ -271,7 +274,7 @@ section(style="font-family: GenEiUniverSans-w, SourceHanSans-w; font-weight: 400
 section(style="font-family: GenEiRomanNotes-w, SourceHanSerif-w; font-weight: 700")
   h3.blogstyle(style="font-family: GenEiRomanNotes-w, SourceHanSerif-w; font-weight: 700") 源瑛ロマンのーと
   :md
-    「えれがんと」と一緒に使える欧文フォント。
+    「えれがんと」と一緒に使える欧文フォント（`font-face`で指定されているウェイトは900だが、ここでは700を指定）
 
     |||
     |:----:|:-----|
@@ -283,7 +286,7 @@ section(style="font-family: GenEiRomanNotes-w, SourceHanSerif-w; font-weight: 70
 section(style="font-family: Nasu-w")
   h3.blogstyle(style="font-family: Nasu-w; font-weight: 700") Nasu
   :md
-    ディスプレイ向けのフォント。
+    ディスプレイ向けのフォント
 
     |||
     |:----:|:-----|
@@ -302,7 +305,7 @@ section(style="font-family: Nasu-w")
 section(style="font-family: NasuM-w")
   h3.blogstyle(style="font-family: NasuM-w; font-weight: 700") NasuM
   :md
-    ディスプレイ向けの等幅フォント。
+    ディスプレイ向けの等幅フォント
 
     |||
     |:----:|:-----|

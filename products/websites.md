@@ -13,5 +13,5 @@ rank: 98
 ## [himekawa-sekken.github.io](https://himekawa-sekken.github.io)
 「姫川雪質研究会」という謎の団体のWebサイト。
 
-## [tamaina.github.io](#tamaina.github.io)
+## a9z.dev
 このサイト

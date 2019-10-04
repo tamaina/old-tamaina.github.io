@@ -1,20 +1,21 @@
 ---
-title: the Japanese Web Fonts
-description: the Japanese Web Fontsは、フリーフォントを集めたWebフォントセットです。
+title: The Japanese Web Fonts
+description: The Japanese Web Fontsは、フリーフォントを集めたWebフォントセットです。
 layout: index
 rank: 10
 ---
-the Japanese Web Fontsは、日本語フリーフォントを集めたWebフォントセットです。  
+The Japanese Web Fontsは、日本語フリーフォントを集めたWebフォントセットです。  
 日本語用にサブセットしています。
 
-[GitHub tamaina/the-japanese-web-fonts](https://github.com/tamaina/The-Japanese-Web-Fonts)
+[GitHub tamaina/The-Japanese-Web-Fonts](https://github.com/tamaina/The-Japanese-Web-Fonts)
 
 ## 概要
 日本語に適したサブセットにしています。
 
-- unicode-range指定
-- 細かいサブセット
-- CDN配信
+- 細かいサブセット（ラテン、ラテン拡張、記号、ひらがな、カタカナ、小学校で習う漢字、常用漢字、表外漢字、etc.）
+- unicode-rangeを記載
+- M+ Fontは1,2,c,p,m,mn,S（記号）で別のフォントに分割
+- CDN（jsdelivr使用）
 
 ## 使い方
 

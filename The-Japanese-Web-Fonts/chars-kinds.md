@@ -1,10 +1,10 @@
 ---
 title: 文字種と文字一覧
-description: the Japanese Web Fonts v7.0.2現在の文字種と文字一覧。
+description: The Japanese Web Fonts v7.0.2現在の文字種と文字一覧。
 layout: default
 rank: 3
 ---
-the Japanese Web Fonts v7.0.2現在の文字種と文字一覧。  
+The Japanese Web Fonts v7.0.2現在の文字種と文字一覧。  
 [ソースファイル](https://github.com/tamaina/The-Japanese-Web-Fonts/tree/master/text/chars)
 
 ## 順位
