@@ -34,7 +34,7 @@ export default () => {
     document.head.append(...fonts.map(font => {
       const lnk = document.createElement("link")
       lnk.setAttribute("rel", "stylesheet")
-      lnk.setAttribute("href", `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.0.2/dist/${font}/${font}.css`)
+      lnk.setAttribute("href", `https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.1.0/dist/${font}/${font}.css`)
       return lnk
     }))
 

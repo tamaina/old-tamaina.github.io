@@ -17,7 +17,7 @@ pages_src:
 page_namingrule: name
 theme_color:
   primary: "#ffffff"
-  secondary: "#000000"
+  secondary: "#00251b"
 # theme_colorはmanifest用なのでスタイルシートのprimaryなどとは別
 default:
   template: default
