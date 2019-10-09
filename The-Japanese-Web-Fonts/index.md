@@ -2,7 +2,7 @@
 title: The Japanese Web Fonts
 description: The Japanese Web Fontsは、フリーフォントを集めたWebフォントセットです。
 layout: index
-rank: 10
+rank: 11
 ---
 The Japanese Web Fontsは、日本語フリーフォントを集めたWebフォントセットです。  
 日本語用にサブセットしています。
@@ -22,7 +22,7 @@ The Japanese Web Fontsは、日本語フリーフォントを集めたWebフォ�
 [フォントリスト](fonts/)の「CSS」に書かれているURLをHTMLの`&lt;link&gt;`タグで読み込みます。
 
 ```html
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.0.2/dist/SourceHanSans/SourceHanSans.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.1.0/dist/SourceHanSans/SourceHanSans.css"&gt;
 ```
 
 [フォントリスト](fonts/)の「font-family」に書かれているフォント名をfont-familyとして指定します。

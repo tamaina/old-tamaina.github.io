@@ -8,7 +8,7 @@ aqz/tamainaは、「あきうす/たまいな」と読み、ある人間のハ�
 
 ## 興味対象
 aqzは以下の要素に興味があるようです。
-1. **鉄道を主軸とした交通**
+1. **交通（鉄道中心）**
   * [Simutrans (ゲーム)](http://japanese.simutrans.com/)が好き。
     * 沼ゲー。
     * 信号システムが独特。
@@ -16,14 +16,13 @@ aqzは以下の要素に興味があるようです。
     * OSSであり本体開発も醍醐味のひとつ。
 2. **東方Project**
   * 原作は未プレイだが、Steamで公開されている作品はやっていっていく予定。
-  * 好きな登場人物……「あれは群像劇であり、その質問自体が愚か」
 3. **VTuber**
   * 一推しのは[冬野伊雪](https://www.youtube.com/channel/UCcmuIymL38UIP9_ojixhyww)。
   * VTuberが流行り始めたころに「新人発掘」に勤しんでいた時期がある。
     * 「Virtual YouTubers' Fans」というサイトを運営しており、VTuber全員網羅を目指していたため、必然的に新人発掘する必要が発生した。
-  * Twitterのタグ *#VTuber準備中* や *#VTuberはじめました* を定着させたのはaqzかもしれない（崇めて）。
+  * Twitterのタグ *#VTuber準備中* や *#VTuberはじめました* を定着させたのはaqzかもしれない。
 4. **Web技術 (HTML/CSS/JavaScript)**
-  * 安く上がるので、静的なサイトで事を済まそうとしている。
+  * 安く上がるので、staticなサイトで事を済まそうとしている。
   * このサイトについても自分でビルダー[「maqz」](/maqz/)を製作した。
   * [MDN](https://developer.mozilla.org/ja/)は聖典。
 5. **政治**

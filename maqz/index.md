@@ -2,7 +2,7 @@
 title: maqz
 description: maqzは、node.js製の静的サイトビルダーです。
 layout: index
-rank: 2
+rank: 10
 ---
 maqzは、Node.js製の静的サイトビルダーです。
 
