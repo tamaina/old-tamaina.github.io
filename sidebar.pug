@@ -7,6 +7,9 @@ ul.list-unstyled.sidebarstyle-list
 
 ul.list-unstyled.sidebarstyle-list
   li
+    a.d-block(href="https://mk.a9z.dev/@aqz" target="_blank" rel="noreferrer")
+      | @aqz@mk.a9z.dev
+  li
     a.d-block(href="https://yuzulia.xyz/@aqz" target="_blank" rel="noreferrer")
       | @aqz@yuzulia.xyz
   li
@@ -16,24 +19,23 @@ ul.list-unstyled.sidebarstyle-list
   li
     a.d-block(href="https://twitter.com/t_ma1n" target="_blank" rel="noreferrer")
       +fa_fw('twitter', 'fab')
-      |  t_ma1n （うるさくないアカウント）
+      |  t_ma1n#[br]　#[small うるさくないアカウント]
   li
     a.d-block(href="https://twitter.com/aqzvy" target="_blank" rel="noreferrer")
       +fa_fw('twitter', 'fab')
-      |  aqzvy （VTuber方面アカウント）
+      |  aqzvy#[br]　#[small VTuber方面アカウント]
   li
     a.d-block(href="https://twitter.com/aqz_tmin" target="_blank" rel="noreferrer")
       +fa_fw('twitter', 'fab')
-      |  aqz_tmin （多方面・RT多めアカウント）
+      |  aqz_tmin#[br]　#[small 多方面・RT多めアカウント]
   li
     a.d-block(href="https://twitter.com/aqzsy" target="_blank" rel="noreferrer")
       +fa_fw('twitter', 'fab')
-      |  aqzsy （政治方面アカウント）
+      |  aqzsy#[br]　#[small 政治方面アカウント]
   li
     a.d-block(href="https://www.youtube.com/channel/UC2_ujStdw7oU3wW283K1yeA?sub_confirmation=1" target="_blank" rel="noreferrer")
       +fa_fw('youtube', 'fab')
       |  YouTube
 
-#updateTime.small
-  | サイトの更新 
-  span.text-muted #{updateMoment.format('lll')}
+#updateTime.small.text-muted
+  | Site built at #{updateMoment.format('lll')}
