@@ -4,10 +4,12 @@
 
 const {
   faGithub,
-  faTwitter
+  faTwitter,
+  faYoutube
 } = require("@fortawesome/free-brands-svg-icons")
 
 const {
+  faBars,
   faHome,
   faExternalLinkAlt
 } = require("@fortawesome/free-solid-svg-icons")
@@ -16,7 +18,9 @@ module.exports = {
   icons: [
     faGithub,
     faTwitter,
+    faYoutube,
 
+    faBars,
     faHome,
     faExternalLinkAlt
   ]

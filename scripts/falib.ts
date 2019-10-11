@@ -5,20 +5,24 @@ import { icon, Icon, IconLookup, IconParams, library } from "@fortawesome/fontaw
 
 import {
   faGithub,
-  faTwitter
+  faTwitter,
+  faYoutube
 } from "@fortawesome/free-brands-svg-icons"
 library.add(
   faGithub,
-  faTwitter
+  faTwitter,
+  faYoutube
 )
 
 import {
+  faBars,
   faExternalLinkAlt,
   faHome
 } from "@fortawesome/free-solid-svg-icons"
 library.add(
-  faHome,
-  faExternalLinkAlt
+  faBars,
+  faExternalLinkAlt,
+  faHome
 )
 
 export const getHTML = (query: IconLookup, option: IconParams): string => {
