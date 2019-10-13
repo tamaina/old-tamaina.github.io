@@ -273,17 +273,18 @@ async function toamp(htm) {
   // eslint-disable-next-line no-shadow
   const $ = cheerio.load(htm, { decodeEntities: false })
   const promises = []
-  $("img[src]").each((i, el) => {
+  $("picture").each((i, el) => {
     promises.push(async () => {
+      const img = $(el).children("img[src]").first()
+      const webp = $(el).children("source[type='image/webp']").first()
       // eslint-disable-next-line no-shadow
-      // console.log("IMAGE")
-      // eslint-disable-next-line no-shadow
-      const src = $(el).attr("src")
-      const alt = $(el).attr("alt")
-      const title = $(el).attr("title")
-      const id = $(el).attr("id")
-      let width = $(el).attr("width")
-      let height = $(el).attr("height")
+      const src = img.attr("src")
+      const srcset = webp.attr("srcset")
+      const alt = img.attr("alt")
+      const title = img.attr("title")
+      const id = img.attr("id")
+      let width = img.attr("width")
+      let height = img.attr("height")
       if ((width === undefined || height === undefined) && src.startsWith(`${urlPrefix}/files/`)) {
         const dims = sizeOf(`.${src.slice(urlPrefix.length)}`)
         // eslint-disable-next-line prefer-destructuring
@@ -310,7 +311,7 @@ async function toamp(htm) {
         glog(`${messages.amp.invalid_imageUrl}:\n${src}`)
         return
       }
-      $(el).replaceWith(`<amp-img src="${src}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
+      $(el).replaceWith(`<amp-img src="${src}" srcset="${srcset}" alt="${alt}" title="${title}" id="${id}" width="${width}" height="${height}" layout="responsive"></amp-image>`)
     })
   })
   if (promises.length > 0) await Promise.all(promises)
