@@ -92,7 +92,8 @@ html(amp)
   body
 
     if(site.sidebar)
-      amp-sidebar(id="sidebar" layout="nodisplay" side="left")!=sidebarHtml
+      amp-sidebar(id="sidebar" layout="nodisplay" side="left")
+        .sidebar-inner!=sidebarHtml
 
     #ampGrid
       block wo_footer
