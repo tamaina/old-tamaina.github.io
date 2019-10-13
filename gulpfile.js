@@ -420,6 +420,11 @@ gulp.task("pug", async () => {
                 puglocals,
                 { isAmp: true, mainHtml: ampHtml }
               )
+
+              if (site.sidebar && sidebarPaths.length > 0) {
+                newoptions.sidebarHtml = pug.render(`${newoptions.themePug.script}\n${newoptions.themePug.mixin}\n${sidebarReads[puglocals.sidebarpath]}`, newoptions)
+              }
+
               gulp.src(amptemplate)
                 .pipe($.pug({ locals: newoptions }))
                 .pipe($.rename(`${page.meta.permalink}amp.html`))
