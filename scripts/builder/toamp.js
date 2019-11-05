@@ -17,8 +17,8 @@ const messages = loadyaml("./.config/messages.yml")
 module.exports = (htm, urlPrefix) => {
   const { window } = new JSDOM(htm)
   const { document } = window
-  Array.from(document.getElementsByTagName("picture")).forEach((picture) => {
-    Array.from(picture.getElementsByTagName("img")).forEach((el) => {
+  document.querySelectorAll("picture").forEach((picture) => {
+    picture.querySelectorAll("img").forEach((el) => {
       const src = el.getAttribute("src")
       const alt = el.getAttribute("alt")
       const title = el.getAttribute("title")
