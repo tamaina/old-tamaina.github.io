@@ -86,7 +86,7 @@
     "mkdirp": "^0.5.1",
     "moment": "^2.24.0",
     "node-sass": "^4.10.0",
-    "npm": "^6.9.0",
+    "npm": "^6.13.0",
     "numeral": "^2.0.6",
     "pjax-api": "^3.27.0",
     "postcss-sorting": "5",
