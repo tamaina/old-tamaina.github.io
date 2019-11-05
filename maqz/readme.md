@@ -12,7 +12,6 @@ description: 詳細な使い方
 - **node.js**
 - **Git**
 - **ImageMagick**もしくは**GraphicsMagick**
-- **Inkscape**（ストア版は不可）
 
 また、エディターも必要です。エディターにはVisual Studio Codeを推奨します。
 
