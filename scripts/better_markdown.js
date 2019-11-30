@@ -7,19 +7,6 @@ const punycode = require("punycode")
 
 module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
   const suf = `?v=${image_compressing_strategy_version}`
-  /*
-  function fuckescape(val){
-    val = val.replace(/&amp;/g, "&")
-             .replace(/&lt;/g, "<")
-             .replace(/&gt;/g, ">")
-             .replace(/&#39;/g, "'")
-             .replace(/&quot;/g, "\"")
-    val = val.replace(/&lt;/g, "<")
-             .replace(/&gt;/g, ">")
-             .replace(/&#39;/g, "'")
-             .replace(/&quot;/g, "\"")
-    return val
-  } */
 
   const $ = cheerio.load(htm, { decodeEntities: false })
 

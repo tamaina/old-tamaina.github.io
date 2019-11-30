@@ -4,7 +4,7 @@
 const Prism = require("prismjs")
 const cheerio = require("cheerio")
 
-module.exports = (htm) => {
+module.exports = htm => {
   const $ = cheerio.load(htm, { decodeEntities: false })
   $("code").each((i, el) => {
     const cl = $(el).attr("class")
@@ -24,6 +24,7 @@ module.exports = (htm) => {
 
     if (!grammer) lang = "javascript"
 
+    console.log(escape($(el).text()))
     $(el).html(
       Prism.highlight(
         $(el).text(), Prism.languages[lang], lang
