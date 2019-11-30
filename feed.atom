@@ -2,13 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>aqz/tamaina's Web site</title>
-    <updated>2019-11-30T06:04:12.839Z</updated>
+    <updated>2019-11-30T06:22:20.531Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://a9z.dev"/>
     <link rel="self" href="https://a9z.dev/feed.atom"/>
     <subtitle>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</subtitle>
     <icon>https://a9z.dev/favicon.ico</icon>
     <rights>© aqz / tamaina</rights>
+    <entry>
+        <title type="html"><![CDATA[maqzアップデート]]></title>
+        <id>https://a9z.dev/blog/10-update</id>
+        <link href="https://a9z.dev/blog/10-update?rel=rss"/>
+        <updated>2019-11-30T06:20:00.000Z</updated>
+        <summary type="html"><![CDATA[joinmisskeyでの成果をもとにmaqzをアップデートしました。]]></summary>
+        <author>
+            <name>aqz</name>
+            <email/>
+            <uri/>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Japanese Web Fonts v7リリース]]></title>
         <id>https://a9z.dev/blog/9-tjwf-v7</id>

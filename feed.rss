@@ -4,11 +4,19 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Sat, 30 Nov 2019 06:04:12 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 06:22:20 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
         <atom:link href="https://a9z.dev/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[maqzアップデート]]></title>
+            <link>https://a9z.dev/blog/10-update?rel=rss</link>
+            <guid>https://a9z.dev/blog/10-update?rel=rss</guid>
+            <pubDate>Sat, 30 Nov 2019 06:20:00 GMT</pubDate>
+            <description><![CDATA[joinmisskeyでの成果をもとにmaqzをアップデートしました。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg"/>
+        </item>
         <item>
             <title><![CDATA[The Japanese Web Fonts v7リリース]]></title>
             <link>https://a9z.dev/blog/9-tjwf-v7?rel=rss</link>

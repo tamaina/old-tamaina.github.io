@@ -6,6 +6,17 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/10-update",
+            "url": "https://a9z.dev/blog/10-update?rel=rss",
+            "title": "maqzアップデート",
+            "summary": "joinmisskeyでの成果をもとにmaqzをアップデートしました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg",
+            "date_modified": "2019-11-30T06:20:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/9-tjwf-v7",
             "url": "https://a9z.dev/blog/9-tjwf-v7?rel=rss",
             "title": "The Japanese Web Fonts v7リリース",
