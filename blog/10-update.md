@@ -21,7 +21,7 @@ amp: true
   もともとこうするべきだったのですが、PugのAPIがよくわからなかったためできていませんでした。
 - 縮小画像の生成に[gulp-responsive](https://www.npmjs.com/package/gulp-responsive)を用いるようにしました。  
   gulp-responsiveは[sharp](https://sharp.pixelplumbing.com/en/stable/)を使用するので、ImageMagick/GraphicsMagickの依存が解消され、さらにイメージ縮小処理が高速化しました。普段あんまりしないけど。
-- `<picture>`要素および`srcset`/`sizes`属性を導入し、画像読み込みの高速化をしました。
+- `&lt;picture&gt;`要素および`srcset`/`sizes`属性を導入し、画像読み込みの高速化をしました。
 - Pjaxは要らなさそうなので廃止しました。  
   Pjaxの問題点:
   * Googleの諸々のスクリプトと相性が合わない
