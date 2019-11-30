@@ -63,8 +63,8 @@
         {
             "id": "https://a9z.dev/blog/5-fediverse",
             "url": "https://a9z.dev/blog/5-fediverse?rel=rss",
-            "title": "Fediverseへのいざない――自分だけのSNSを持ってみないか？",
-            "summary": "MastodonやMisskeyを自分で持ってみませんか。VTuberさんなどのコミュニティにお勧めかも？",
+            "title": "Fediverseへのいざない",
+            "summary": "分散SNSで自分に合ったインターネットライフを。",
             "image": "https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png",
             "date_modified": "2019-03-15T04:15:00.000Z",
             "author": {

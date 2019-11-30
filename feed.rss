@@ -4,7 +4,7 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Sat, 30 Nov 2019 07:47:41 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 07:53:08 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
@@ -50,11 +50,11 @@
             <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg"/>
         </item>
         <item>
-            <title><![CDATA[Fediverseへのいざない――自分だけのSNSを持ってみないか？]]></title>
+            <title><![CDATA[Fediverseへのいざない]]></title>
             <link>https://a9z.dev/blog/5-fediverse?rel=rss</link>
             <guid>https://a9z.dev/blog/5-fediverse?rel=rss</guid>
             <pubDate>Fri, 15 Mar 2019 04:15:00 GMT</pubDate>
-            <description><![CDATA[MastodonやMisskeyを自分で持ってみませんか。VTuberさんなどのコミュニティにお勧めかも？]]></description>
+            <description><![CDATA[分散SNSで自分に合ったインターネットライフを。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png"/>
         </item>
     </channel>
