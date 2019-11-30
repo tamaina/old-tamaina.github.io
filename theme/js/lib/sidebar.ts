@@ -31,9 +31,6 @@ export class Sidebar {
 
     onReady(this.registerOnReady.bind(this))
 
-    document.addEventListener("pjax:content", this.registerClick.bind(this))
-    window.addEventListener("pjax:fetch", this.sidebarClose.bind(this))
-
     window.addEventListener("resize", this.sidebarClose.bind(this))
   }
 

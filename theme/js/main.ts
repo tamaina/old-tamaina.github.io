@@ -1,13 +1,11 @@
-import { fainit } from "./fainit"
-import { gototop } from "./gototop"
-import onReady from "./onReady"
-import { scrolltoshow } from "./scrolltoshow"
+import { fainit } from "./lib/fainit"
+import { gototop } from "./lib/gototop"
+import onReady from "./lib/onReady"
+import { scrolltoshow } from "./lib/scrolltoshow"
 
-import importCss from "./import-css"
-import { detectOldBrowser } from "./old-browsers"
-import { pjaxinit } from "./pjax"
-import { pjaxLoaded } from "./pjax-ready-others"
-import { Sidebar } from "./sidebar"
+import importCss from "./lib/import-css"
+import { detectOldBrowser } from "./lib/old-browsers"
+import { Sidebar } from "./lib/sidebar"
 
 function contentReady() {
   fainit()
@@ -17,11 +15,7 @@ function contentReady() {
 }
 
 onReady(contentReady)
-document.addEventListener("pjax:content", contentReady)
 
 new Sidebar()
-pjaxinit()
 
 detectOldBrowser()
-
-window.addEventListener("pjax:load", pjaxLoaded)

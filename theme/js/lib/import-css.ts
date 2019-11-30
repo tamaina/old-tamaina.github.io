@@ -1,7 +1,7 @@
 export default () => {
-  const top = require("../styl/lazy/top.sass")
+  const top = require("../../styl/lazy/top.sass")
   top.unuse()
-  const tjwf = require("../styl/lazy/tjwf.sass")
+  const tjwf = require("../../styl/lazy/tjwf.sass")
   tjwf.unuse()
 
   const p = window.location.pathname
@@ -40,4 +40,13 @@ export default () => {
 
     tjwf.use()
   } else if (tjwf.unuse) { tjwf.unuse() }
+
+  for (const preload
+    of document.querySelectorAll("link[rel=\"preload\"][as=\"style\"]") as unknown as HTMLLinkElement[]) {
+    const href = preload.href
+    const style = document.createElement("link")
+    style.rel = "stylesheet"
+    style.href = href
+    document.head.appendChild(style)
+  }
 }

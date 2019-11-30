@@ -7,7 +7,6 @@ const frontMatter = require("front-matter")
 const url = require("url")
 
 function isMetaPage(site, permalink) {
-  console.log(site.meta_pages)
   return site.meta_pages.some(i => permalink === `/${i}`)
 }
 

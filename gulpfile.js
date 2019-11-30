@@ -190,6 +190,7 @@ gulp.task("js", cb => {
   const wpackconf = {
     entry: {
       main: "./theme/js/main.ts",
+      "blog-index": "./theme/js/blog-index.ts",
       sw: "./theme/js/sw.ts"
     },
     output: {

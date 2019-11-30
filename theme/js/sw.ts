@@ -1,3 +1,3 @@
-import { swinit } from "./swinit"
+import { swinit } from "./lib/swinit"
 
 swinit()

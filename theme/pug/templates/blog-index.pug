@@ -6,24 +6,22 @@ append preset
     const indexname = "ブログ"
     const indexHeadline = "記事一覧"
   -
-    pages.sort(function(a,b) {
-      if(( a.meta.mtime || a.meta.birthtime ) < ( b.meta.mtime || b.meta.birthtime )) { return 1 } else { return -1 }
-    });
+    let queries = []
 
-    let queries = [], qpages = []
-    
     let rootpath = (() => {
       if(page.attributes.query && page.attributes.query.root) return `/${page.attributes.query.root}`
       else return page.meta.permalink
     })()
 
-    // 「${indexname}」として表示するページの条件を指定し、Array.filter()関数でqpagesに代入します。
+    let qpages = pages.filter(e => (e.meta.permalink.startsWith(rootpath) &&
+      e.attributes.layout === indexPrefix &&
+      e.attributes.draft != true &&
+      e.attributes.published == true))
 
-    qpages = pages.filter(e => e.meta.permalink.indexOf(rootpath) == 0
-                            && e.attributes.layout == indexPrefix           // blogレイアウトが適用されている
-                            && e.attributes.draft != true              // 
-                            && e.attributes.published == true
-                          )
+    qpages.sort((a, b) => {
+      if ((a.meta.mtime || a.meta.birthtime) < (b.meta.mtime || b.meta.birthtime)) return 1
+      return -1
+    })
 
     function addQuery(q, n){
       if( typeof q === "string" ){ queries.push( {"type": n, "query": q} ) }
@@ -47,9 +45,7 @@ append preset
     }
 
     if( page.attributes.query ) {
-
       // front-matter のquery設定があれば適用します
-
       if( page.attributes.query.path ) qpages = pathFilter(page.attributes.query.path, qpages)
       if( page.attributes.query.directory ) qpages = pathFilter(page.attributes.query.directory, qpages)
       if( page.attributes.query.directories ) qpages = pathFilter(page.attributes.query.directories, qpages)
@@ -62,11 +58,14 @@ append preset
       if(queries != []){
         qpages = qpages.filter(function(e,i,a){
           for( m = 0; m < queries.length; m++ ){
-            if( !!e.attributes[queries[m].type] ){ if( e.attributes[queries[m].type].find(f => f === queries[m].query ) !== undefined ) { return true } }
+            if( !!e.attributes[queries[m].type] ){
+              if( e.attributes[queries[m].type].find(f => f === queries[m].query ) !== undefined ) {
+                return true
+              }
+            }
           }
         })
       }
-
     }
   -
     // 見出しを設定します。
@@ -85,20 +84,19 @@ append preset
     if(!page.attributes.title) page.attributes.title = headline
 
 block title
-  title ブログ: #{page.attributes.title} - #{site.name}
+  title #{page.attributes.title} - Blog
 
 block article_header
-  header.w-100
-    h1 ブログ: #{page.attributes.title}
+  h1.pb-2 Blog: #{page.attributes.title}
 
 append article_body
   h2.font-weight-light.h3= headline
   #blog_index.d-flex.flex-row.row.m-0
-    each thispage in qpages
-      a(href=`${site.url.path}${thispage.meta.permalink}`).blog-index-item
+    each thispage, p in qpages
+      a.blog-index-item(href=`${site.url.path}${thispage.meta.permalink}` style="display: none;")
         article.card
-          if ( thispage.meta.thumbnail )
-            img.card-img-top(alt="サムネイル", src=`${site.url.path}${thispage.meta.thumbnail.dir}/${thispage.meta.thumbnail.name}.720${thispage.meta.thumbnail.ext}`)
+          if ( thispage.attributes.thumbnail )
+            +picture({ src: thispage.attributes.thumbnail, alt: "サムネイル", loading: "lazy", class: "card-img-top", sizes: "calc(100vw - 30px - 1rem), (min-width: 576px) 494px, (min-width: 768px) 329px, (min-width: 992px) 449px, (min-width: 1200px) 354px" })
           h4.card-title #{thispage.attributes.title}
           p.card-text.px-3 #{thispage.attributes.description}
           - let birthtime = new Date(thispage.meta.birthtime)
@@ -106,5 +104,11 @@ append article_body
           footer.card-footer
             div.mr-2
               +fa_fw("clock")
-              time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).format('lll')
+              time(datetime=thispage.meta.mtime)=moment(thispage.meta.mtime).format('llll z')
             +blog_badges(thispage)
+
+  nav#pagination_container.pt-4
+    ul.pagination.justify-content-center
+      each undef, q in Array(Math.floor(qpages.length / 18) + 1)
+        li.page-item
+          a.page-link(href=`?page=${q + 1}`)= q + 1
