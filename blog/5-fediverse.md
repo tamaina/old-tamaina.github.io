@@ -1,6 +1,6 @@
 ---
-title: Fediverseへのいざない――自分だけのSNSを持ってみないか？
-description: MastodonやMisskeyを自分で持ってみませんか。VTuberさんなどのコミュニティにお勧めかも？
+title: Fediverseへのいざない
+description: 分散SNSで自分に合ったインターネットライフを。
 layout: blog
 Tag: Misskey
 category: Computer
