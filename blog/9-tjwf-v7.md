@@ -2,7 +2,7 @@
 title: The Japanese Web Fonts v7リリース
 description: The Japanese Web Fonts v7をリリースしました。
 layout: blog
-#category: Misskey
+category: Computer
 thumbnail: /files/images/imports/2019/08/P_20190812_103848.jpg
 date: 2019-10-02T12:45:00+09:00
 author:

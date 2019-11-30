@@ -11,7 +11,6 @@ description: 詳細な使い方
 
 - **node.js**
 - **Git**
-- **ImageMagick**もしくは**GraphicsMagick**
 
 また、エディターも必要です。エディターにはVisual Studio Codeを推奨します。
 
@@ -79,12 +78,6 @@ filesフォルダー以下に置いたファイルには圧縮がかかります
 `theme/static/`に置いたファイルは圧縮されません。
 
 設定は`./config/images.yml`で行います。
-
-ImageMagickまたはGraphicsMagickが必要です。  
-
-#### 設定ファイル
-- `imageMagick:` *boolean*
-  ImageMagickの場合は**true**、GraphicsMagickの場合は**false**を指定します。
 
 #### 画像を追加
 ```

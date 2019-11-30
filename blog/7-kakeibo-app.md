@@ -2,7 +2,7 @@
 title: 家計簿アプリの話
 description: とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。
 layout: blog
-#category: Misskey
+category: Money
 thumbnail: /files/images/imports/2019/09/P_20190906_183148.jpg
 date: 2019-09-09T15:00:00+09:00
 author:

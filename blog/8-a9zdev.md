@@ -2,7 +2,7 @@
 title: ドメインを買ってMisskeyインスタンスを立てました
 description: a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。
 layout: blog
-#category: Misskey
+category: Computer
 thumbnail: /files/images/imports/2019/09/P_20190906_151146.jpg
 date: 2019-09-10T20:30:00+09:00
 author:
