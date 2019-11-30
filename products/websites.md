@@ -5,7 +5,7 @@ rank: 98
 ---
 同じ人が作っているため同じ感じになっています。
 
-## [joinmisskey.github.io](https://joinmisskey.github.io)
+## [join.misskey.page](https://join.misskey.page)
 [Misskey](https://github.com/syuilo/misskey)を紹介するサイト。
 
 - 複数言語対応版（文書はGitのブランチ分けで管理、言語間自動遷移スクリプトつき）
