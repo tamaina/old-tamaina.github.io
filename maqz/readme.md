@@ -96,8 +96,8 @@ gulp image -i <glob-readable-path>
 - `/files/images/imports/yyyy/mm/{name}.webp` - 横幅が1200px以下でwebp
 - `/files/images/imports/yyyy/mm/{name}.720.{ext}` - 横幅が720px以下で同系式（圧縮はする）
 - `/files/images/imports/yyyy/mm/{name}.720.webp` - 横幅が720pxのwebp
-- `/files/images/imports/yyyy/mm/{name}.360.{ext}` - 横幅が720px以下で同系式（圧縮はする）
-- `/files/images/imports/yyyy/mm/{name}.360.webp` - 横幅が720pxのwebp
+- `/files/images/imports/yyyy/mm/{name}.360.{ext}` - 横幅が360px以下で同系式（圧縮はする）
+- `/files/images/imports/yyyy/mm/{name}.360.webp` - 横幅が360pxのwebp
 
 SVGも圧縮しますが、png化などは行いません。
 

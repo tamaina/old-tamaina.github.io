@@ -1,5 +1,6 @@
 ---
-title: Blog
+title: トップ
+title-breadcrumb: Blog
 description: ブログです。
 layout: blog-index
 rank: 3
