@@ -1,26 +1,14 @@
-const kramed = require("kramed")
-const { minify } = require("html-minifier")
-const readyaml = require("js-yaml").safeLoad
-const fs = require("fs")
-
-const betterMarkdown = require("./scripts/better_markdown")
-const highl = require("./scripts/highl")
-
-function loadyaml(filepath) {
-  return readyaml(fs.readFileSync(filepath))
-}
-const site = Object.assign(loadyaml("./.config/messages.yml"), loadyaml("./.config/default.yml"))
+/* eslint-disable global-require */
+const site = require("./scripts/site")
 
 module.exports = {
-  md: (str) => {
-    let htm = kramed(str)
-    htm = betterMarkdown(htm, site.url.path)
-    htm = highl(htm)
-    htm = minify(htm, {
-      collapseWhitespace: true, removeEmptyAttributes: false, removeEmptyElements: false
-    })
+  md: str => {
+    let htm = require("marked")(str)
+    htm = require("./scripts/better_markdown")(htm, site.url.path, site.image_compressing_strategy_version)
+    htm = require("./scripts/highl")(htm)
+    htm = require("html-minifier").minify(htm, { collapseWhitespace: true, removeEmptyAttributes: false, removeEmptyElements: false })
     return htm
   },
-  markdown: str => kramed(str),
+  markdown: str => (require("marked")(str)),
   oneline: str => str.replace(/\r?\n/g, "")
 }

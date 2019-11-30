@@ -1,56 +1,64 @@
-imageMagick: false
-images: 
-  files: 
-    all: 
-      image: 
-        pngquant: 
-          - "--speed=3"
-        mozjpeg: 
-          - "-optimize"
-          - "-progressive"
-        concurrent: 10
-    sizes: 
-      - resize: 
-          width: 1600
-          crop: false
-          upscale: false
-          interlace: line
-          cover: false
-        image: 
-      - rename: 
-          extname: ".webp"
-        resize: 
-          width: 1600
-          crop: false
-          upscale: false
-          interlace: line
-          cover: false
-          format: webp
-        image: 
-      - rename: 
-          suffix: ".720"
-        resize: 
-          width: 720
-          height: 720
-          crop: false
-          upscale: false
-          interlace: line
-          cover: false
-          sharpen: "0x0.75+0.75+0.008"
-        image: 
-      - rename: 
-          suffix: ".720"
-          extname: ".webp"
-        resize: 
-          width: 720
-          height: 720
-          crop: false
-          upscale: false
-          interlace: line
-          cover: false
-          format: webp
-          sharpen: "0x0.75+0.75+0.008"
-        image: 
+image_compressing_strategy_version: 1.0.0
+images:
+  files:
+    all:
+      image:
+        pngquant:
+        - "--speed=1"
+        mozjpeg:
+        - "-optimize"
+        - "-progressive"
+        concurrent: 16
+      responsive:
+        rotate: true
+        quality: 99
+        compressionLevel: 0
+        progressive: true
+        errorOnEnlargement: false
+        errorOnUnusedConfig: false
+        errorOnUnusedImage: false
+        passThroughUnused: false
+    responsive:
+    - width: 1200
+      withoutEnlargement: true
+      crop: false
+    - width: 1200
+      crop: false
+      withoutEnlargement: true
+      quality: 80
+      # format: webp
+      rename:
+        extname: ".webp"
+    - width: 720
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      rename:
+        suffix: ".720"
+    - width: 720
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      quality: 80
+      # format: webp
+      rename:
+        suffix: ".720"
+        extname: ".webp"
+    - width: 360
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      rename:
+        suffix: ".360"
+    - width: 360
+      crop: false
+      withoutEnlargement: true
+      sharpen: "0.5x0.5+0.5+0.008"
+      quality: 70
+      # format: webp
+      rename:
+        suffix: ".360"
+        extname: ".webp"
 icons: 
   - path: "/files/images/icons/icon-2.svg"
     sizes: 192x192

@@ -2,4 +2,4 @@ extends ./default.pug
 
 append article_body_inner
   ul.simpleindex.list-unstyled
-    +lis_of_dir(page.meta.permalink, {self: false, s: true, unstyled: true, description: (page.attributes.description !== undefined ? page.attributes.description : true)})
+    +lis_of_dir(page.meta.permalink, {self: false, s: false, unstyled: true, description: (page.attributes.description !== undefined ? page.attributes.description : true)})

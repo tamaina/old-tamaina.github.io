@@ -21,31 +21,29 @@ nav(aria-label="breadcrumb")#breadcrumb.bg-transparent
       if( dirs.length > 2 )
         li.breadcrumb-item
           a(href=`${site.url.path}/` aria-label=topPage.attributes['title-breadcrumb'] || topPage.attributes.title).py-1.text-primary
-            +fa_fw("home", "fas")
+            +fa_fw("home","fas")
         - let dirpl = `/`
-        - const offset = dirpl.split('/').length - 1
-        - for( let i = offset; i < dirs.length - offset; i++ ){               // i = 3 の場合
+        - for( let i = 1; i < dirs.length - (dirs[dirs.length - 1] === "" ? 2 : 1); i++){                // i = 3 の場合
         -   let nowdir = dirs[i]                                    // "bar"
         -   dirpl = `${dirpl}${nowdir}/`                            // /foo/bar/
         -   let indexPage = pages.find(e => e.meta.permalink === dirpl)
-        -   if( indexPage != undefined && i < dirs.length - 2 ){
-        -     const title = indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title
+        -   if( indexPage != undefined ){
+        -     const title = (indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title) || dirs[i] || "index"
         -     if (!!title) {
-              li.breadcrumb-item
-                a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{title}
+          li.breadcrumb-item
+            a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{title}
         -     } else {
           li.breadcrumb-item
             a(href=`${site.url.path}${dirpl}`).py-1.text-primary #{nowdir}
         -     }
-        -   } else if( indexPage == undefined && i < dirs.length - 2 ){
+        -   } else if( indexPage == undefined ){
           li.breadcrumb-item(aria-current="page").text-primary #{nowdir}
-        -   } else if( i == dirs.length - 2 ){
-        -     const title = indexPage.attributes['title-breadcrumb'] || indexPage.attributes.title
-          li.breadcrumb-item.active
-            a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-dark.font-weight-bold.trigger-gototop.button-like-anchor #{title ? title : nowdir}
         -   }
         - }
+        - const title = (page.attributes['title-breadcrumb'] || page.attributes.title) || dirs[dirs.length - 1] || "index"
+          li.breadcrumb-item.active
+            a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`).text-dark.font-weight-bold.trigger-gototop.button-like-anchor= title
       else
         li.breadcrumb-item.active
-          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}`  aria-label=topPage.attributes['title-breadcrumb'] || topPage.attributes.title).text-primary.font-weight-bold.trigger-gototop.button-like-anchor
-            +fa_fw("home", "fas")
+          a(aria-current="page" href=`${urlPrefix}${page.meta.permalink}` aria-label=topPage.attributes['title-breadcrumb'] || topPage.attributes.title).text-primary.font-weight-bold.trigger-gototop.button-like-anchor
+            +fa_fw("home","fas")

@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 const htmlmin = require("html-minifier").minify
 const pug = require("pug")
 const glog = require("fancy-log")
-const kramed = require("kramed")
+const marked = require("marked")
 const betterMarkdown = require("./better_markdown")
 const highl = require("./highl")
 
@@ -19,8 +20,8 @@ module.exports = (page, puglocals, urlPrefix) => {
   let mainHtml
   switch (page.meta.src.ext) {
   case ".md":
-    mainHtml = kramed(page.body)
-    mainHtml = betterMarkdown(mainHtml, urlPrefix)
+    mainHtml = marked(page.body)
+    mainHtml = betterMarkdown(mainHtml, urlPrefix, puglocals.site.image_compressing_strategy_version)
     // mainHtml = maly(mainHtml)
     mainHtml = htmlmin(mainHtml, {
       collapseWhitespace: true,
@@ -35,7 +36,7 @@ module.exports = (page, puglocals, urlPrefix) => {
       removeEmptyAttributes: false,
       removeEmptyElements: false
     })
-    if (page.attributes.improve) mainHtml = betterMarkdown(mainHtml, urlPrefix)
+    if (page.attributes.improve) mainHtml = betterMarkdown(mainHtml, urlPrefix, puglocals.site.image_compressing_strategy_version)
     break
   case ".pug":
     try {
@@ -44,7 +45,7 @@ module.exports = (page, puglocals, urlPrefix) => {
       glog(`Error @ ${page.meta.permalink}`)
       throw Error(e)
     }
-    if (page.attributes.improve) mainHtml = betterMarkdown(mainHtml, urlPrefix)
+    if (page.attributes.improve) mainHtml = betterMarkdown(mainHtml, urlPrefix, puglocals.site.image_compressing_strategy_version)
     break
   default:
     mainHtml = page.body

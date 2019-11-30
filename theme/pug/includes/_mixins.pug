@@ -51,24 +51,17 @@ mixin toc(headings, n, tag, cl)
 
 mixin lis_of_dir(pathf, $option)
   -
-    function pathME(e, pathf){
-      if (!(e.meta.permalink.startsWith(pathf) && !e.meta.isMetaPage)) return false
-      
-      const a = e.meta.permalink.split('/').length
-      const b = pathf.split('/').length
-      if ($option.self) {
-        return a == b || a == b + 1
-      } else {
-        return a == b + 1
-      }
-    }
     function pathMFilter(pathf){
       return pages.filter(function(e,i,a){
-        if (typeof pathf === "string") {
-          return pathME(e, pathf)
+        if (typeof pathf === "string"){
+          return e.meta.permalink.startsWith(pathf) && !e.meta.isMetaPage &&
+            e.meta.permalink.replace(`${pathf}`, "") !== "" &&
+            (e.meta.dirs.length === pathf.split('/').length || (e.meta.dirs.length === pathf.split('/').length + 1 && e.meta.dirs[e.meta.dirs.length - 1] === ""))
         } else if (typeof pathf === "object" && Array.isArray(pathf) ){
-          for (const c of pathf) {
-            if (pathME(e, c)) return true
+          for( c = 0; c < pathf.length; c++ ){
+            if(e.meta.permalink.startsWith(pathf[c]) && !e.meta.isMetaPage &&
+              e.meta.permalink.replace(`${pathf[c]}`, "") !== "" &&
+              e.meta.permalink.split('/').length === pathf.split('/').length + 1) return true
           }
         }
       })
@@ -81,8 +74,8 @@ mixin lis_of_dir(pathf, $option)
       a.d-block(href=`${site.url.path}${rpage.meta.permalink}` class=(page.meta.permalink.startsWith(rpage.meta.permalink) ? 'font-weight-bold' : ''))
         div=rpage.attributes.title
         if($option.description)
-          div.small.lh-12=rpage.attributes.description
-      if($option.s == true && rpage.attributes.has_child == true)
+          div.small.lh-12.mb-1=rpage.attributes.description
+      if($option.s && rpage.meta.permalink.endsWith("/"))
         ul.mt-1(clas=`${$option.unstyled ? 'list-unstyled' : ''}`)
           +lis_of_dir(rpage.meta.permalink, {unstyled: $option.unstyled, self: $option.self, s: true, description: $option.description})
 
@@ -97,6 +90,15 @@ mixin embed_youtube_autoplay(vid)
   +embed_video(`https://www.youtube.com/embed/${vid}?autoplay=1&controls=2&modestbranding=1&rel=0`)
 
 //- https://developers.google.com/youtube/player_parameters?hl=ja
+
+mixin picture(img)
+  - const iu = path.parse(img.src)
+  - if (!img.sizes) img.sizes = "100vw, (min-width: 576px) 50vw, (min-width: 1200px) 30vw"
+  - const suf = `?v=${site.image_compressing_strategy_version}`
+  picture
+    source(srcset=`${urlPrefix}${iu.dir}/${iu.name}.360.webp${suf} 360w, ${urlPrefix}${iu.dir}/${iu.name}.720.webp${suf} 720w, ${urlPrefix}${iu.dir}/${iu.name}.webp${suf} 1200w` type="image/webp" sizes=img.sizes)
+    source(srcset=`${urlPrefix}${iu.dir}/${iu.name}.360${iu.ext}${suf} 360w, ${urlPrefix}${iu.dir}/${iu.name}.720${iu.ext}${suf} 720w, ${urlPrefix}${iu.dir}/${iu.base}${suf}` sizes=img.sizes)
+    img(src=`${img.src}${suf}` alt=img.alt class=img.class id=img.id title=img.title loading=img.loading)
 
 mixin blog_badges(targetpage)
   div.mr-2

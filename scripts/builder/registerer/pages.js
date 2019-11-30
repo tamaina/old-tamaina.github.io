@@ -6,10 +6,9 @@ const glob = require("glob")
 const frontMatter = require("front-matter")
 const url = require("url")
 
-const getHash = require("../../gethash")
-
 function isMetaPage(site, permalink) {
-  return site.meta_pages.some(i => permalink === `/${i}/`)
+  console.log(site.meta_pages)
+  return site.meta_pages.some(i => permalink === `/${i}`)
 }
 
 module.exports = async (site, src, urlPrefix) => {
@@ -33,8 +32,6 @@ module.exports = async (site, src, urlPrefix) => {
     page.meta.src.subdir = subdir
 
     page.meta.hash = {}
-    page.meta.hash.md5 = getHash(file, "md5", "binary", "hex")
-    page.meta.hash.sha384 = getHash(file, "sha384", "binary", "base64")
     page.stats = await promisify(fs.stat)(val)
 
     page.body = page.body.replace(/\r\n?/gi, "\n") // 文字コードをLFにそろえる
@@ -56,8 +53,6 @@ module.exports = async (site, src, urlPrefix) => {
     if (page.meta.permalink.indexOf("/") !== 0) page.meta.permalink = `/${page.meta.permalink}`
     if (page.meta.permalink.lastIndexOf("index") === page.meta.permalink.length - 5 && page.meta.permalink.indexOf("index") !== -1) {
       page.meta.permalink = page.meta.permalink.slice(0, -5)
-    } else if (page.meta.permalink.lastIndexOf("/") !== page.meta.permalink.length - 1) {
-      page.meta.permalink = `${page.meta.permalink}/`
     }
 
     page.meta.dirs = page.meta.permalink.split("/")

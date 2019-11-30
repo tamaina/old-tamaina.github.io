@@ -1,10 +1,12 @@
+/* eslint-disable camelcase */
 const path = require("path")
 const cheerio = require("cheerio")
 const fontawesome = require("@fortawesome/fontawesome-svg-core")
 fontawesome.library.add(require("@fortawesome/free-solid-svg-icons").fas, require("@fortawesome/free-regular-svg-icons").far, require("@fortawesome/free-brands-svg-icons").fab)
 const punycode = require("punycode")
 
-module.exports = (htm, urlprefix) => {
+module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
+  const suf = `?v=${image_compressing_strategy_version}`
   /*
   function fuckescape(val){
     val = val.replace(/&amp;/g, "&")
@@ -24,18 +26,20 @@ module.exports = (htm, urlprefix) => {
   $("body > h2, body > h3, body > h4, body > h5, body > h6").addClass("blogstyle")
   const hs = []
   $("h2, h3, h4, h5, h6").each((i, el) => { hs.push(encodeURIComponent($(el).text())) })
-  $("h2, h3, h4, h5, h6").each((i) => { $("h2, h3, h4, h5, h6").eq(i).attr("id", hs[i]) })
+  $("h2, h3, h4, h5, h6").each(i => { $("h2, h3, h4, h5, h6").eq(i).attr("id", hs[i]) })
   $("img:not(.notblogstyle)").each((i, el) => {
     const img = (() => {
       const imgurl = (() => {
-        if ($(el).is("img[src^=\"/\"]")) return $(el).attr("src")
-        if ($(el).is("img[src^=\"files/\"]")) return `/${$(el).attr("src")}`
+        if ($(el).is("img[src^=\"/\"]")) return `${$(el).attr("src")}${suf}`
+        if ($(el).is("img[src^=\"files/\"]")) return `/${$(el).attr("src")}${suf}`
         return null
       })()
-      if (imgurl) {
+      if (imgurl && imgurl.match(/png$|jpg$|jpeg$|gif$|webp$/)) {
         const iu = path.parse(imgurl)
-        return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.720.webp 720w, ${urlprefix}${iu.dir}/${iu.name}.webp 1600w" type="image/webp"><source srcset="${urlprefix}${iu.dir}/${iu.name}.720${iu.ext} 720w, ${urlprefix}${iu.dir}/${iu.base}">${$.html($(el))}</picture>`
+        const sizes = "calc(100vw - 30px), (min-width: 576px) 510px, (min-width: 768px) 40em"
+        return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.360.webp${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720.webp${suf} 720w, ${urlprefix}${iu.dir}/${iu.name}.webp${suf} 1200w" type="image/webp" sizes="${sizes}"><source srcset="${urlprefix}${iu.dir}/${iu.name}.360${iu.ext}${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720${iu.ext}${suf} 720w, ${urlprefix}${iu.dir}/${iu.base}${suf} 1200w" sizes="${sizes}">${$.html($(el))}</picture>`
       }
+      $(el).attr("src", `${$(el).attr("src")}${suf}`)
       return $.html($(el))
     })()
     const tit = $(el).attr("title")
@@ -50,7 +54,7 @@ module.exports = (htm, urlprefix) => {
   $(":not([data-mfm]) > a[href^=\"http\"], :not([data-mfm]) > a[href^=\"//\"]").append(String.raw`<i class="fa fas external-link-alt" data-fa-prefix="fas" data-fa-icon-name="external-link-alt" data-fa-option="{'classes':['fa-fw', 'fa-sm']}"></i>`)
   const as = []
   $("a[href^=\"http\"], a[href^=\"//\"]").each((i, el) => { as.push($(el).text()) })
-  $("a[href^=\"http\"], a[href^=\"//\"]").each((i) => {
+  $("a[href^=\"http\"], a[href^=\"//\"]").each(i => {
     const e = $("a[href^=\"http\"], a[href^=\"//\"]").eq(i)
     const text = as[i]
     e.attr({ target: "_blank", rel: "noopener" })
