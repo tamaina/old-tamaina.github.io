@@ -10,8 +10,11 @@ const {
 
 const {
   faBars,
+  faClock,
+  faExternalLinkAlt,
   faHome,
-  faExternalLinkAlt
+  faFolderOpen,
+  faTags
 } = require("@fortawesome/free-solid-svg-icons")
 
 module.exports = {
@@ -21,7 +24,10 @@ module.exports = {
     faYoutube,
 
     faBars,
+    faClock,
+    faExternalLinkAlt,
     faHome,
-    faExternalLinkAlt
+    faFolderOpen,
+    faTags
   ]
 }

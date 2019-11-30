@@ -16,13 +16,19 @@ library.add(
 
 import {
   faBars,
+  faClock,
   faExternalLinkAlt,
-  faHome
+  faHome,
+  faFolderOpen,
+  faTags
 } from "@fortawesome/free-solid-svg-icons"
 library.add(
   faBars,
+  faClock,
   faExternalLinkAlt,
-  faHome
+  faHome,
+  faFolderOpen,
+  faTags
 )
 
 export const getHTML = (query: IconLookup, option: IconParams): string => {
