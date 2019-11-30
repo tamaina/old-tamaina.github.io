@@ -24,7 +24,6 @@ module.exports = htm => {
 
     if (!grammer) lang = "javascript"
 
-    console.log(escape($(el).text()))
     $(el).html(
       Prism.highlight(
         $(el).text(), Prism.languages[lang], lang
