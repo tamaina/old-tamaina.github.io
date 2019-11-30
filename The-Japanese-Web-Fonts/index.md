@@ -19,13 +19,13 @@ The Japanese Web Fontsは、日本語フリーフォントを集めたWebフォ�
 
 ## 使い方
 
-[フォントリスト](fonts/)の「CSS」に書かれているURLをHTMLの`&lt;link&gt;`タグで読み込みます。
+[フォントリスト](fonts)の「CSS」に書かれているURLをHTMLの`&lt;link&gt;`タグで読み込みます。
 
 ```html
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v7.2.0/dist/SourceHanSans/SourceHanSans.css"&gt;
 ```
 
-[フォントリスト](fonts/)の「font-family」に書かれているフォント名をfont-familyとして指定します。
+[フォントリスト](fonts)の「font-family」に書かれているフォント名をfont-familyとして指定します。
 
 ```css
 body, html {
