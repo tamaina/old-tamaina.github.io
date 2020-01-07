@@ -55,15 +55,19 @@ mixin lis_of_dir(pathf, $option)
       return pages.filter(function(e,i,a){
         if( typeof pathf === "string" ){
           return !e.canonical &&
+            e.meta.permalink !== pathf &&
             e.meta.permalink.indexOf(`${pathf}`) === 0 &&
             e.meta.permalink.replace(`${pathf}`, "") !== "" &&
-            (e.meta.dirs.length === pathf.split('/').length || (e.meta.dirs.length === pathf.split('/').length + 1 && e.meta.dirs[e.meta.dirs.length - 1] === ""))
+            (e.meta.dirs.length === pathf.split('/').length || (e.meta.dirs.length === pathf.split('/').length + 1 && e.meta.dirs[e.meta.dirs.length - 1] === "")) &&
+            !site.metaPages.some(i => e.meta.permalink === `/${i}`)
         } else if (typeof pathf === "object" && Array.isArray(pathf) ){
           for( c = 0; c < pathf.length; c++ ){
             if( !e.canonical &&
+              e.meta.permalink !== pathf[c] &&
               e.meta.permalink.indexOf(`${pathf[c]}`) === 0 &&
               e.meta.permalink.replace(`${pathf[c]}`, "") !== "" &&
-              e.meta.permalink.split('/').length === pathf.split('/').length + 1) return true
+              e.meta.permalink.split('/').length === pathf[c].split('/').length + 1 &&
+              !site.metaPages.some(i => e.meta.permalink === `/${i}`)) return true
           }
         }
       })
