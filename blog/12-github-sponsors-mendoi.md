@@ -33,6 +33,8 @@ GitHub Sponsorsの銀行口座へのはSpriteを使いますが、本人確認�
 ## 米国で源泉徴収されるためクソめんどい
 `Fill out a tax form`がクソめんどいです。というか他の人の記事を見るとこの手順はないのですが、これはいったいどこから湧いてきたんでしょう……？
 
+![Fill out a tax form](/files/images/imports/2020/01/kimon.png)
+
 収入が発生する以上は所得税を払う必要があり、GitHub Sponsersにおいてこの所得税の支払い方というのが[**米国での源泉徴収**](https://help.github.com/ja/github/site-policy/github-sponsors-additional-terms#43-sponsored-developer-payment-exclusions)であるようです。
 
 まず、申し込み時にGitHubから**W-8BEN**の記入と提出を求められます。この書類自体難しいことはありません。  
