@@ -78,7 +78,7 @@ mixin lis_of_dir(pathf, $option)
   each rpage in bpages
     li.mb-1
       a.d-block(href=`${site.url.path}${rpage.meta.permalink}`)
-        div=$option.useBreadcrumbTitle ? rpage.attributes['title-breadcrumb'] : rpage.attributes.title
+        div=$option.useBreadcrumbTitle ? rpage.attributes['title-breadcrumb'] || rpage.attributes.title : rpage.attributes.title
         if ($option.description !== false)
           div.small.lh-12=rpage.attributes.description
       if($option.s == true && rpage.meta.permalink.endsWith("/"))
