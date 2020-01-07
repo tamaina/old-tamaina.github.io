@@ -53,6 +53,6 @@ sidebar: true
 # サイドバーは無効にできる
 manifest:
   display: standalone
-meta_pages: ['404', 'offline']
+metaPages: ['404', 'offline']
 # システムで利用するページを列挙
 sw: "js|css|png|jpeg|jpg|svg|svgz|woff2"
