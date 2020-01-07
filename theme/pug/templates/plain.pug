@@ -23,9 +23,11 @@ html(lang=site.language)
           *
           *
       block canonical
-        link(rel="canonical", href=page.meta.url.href)
+        if(page.canonical)
+          meta(http-equiv="refresh" content=`0;URL=${page.canonical}`)
+        link(rel="canonical", href=(page.canonical ? page.meta.canonicalUrl.href : page.meta.url.href))
         if(page.attributes.amp)
-          link(rel="amphtml", href=`${page.meta.url.href}.amp`)
+          link(rel="amphtml", href=`${page.canonical ? page.meta.canonicalUrl.href : page.meta.url.href}.amp`)
       block seo
         meta(name="author" content=site.author)
         meta(name="generator" content="maqz")

@@ -53,13 +53,15 @@ mixin lis_of_dir(pathf, $option)
   -
     function pathMFilter(pathf){
       return pages.filter(function(e,i,a){
-        if (typeof pathf === "string"){
-          return e.meta.permalink.startsWith(pathf) && !e.meta.isMetaPage &&
+        if( typeof pathf === "string" ){
+          return !e.canonical &&
+            e.meta.permalink.indexOf(`${pathf}`) === 0 &&
             e.meta.permalink.replace(`${pathf}`, "") !== "" &&
             (e.meta.dirs.length === pathf.split('/').length || (e.meta.dirs.length === pathf.split('/').length + 1 && e.meta.dirs[e.meta.dirs.length - 1] === ""))
         } else if (typeof pathf === "object" && Array.isArray(pathf) ){
           for( c = 0; c < pathf.length; c++ ){
-            if(e.meta.permalink.startsWith(pathf[c]) && !e.meta.isMetaPage &&
+            if( !e.canonical &&
+              e.meta.permalink.indexOf(`${pathf[c]}`) === 0 &&
               e.meta.permalink.replace(`${pathf[c]}`, "") !== "" &&
               e.meta.permalink.split('/').length === pathf.split('/').length + 1) return true
           }
@@ -70,14 +72,13 @@ mixin lis_of_dir(pathf, $option)
     bpages.sort( (a, b) => { return ( a.meta.permalink > b.meta.permalink ) ? 1 : -1 } )
     bpages.sort( (a, b) => a.attributes.rank - b.attributes.rank )
   each rpage in bpages
-    li
-      a.d-block(href=`${site.url.path}${rpage.meta.permalink}` class=(page.meta.permalink.startsWith(rpage.meta.permalink) ? 'font-weight-bold' : ''))
-        div= (($option.useBreadcrumbTitle ? rpage.attributes["title-breadcrumb"] : null) || rpage.attributes.title)
-        if($option.description)
-          div.small.lh-12.mb-1=rpage.attributes.description
-      if($option.s && rpage.meta.permalink.endsWith("/"))
+    li.mb-1
+      a.d-block(href=`${site.url.path}${rpage.meta.permalink}`)
+        div=rpage.attributes.title
+        div.small.lh-12=rpage.attributes.description
+      if($option.s == true && rpage.meta.permalink.endsWith("/"))
         ul.mt-1(clas=`${$option.unstyled ? 'list-unstyled' : ''}`)
-          +lis_of_dir(rpage.meta.permalink, {unstyled: $option.unstyled, self: $option.self, s: true, description: $option.description})
+          +lis_of_dir(rpage.meta.permalink, {s: true})
 
 mixin embed_video(url)
   .embed-responsive.embed-responsive-16by9.video-embed

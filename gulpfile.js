@@ -294,7 +294,7 @@ gulp.task("pug", async () => {
     if (site.sidebar && sidebarPaths.length > 0) {
       puglocals.sidebarHtml = pug.render(`${base.themePug.script}\n${base.themePug.mixin}\n${sidebarReads[puglocals.sidebarpath]}`, renderBase)
     }
-    const mainHtml = makeHtml(page, renderBase, urlPrefix)
+    const mainHtml = page.canonical ? `This page has been moved to <a href="${page.canonical}">${page.canonical}</a>` : makeHtml(page, renderBase, urlPrefix)
 
     const { layout } = page.attributes
 
