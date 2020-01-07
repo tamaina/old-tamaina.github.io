@@ -6,12 +6,78 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/12-github-sponsors-mendoi/",
+            "url": "https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss",
+            "title": "GitHub Sponsors、面倒臭い",
+            "summary": "ただの愚痴です。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg",
+            "date_modified": "2020-01-07T08:01:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/12-github-sponsors-mendoi",
+            "url": "https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss",
+            "title": "GitHub Sponsors、面倒臭い",
+            "summary": "ただの愚痴です。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg",
+            "date_modified": "2020-01-07T08:01:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/11-akeome/",
+            "url": "https://a9z.dev/blog/11-akeome/?rel=rss",
+            "title": "c2.a9z.devを開設",
+            "summary": "あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg",
+            "date_modified": "2020-01-07T08:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/11-akeome",
+            "url": "https://a9z.dev/blog/11-akeome?rel=rss",
+            "title": "c2.a9z.devを開設",
+            "summary": "あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg",
+            "date_modified": "2020-01-07T08:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/10-update/",
+            "url": "https://a9z.dev/blog/10-update/?rel=rss",
+            "title": "maqzアップデート",
+            "summary": "joinmisskeyの成果をmaqzに反映しました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg",
+            "date_modified": "2019-11-30T06:45:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/10-update",
             "url": "https://a9z.dev/blog/10-update?rel=rss",
             "title": "maqzアップデート",
             "summary": "joinmisskeyの成果をmaqzに反映しました。",
             "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg",
             "date_modified": "2019-11-30T06:45:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/9-tjwf-v7/",
+            "url": "https://a9z.dev/blog/9-tjwf-v7/?rel=rss",
+            "title": "The Japanese Web Fonts v7リリース",
+            "summary": "The Japanese Web Fonts v7をリリースしました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg",
+            "date_modified": "2019-10-02T03:45:00.000Z",
             "author": {
                 "name": "aqz"
             }
@@ -28,12 +94,34 @@
             }
         },
         {
+            "id": "https://a9z.dev/blog/8-a9zdev/",
+            "url": "https://a9z.dev/blog/8-a9zdev/?rel=rss",
+            "title": "ドメインを買ってMisskeyインスタンスを立てました",
+            "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg",
+            "date_modified": "2019-09-10T11:30:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/8-a9zdev",
             "url": "https://a9z.dev/blog/8-a9zdev?rel=rss",
             "title": "ドメインを買ってMisskeyインスタンスを立てました",
             "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。",
             "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg",
             "date_modified": "2019-09-10T11:30:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/7-kakeibo-app/",
+            "url": "https://a9z.dev/blog/7-kakeibo-app/?rel=rss",
+            "title": "家計簿アプリの話",
+            "summary": "とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_183148.jpg",
+            "date_modified": "2019-09-09T06:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
@@ -50,12 +138,34 @@
             }
         },
         {
+            "id": "https://a9z.dev/blog/6-shash-junbikai/",
+            "url": "https://a9z.dev/blog/6-shash-junbikai/?rel=rss",
+            "title": "C96 4日目に行ってきてみた",
+            "summary": "群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg",
+            "date_modified": "2019-08-20T05:30:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/6-shash-junbikai",
             "url": "https://a9z.dev/blog/6-shash-junbikai?rel=rss",
             "title": "C96 4日目に行ってきてみた",
             "summary": "群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。",
             "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg",
             "date_modified": "2019-08-20T05:30:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/5-fediverse/",
+            "url": "https://a9z.dev/blog/5-fediverse/?rel=rss",
+            "title": "Fediverseへのいざない",
+            "summary": "分散SNSで自分に合ったインターネットライフを。",
+            "image": "https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png",
+            "date_modified": "2019-03-15T04:15:00.000Z",
             "author": {
                 "name": "aqz"
             }
