@@ -12,13 +12,15 @@ function isMetaPage(site, permalink) {
 
 module.exports = async (site, src, urlPrefix) => {
   const promises = []
+  const pages = []
   const srcs = glob.sync(src.pages)
 
+  // eslint-disable-next-line consistent-return
   async function doit(val, i, arr, srcpath) {
     let page = {}
     const srcp = path.parse(val)
 
-    if (srcp.name === "sidebar") return false // 名前がsidebarのとき弾く
+    if (srcp.name === "sidebar") return
     let subdir = srcp.dir.replace(srcpath.base, "")
     if (subdir.indexOf("/") === 0) subdir = subdir.slice(1)
     if (!subdir) subdir = ""
@@ -78,7 +80,28 @@ module.exports = async (site, src, urlPrefix) => {
       page.attributes.tags = page.attributes.tag.split(" ")
       delete page.attributes.tag
     }
-    return page
+
+    pages.push(page)
+
+    if (!page.meta.permalink.endsWith("/") && typeof page.attributes.anotherUrls !== "object") {
+      page.attributes.anotherUrls = [`${page.meta.permalink}/`]
+    }
+
+    if (typeof page.attributes.anotherUrls === "object" && page.attributes.anotherUrls.length > 0) {
+      for (let u = 0; u < page.attributes.anotherUrls.length; u += 1) {
+        const permalink = page.attributes.anotherUrls[u]
+        pages.push(extend(true, {}, page, {
+          canonical: page.meta.permalink,
+          meta: {
+            permalink,
+            canonicalDirs: page.meta.dirs,
+            dirs: permalink.split("/"),
+            canonicalUrl: page.meta.url,
+            url: url.parse(`${urlPrefix}${permalink}`)
+          }
+        }))
+      }
+    }
   }
 
   for (let p = 0; p < srcs.length; p += 1) {
@@ -86,7 +109,8 @@ module.exports = async (site, src, urlPrefix) => {
       doit(srcs[p], p, srcs, path.parse(site.pages_src.path))
     )
   }
-  let result = await Promise.all(promises)
-  result = result.filter(el => !!el)
-  return result
+
+  await Promise.all(promises)
+
+  return pages
 }
