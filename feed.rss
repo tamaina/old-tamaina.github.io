@@ -4,11 +4,27 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Fri, 10 Jan 2020 12:53:23 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Jan 2020 16:51:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
         <atom:link href="https://a9z.dev/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Echo 第2世代【レビュー】]]></title>
+            <link>https://a9z.dev/blog/13-echo2/?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2/</guid>
+            <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
+            <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Echo 第2世代【レビュー】]]></title>
+            <link>https://a9z.dev/blog/13-echo2?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2</guid>
+            <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
+            <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
+        </item>
         <item>
             <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
             <link>https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss</link>

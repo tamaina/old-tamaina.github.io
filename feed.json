@@ -6,6 +6,28 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/13-echo2/",
+            "url": "https://a9z.dev/blog/13-echo2/?rel=rss",
+            "title": "Echo 第2世代【レビュー】",
+            "summary": "AmazonでEchoというBluetoothスピーカーが安かったので購入。",
+            "image": "https://a9z.dev/files/images/imports/2020/01/echo2.jpg",
+            "date_modified": "2020-01-10T15:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/13-echo2",
+            "url": "https://a9z.dev/blog/13-echo2?rel=rss",
+            "title": "Echo 第2世代【レビュー】",
+            "summary": "AmazonでEchoというBluetoothスピーカーが安かったので購入。",
+            "image": "https://a9z.dev/files/images/imports/2020/01/echo2.jpg",
+            "date_modified": "2020-01-10T15:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/12-github-sponsors-mendoi/",
             "url": "https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss",
             "title": "GitHub Sponsorsは面倒くさくない！",
