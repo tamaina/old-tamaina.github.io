@@ -11,12 +11,12 @@ author:
   avatar: aqz
 amp: true
 ---
-GitHub Sponsorsの手続きが面倒臭い。
+GitHub Sponsorsの手続きが面倒臭かったけど今になってみればそこまで面倒じゃないと思っています。
 
 ※ただの愚痴です。あと英語がだめなので間違ったことを書いているかもしれませんがご了承ください。
 
 ## まえがき
-この文章は**日本国籍を持つ日本人向け**に書いています。それ以外の方についてこの記事の内容を実行したとして私は責任を負えませんし、日本国籍を持つ日本人であっても私は責任を負えません。
+この文章は**日本国籍を持つ日本人向け**に書いています。それ以外の方がこの記事の内容を実行したとしても私は責任を負えませんし、日本国籍を持つ日本人であっても私は責任を負えません。
 
 ### 必要だったもの
 - 顔写真付き証明書（後述）
@@ -46,12 +46,13 @@ GitHub Sponsorsの銀行口座へのはSpriteを使いますが、本人確認�
 
 収入が発生する以上は所得税を払う必要があります。~~GitHub Sponsersにおいてこの所得税の支払い方というのが[**米国での源泉徴収**](https://help.github.com/ja/github/site-policy/github-sponsors-additional-terms#43-sponsored-developer-payment-exclusions)であるようです。~~[（訂正: 源泉徴収はされません）](https://help.github.com/ja/github/supporting-the-open-source-community-with-github-sponsors/tax-information-for-github-sponsors)
 
-まず、申し込み時にGitHubからDocuSignにて**W-8BEN**フォームの記入と提出を求められます。この書類自体難しいことはありません。
+まず、申し込み時にGitHubからDocuSignにて**W-8BEN**フォームの記入と署名を求められます。  
+この書類自体難しいことはありません。**[記入方法はこちらのDiG DUGさんの記事を参考にしてください。](https://stockillust.com/archives/270)**
 
-しかしこのフォームの**5 U.S. taxpayer identification number (SSN or ITIN)**（*訳: 米国納税者識別番号 （SSNもしくは<b>[ITIN](https://jp.usembassy.gov/ja/u-s-citizen-services-ja/itin-ja/)</b>）*）が赤い必須の枠になっている場合があります。私の場合がそうでした。
+このフォームの**5 U.S. taxpayer identification number (SSN or ITIN)**（*訳: 米国納税者識別番号 （SSNもしくは<b>[ITIN](https://jp.usembassy.gov/ja/u-s-citizen-services-ja/itin-ja/)</b>）*）が赤い必須の枠になっている場合があります。私の場合がそうでした。
 
 私のような日本に住んでいる一般的な日本人は、SSNやITINを持っていませんし必要ありません。  
-これはW-8BENフォームの意図するところでもあるのですが、普通は<u>**5**を空欄にして**6**に（日本人なら）**個人番号**（マイナンバー）</u>を埋めます。  
+これはW-8BENフォームの意図するところでもあるのですが、DiG DUGさんの記事にもあるように、ふつうは<u>**5**を空欄にして**6**に（日本人なら）**個人番号**（マイナンバー）</u>を埋めます。  
 でも、それではDocuSignでダメって言われます。
 
 じゃあどうすればいいんでしょう。
