@@ -2,7 +2,7 @@ git fetch
 
 git add --all
 git commit -a -m %1
-git pull origin
+git pull origin src
 cd pages
 git add --all
 git commit -a -m %1
