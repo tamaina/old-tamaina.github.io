@@ -22,7 +22,7 @@ Amazonで[Echo 第2世代](https://www.amazon.co.jp/dp/B074B17MJ6/)を**2,980円
 ![Echo 第2世代](/files/images/imports/2020/01/echo2.jpg)
 
 ## スピーカー詳細
-スピーカーは63.5mmウーファーと16mmツイーター。 
+スピーカーは63.5mmウーファーと16mmツイーター。   
 第2世代の性能でも私は十分に感じましたし、また母も悪くないと言っていました。非常に良いって程ではないけど、3000円なら普通に良いって感じ。  
 第3世代はこのサイズよりひと回り……いや、ふた周り程大きく、ウーファーはネオジム磁石を使用したものになっています。  
 Echo Studioはもっとすごい構成です。この調子ならEcho Studioは結構良い音を出すんじゃないかなと勝手に想像しています。
@@ -59,11 +59,11 @@ Spotify（有料アカウントが必要）とかも聞けるのでそういう�
 
 - [JR東日本](https://www.amazon.co.jp/dp/B074QH7GM5)  
   運行情報の通知、確認ができます。
-- [ヤマト運輸](https://www.amazon.co.jp/gp/product/B07SYHT71S)
+- [ヤマト運輸](https://www.amazon.co.jp/gp/product/B07SYHT71S)  
   クロネコメンバーズのe-お知らせシリーズで登録した宛先への荷物の確認と日時の変更ができます。
-- [JapanTaxi](https://www.amazon.co.jp/dp/B07H8QPJGC/)
+- [JapanTaxi](https://www.amazon.co.jp/dp/B07H8QPJGC/)  
   JapanTaxi対応タクシー（上信ハイヤーや構内タクシー等）を呼べます。
-- [ローソンラジオ](https://www.amazon.co.jp/dp/B07C5MBQ57)
+- [ローソンラジオ](https://www.amazon.co.jp/dp/B07C5MBQ57)  
   ローソンの店内放送や時報が流れる。起動時にあきこちゃんが運勢を占ってくれます。  
   そんな暇と金があったらもうちょっと弁当を美味しくしてほしい。
 - 各証券会社は市況を知ることができるスキルをリリースしています。
