@@ -4,25 +4,41 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Sat, 18 Jan 2020 11:19:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Jan 2020 11:38:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
         <atom:link href="https://a9z.dev/feed.atom" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[GitHub Sponsors、面倒臭い]]></title>
+            <title><![CDATA[Echo 第2世代【レビュー】]]></title>
+            <link>https://a9z.dev/blog/13-echo2/?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2/</guid>
+            <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
+            <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Echo 第2世代【レビュー】]]></title>
+            <link>https://a9z.dev/blog/13-echo2?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2</guid>
+            <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
+            <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
             <link>https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss</link>
             <guid>https://a9z.dev/blog/12-github-sponsors-mendoi/</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
-            <description><![CDATA[ただの愚痴です。]]></description>
+            <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
-            <title><![CDATA[GitHub Sponsors、面倒臭い]]></title>
+            <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
             <link>https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss</link>
             <guid>https://a9z.dev/blog/12-github-sponsors-mendoi</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
-            <description><![CDATA[ただの愚痴です。]]></description>
+            <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
