@@ -4,8 +4,8 @@ description: SVGを読み込んでOBSに良い感じのテロップを出した�
 layout: index
 rank: 1
 ---
-**[リポジトリ https://github.com/tamaina/svg-telopper](https://github.com/tamaina/svg-telopper)**
+SVGを読み込んでOBSに良い感じのテロップを出したいと思ったので、OBSのブラウザソースを利用するテロッパーを作りました。
 
-
+**[リポジトリ tamaina/svg-telopper on GitHub](https://github.com/tamaina/svg-telopper)**
 
 ## バージョン別取扱説明書
