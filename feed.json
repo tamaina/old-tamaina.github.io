@@ -6,6 +6,28 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/14-au-support/",
+            "url": "https://a9z.dev/blog/14-au-support/?rel=rss",
+            "title": "auの故障紛失サポートを使ってみた",
+            "summary": "スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg",
+            "date_modified": "2020-01-20T12:10:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/14-au-support",
+            "url": "https://a9z.dev/blog/14-au-support?rel=rss",
+            "title": "auの故障紛失サポートを使ってみた",
+            "summary": "スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg",
+            "date_modified": "2020-01-20T12:10:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/13-echo2/",
             "url": "https://a9z.dev/blog/13-echo2/?rel=rss",
             "title": "Echo 第2世代【レビュー】",
