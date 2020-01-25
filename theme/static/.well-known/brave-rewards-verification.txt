@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: a9z.dev
+Token: 9f1b74828a67089a4f57cff48d6535f686b93e87b211dc0749ee25a792f870f6
