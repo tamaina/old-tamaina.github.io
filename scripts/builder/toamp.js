@@ -17,8 +17,8 @@ const messages = loadyaml("./.config/messages.yml")
 module.exports = (htm, urlPrefix) => {
   const { window } = new JSDOM(htm)
   const { document } = window
-  document.querySelectorAll("picture").forEach((picture) => {
-    picture.querySelectorAll("img").forEach((el) => {
+  document.querySelectorAll("picture").forEach(picture => {
+    picture.querySelectorAll("img").forEach(el => {
       const src = el.getAttribute("src")
       const alt = el.getAttribute("alt")
       const title = el.getAttribute("title")
@@ -54,8 +54,7 @@ module.exports = (htm, urlPrefix) => {
     })
     picture.remove()
   })
-  // eslint-disable-next-line no-restricted-syntax
-  for (const el of Array.from(document.getElementsByTagName("i"))) {
+  document.querySelectorAll("i").forEach(el => {
     try {
       el.insertAdjacentHTML("afterend", icon(
         { iconName: el.dataset.faIconName, prefix: el.dataset.faPrefix },
@@ -66,7 +65,7 @@ module.exports = (htm, urlPrefix) => {
       glog(`FontAwesome: ${el.dataset.faPrefix} ${el.dataset.faIconName}は見つかりませんでした。`)
       glog(e)
     }
-  }
-
+  })
+  document.querySelectorAll("ins, script").forEach(el => el.remove())
   return document.body.innerHTML
 }
