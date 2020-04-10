@@ -13,7 +13,7 @@ amp: true
 ---
 2月中旬に中古のMacBook Air (11-inch, Mid 2012)を購入しました。メルカリで￥29,000-でした。Web開発において重要なSafariの動作確認はApple製品上ででしかできないようなので、購入を迫られていました。
 
-Mid 2012を選んだ理由は、最新のmacOS Catalina（10.15）がサポートされているからです。現状のサポートのサイクルが続けばあと2年以上は最新版Safariの動作確認に利用できるはずです。  
+最新のmacOS Catalina（10.15）でサポートされているのでMid 2012以上を選択しました。現状のサポートのサイクルが続けばあと2年以上は最新版Safariの動作確認に利用できるはずです。  
 画面サイズに特に拘りはなく、安さで選びました。
 
 ![](/files/images/imports/2020/04/mba1.jpg)
@@ -25,7 +25,7 @@ Mid 2012を選んだ理由は、最新のmacOS Catalina（10.15）がサポー�
 ## 性能は？
 パソコンを数触っていないのであまり正確なことは言えないのですが、私の以前のメインPCがCore i5 2410M搭載の[dynabook Qosmio D711/T9BB](http://dynabook.com/pc/catalog/d_qosmio/110223d711d710/index_j.htm)でしたので、主にこれと比較してお話したいと思います。
 
-![](/files/images/imports/2020/04/mba-s.jpg)
+![](/files/images/imports/2020/04/mba-s.png)
 
 MacBook Air Mid 2013にはCore i5 3427Uが搭載されているそうで、私見ではまだまだ現役で使えると思います。  
 [PassMark（cpubenchmark.net）で比較する](https://www.cpubenchmark.net/compare/Intel-i5-2410M-vs-Intel-i5-3427U/796vs819)と、MacBookの3427Uの方が総合的な点数とシングルスレッドの両方で優れているというようになっています。にもかかわらず消費電力は半分になるようです。はぁ（溜息）。
