@@ -1,11 +1,11 @@
 ---
-title: mk.a9z.dev
+title: c2.a9z.dev
 description: Misskeyインスタンス
 layout: index
 rank: 0
 ---
-https://mk.a9z.dev
+https://c2.a9z.dev
 
-自宅サーバーでMisskeyインスタンスを運用している。
+AWS上でMisskeyインスタンスを運用している。
 
 <hr>
