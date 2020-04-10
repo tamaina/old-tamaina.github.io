@@ -17,7 +17,7 @@ module.exports = async (name, url, tempDir, alwaysReturn) => {
     // glog("Getting image: " + url)
     const remote = await download(url).catch(() => false)
     if (!remote) return false
-    const { ext } = fileType(remote)
+    const { ext } = await fileType.fromBuffer(remote)
     const local = await readFile(`${tempDir}${name}.${ext}`).catch(() => false)
     if (!local) return false
     if (getHash(remote, "sha384", "binary", "base64") !== getHash(local, "sha384", "binary", "base64")) {
