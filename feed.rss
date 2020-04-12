@@ -4,7 +4,7 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Sun, 12 Apr 2020 16:03:13 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Apr 2020 16:17:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
@@ -14,7 +14,7 @@
             <link>https://a9z.dev/blog/16-rakuten-mobile/?rel=rss</link>
             <guid>https://a9z.dev/blog/16-rakuten-mobile/</guid>
             <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
-            <description><![CDATA[そんなに問題はなかったのですが、1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。]]></description>
+            <description><![CDATA[1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
         </item>
         <item>
@@ -22,7 +22,7 @@
             <link>https://a9z.dev/blog/16-rakuten-mobile?rel=rss</link>
             <guid>https://a9z.dev/blog/16-rakuten-mobile</guid>
             <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
-            <description><![CDATA[そんなに問題はなかったのですが、1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。]]></description>
+            <description><![CDATA[1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
         </item>
         <item>
