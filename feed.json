@@ -6,6 +6,28 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/16-rakuten-mobile/",
+            "url": "https://a9z.dev/blog/16-rakuten-mobile/?rel=rss",
+            "title": "Rakuten Mobileが来た",
+            "summary": "そんなに問題はなかったのですが、1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rm-1.jpg",
+            "date_modified": "2020-04-12T16:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/16-rakuten-mobile",
+            "url": "https://a9z.dev/blog/16-rakuten-mobile?rel=rss",
+            "title": "Rakuten Mobileが来た",
+            "summary": "そんなに問題はなかったのですが、1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rm-1.jpg",
+            "date_modified": "2020-04-12T16:00:00.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/15-macbookair-mid2012/",
             "url": "https://a9z.dev/blog/15-macbookair-mid2012/?rel=rss",
             "title": "中古のMacBook Airを買った",
