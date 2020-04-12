@@ -1,6 +1,6 @@
 ---
 title: Rakuten Mobileが来た
-description: 1つだけ大きな不具合に直面しました。キャンペーンでさらに2000ポイントもらえますのでぜひ。
+description: MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。
 layout: blog
 category: Computer
 thumbnail: /files/images/imports/2020/04/rm-1.jpg
