@@ -1,269 +1,269 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "aqz/tamaina's Web site",
-    "home_page_url": "http://localhost:8084",
-    "feed_url": "http://localhost:8084/feed.json",
+    "home_page_url": "https://a9z.dev",
+    "feed_url": "https://a9z.dev/feed.json",
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
-            "id": "http://localhost:8084/blog/16-rakuten-mobile/",
-            "url": "http://localhost:8084/blog/16-rakuten-mobile/?rel=rss",
+            "id": "https://a9z.dev/blog/16-rakuten-mobile/",
+            "url": "https://a9z.dev/blog/16-rakuten-mobile/?rel=rss",
             "title": "Rakuten Mobileが来た",
             "summary": "MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。",
-            "image": "http://localhost:8084/files/images/imports/2020/04/rm-1.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rm-1.jpg",
             "date_modified": "2020-04-12T16:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/16-rakuten-mobile",
-            "url": "http://localhost:8084/blog/16-rakuten-mobile?rel=rss",
+            "id": "https://a9z.dev/blog/16-rakuten-mobile",
+            "url": "https://a9z.dev/blog/16-rakuten-mobile?rel=rss",
             "title": "Rakuten Mobileが来た",
             "summary": "MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。",
-            "image": "http://localhost:8084/files/images/imports/2020/04/rm-1.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rm-1.jpg",
             "date_modified": "2020-04-12T16:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/15-macbookair-mid2012/",
-            "url": "http://localhost:8084/blog/15-macbookair-mid2012/?rel=rss",
+            "id": "https://a9z.dev/blog/15-macbookair-mid2012/",
+            "url": "https://a9z.dev/blog/15-macbookair-mid2012/?rel=rss",
             "title": "中古のMacBook Airを買った",
             "summary": "Safariのデバッグ用に買いました。メルカリで3万円弱。",
-            "image": "http://localhost:8084/files/images/imports/2020/04/mba2.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/04/mba2.jpg",
             "date_modified": "2020-04-10T16:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/15-macbookair-mid2012",
-            "url": "http://localhost:8084/blog/15-macbookair-mid2012?rel=rss",
+            "id": "https://a9z.dev/blog/15-macbookair-mid2012",
+            "url": "https://a9z.dev/blog/15-macbookair-mid2012?rel=rss",
             "title": "中古のMacBook Airを買った",
             "summary": "Safariのデバッグ用に買いました。メルカリで3万円弱。",
-            "image": "http://localhost:8084/files/images/imports/2020/04/mba2.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/04/mba2.jpg",
             "date_modified": "2020-04-10T16:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/14-au-support/",
-            "url": "http://localhost:8084/blog/14-au-support/?rel=rss",
+            "id": "https://a9z.dev/blog/14-au-support/",
+            "url": "https://a9z.dev/blog/14-au-support/?rel=rss",
             "title": "auの故障紛失サポートを使ってみた",
             "summary": "スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_102344.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg",
             "date_modified": "2020-01-20T12:10:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/14-au-support",
-            "url": "http://localhost:8084/blog/14-au-support?rel=rss",
+            "id": "https://a9z.dev/blog/14-au-support",
+            "url": "https://a9z.dev/blog/14-au-support?rel=rss",
             "title": "auの故障紛失サポートを使ってみた",
             "summary": "スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_102344.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg",
             "date_modified": "2020-01-20T12:10:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/13-echo2/",
-            "url": "http://localhost:8084/blog/13-echo2/?rel=rss",
+            "id": "https://a9z.dev/blog/13-echo2/",
+            "url": "https://a9z.dev/blog/13-echo2/?rel=rss",
             "title": "Echo 第2世代【レビュー】",
             "summary": "AmazonでEchoというBluetoothスピーカーが安かったので購入。",
-            "image": "http://localhost:8084/files/images/imports/2020/01/echo2.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/01/echo2.jpg",
             "date_modified": "2020-01-10T15:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/13-echo2",
-            "url": "http://localhost:8084/blog/13-echo2?rel=rss",
+            "id": "https://a9z.dev/blog/13-echo2",
+            "url": "https://a9z.dev/blog/13-echo2?rel=rss",
             "title": "Echo 第2世代【レビュー】",
             "summary": "AmazonでEchoというBluetoothスピーカーが安かったので購入。",
-            "image": "http://localhost:8084/files/images/imports/2020/01/echo2.jpg",
+            "image": "https://a9z.dev/files/images/imports/2020/01/echo2.jpg",
             "date_modified": "2020-01-10T15:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/12-github-sponsors-mendoi/",
-            "url": "http://localhost:8084/blog/12-github-sponsors-mendoi/?rel=rss",
+            "id": "https://a9z.dev/blog/12-github-sponsors-mendoi/",
+            "url": "https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss",
             "title": "GitHub Sponsorsは面倒くさくない！",
             "summary": "GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_114755a.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg",
             "date_modified": "2020-01-07T08:01:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/12-github-sponsors-mendoi",
-            "url": "http://localhost:8084/blog/12-github-sponsors-mendoi?rel=rss",
+            "id": "https://a9z.dev/blog/12-github-sponsors-mendoi",
+            "url": "https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss",
             "title": "GitHub Sponsorsは面倒くさくない！",
             "summary": "GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_114755a.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg",
             "date_modified": "2020-01-07T08:01:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/11-akeome/",
-            "url": "http://localhost:8084/blog/11-akeome/?rel=rss",
+            "id": "https://a9z.dev/blog/11-akeome/",
+            "url": "https://a9z.dev/blog/11-akeome/?rel=rss",
             "title": "c2.a9z.devを開設",
             "summary": "あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_112138.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg",
             "date_modified": "2020-01-07T08:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/11-akeome",
-            "url": "http://localhost:8084/blog/11-akeome?rel=rss",
+            "id": "https://a9z.dev/blog/11-akeome",
+            "url": "https://a9z.dev/blog/11-akeome?rel=rss",
             "title": "c2.a9z.devを開設",
             "summary": "あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_112138.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg",
             "date_modified": "2020-01-07T08:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/10-update/",
-            "url": "http://localhost:8084/blog/10-update/?rel=rss",
+            "id": "https://a9z.dev/blog/10-update/",
+            "url": "https://a9z.dev/blog/10-update/?rel=rss",
             "title": "maqzアップデート",
             "summary": "joinmisskeyの成果をmaqzに反映しました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_134047.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg",
             "date_modified": "2019-11-30T06:45:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/10-update",
-            "url": "http://localhost:8084/blog/10-update?rel=rss",
+            "id": "https://a9z.dev/blog/10-update",
+            "url": "https://a9z.dev/blog/10-update?rel=rss",
             "title": "maqzアップデート",
             "summary": "joinmisskeyの成果をmaqzに反映しました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_134047.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg",
             "date_modified": "2019-11-30T06:45:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/9-tjwf-v7/",
-            "url": "http://localhost:8084/blog/9-tjwf-v7/?rel=rss",
+            "id": "https://a9z.dev/blog/9-tjwf-v7/",
+            "url": "https://a9z.dev/blog/9-tjwf-v7/?rel=rss",
             "title": "The Japanese Web Fonts v7リリース",
             "summary": "The Japanese Web Fonts v7をリリースしました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_103848.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg",
             "date_modified": "2019-10-02T03:45:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/9-tjwf-v7",
-            "url": "http://localhost:8084/blog/9-tjwf-v7?rel=rss",
+            "id": "https://a9z.dev/blog/9-tjwf-v7",
+            "url": "https://a9z.dev/blog/9-tjwf-v7?rel=rss",
             "title": "The Japanese Web Fonts v7リリース",
             "summary": "The Japanese Web Fonts v7をリリースしました。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_103848.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg",
             "date_modified": "2019-10-02T03:45:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/8-a9zdev/",
-            "url": "http://localhost:8084/blog/8-a9zdev/?rel=rss",
+            "id": "https://a9z.dev/blog/8-a9zdev/",
+            "url": "https://a9z.dev/blog/8-a9zdev/?rel=rss",
             "title": "ドメインを買ってMisskeyインスタンスを立てました",
             "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。",
-            "image": "http://localhost:8084/files/images/imports/2019/09/P_20190906_151146.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg",
             "date_modified": "2019-09-10T11:30:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/8-a9zdev",
-            "url": "http://localhost:8084/blog/8-a9zdev?rel=rss",
+            "id": "https://a9z.dev/blog/8-a9zdev",
+            "url": "https://a9z.dev/blog/8-a9zdev?rel=rss",
             "title": "ドメインを買ってMisskeyインスタンスを立てました",
             "summary": "a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。",
-            "image": "http://localhost:8084/files/images/imports/2019/09/P_20190906_151146.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg",
             "date_modified": "2019-09-10T11:30:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/7-kakeibo-app/",
-            "url": "http://localhost:8084/blog/7-kakeibo-app/?rel=rss",
+            "id": "https://a9z.dev/blog/7-kakeibo-app/",
+            "url": "https://a9z.dev/blog/7-kakeibo-app/?rel=rss",
             "title": "家計簿アプリの話",
             "summary": "とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。",
-            "image": "http://localhost:8084/files/images/imports/2019/09/P_20190906_183148.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_183148.jpg",
             "date_modified": "2019-09-09T06:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/7-kakeibo-app",
-            "url": "http://localhost:8084/blog/7-kakeibo-app?rel=rss",
+            "id": "https://a9z.dev/blog/7-kakeibo-app",
+            "url": "https://a9z.dev/blog/7-kakeibo-app?rel=rss",
             "title": "家計簿アプリの話",
             "summary": "とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。",
-            "image": "http://localhost:8084/files/images/imports/2019/09/P_20190906_183148.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/09/P_20190906_183148.jpg",
             "date_modified": "2019-09-09T06:00:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/6-shash-junbikai/",
-            "url": "http://localhost:8084/blog/6-shash-junbikai/?rel=rss",
+            "id": "https://a9z.dev/blog/6-shash-junbikai/",
+            "url": "https://a9z.dev/blog/6-shash-junbikai/?rel=rss",
             "title": "C96 4日目に行ってきてみた",
             "summary": "群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_141001.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg",
             "date_modified": "2019-08-20T05:30:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/6-shash-junbikai",
-            "url": "http://localhost:8084/blog/6-shash-junbikai?rel=rss",
+            "id": "https://a9z.dev/blog/6-shash-junbikai",
+            "url": "https://a9z.dev/blog/6-shash-junbikai?rel=rss",
             "title": "C96 4日目に行ってきてみた",
             "summary": "群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。",
-            "image": "http://localhost:8084/files/images/imports/2019/08/P_20190812_141001.jpg",
+            "image": "https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg",
             "date_modified": "2019-08-20T05:30:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/5-fediverse/",
-            "url": "http://localhost:8084/blog/5-fediverse/?rel=rss",
+            "id": "https://a9z.dev/blog/5-fediverse/",
+            "url": "https://a9z.dev/blog/5-fediverse/?rel=rss",
             "title": "Fediverseへのいざない",
             "summary": "分散SNSで自分に合ったインターネットライフを。",
-            "image": "http://localhost:8084/files/images/imports/2019/03/FEDIVERSE.png",
+            "image": "https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png",
             "date_modified": "2019-03-15T04:15:00.000Z",
             "author": {
                 "name": "aqz"
             }
         },
         {
-            "id": "http://localhost:8084/blog/5-fediverse",
-            "url": "http://localhost:8084/blog/5-fediverse?rel=rss",
+            "id": "https://a9z.dev/blog/5-fediverse",
+            "url": "https://a9z.dev/blog/5-fediverse?rel=rss",
             "title": "Fediverseへのいざない",
             "summary": "分散SNSで自分に合ったインターネットライフを。",
-            "image": "http://localhost:8084/files/images/imports/2019/03/FEDIVERSE.png",
+            "image": "https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png",
             "date_modified": "2019-03-15T04:15:00.000Z",
             "author": {
                 "name": "aqz"

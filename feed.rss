@@ -2,204 +2,204 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>aqz/tamaina's Web site</title>
-        <link>http://localhost:8084</link>
+        <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Tue, 14 Apr 2020 11:55:42 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Apr 2020 11:16:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
-        <atom:link href="http://localhost:8084/feed.atom" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://a9z.dev/feed.atom" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Rakuten Mobileが来た]]></title>
-            <link>http://localhost:8084/blog/16-rakuten-mobile/?rel=rss</link>
-            <guid>http://localhost:8084/blog/16-rakuten-mobile/</guid>
+            <link>https://a9z.dev/blog/16-rakuten-mobile/?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-rakuten-mobile/</guid>
             <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/04/rm-1.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
         </item>
         <item>
             <title><![CDATA[Rakuten Mobileが来た]]></title>
-            <link>http://localhost:8084/blog/16-rakuten-mobile?rel=rss</link>
-            <guid>http://localhost:8084/blog/16-rakuten-mobile</guid>
+            <link>https://a9z.dev/blog/16-rakuten-mobile?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-rakuten-mobile</guid>
             <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/04/rm-1.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
         </item>
         <item>
             <title><![CDATA[中古のMacBook Airを買った]]></title>
-            <link>http://localhost:8084/blog/15-macbookair-mid2012/?rel=rss</link>
-            <guid>http://localhost:8084/blog/15-macbookair-mid2012/</guid>
+            <link>https://a9z.dev/blog/15-macbookair-mid2012/?rel=rss</link>
+            <guid>https://a9z.dev/blog/15-macbookair-mid2012/</guid>
             <pubDate>Fri, 10 Apr 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[Safariのデバッグ用に買いました。メルカリで3万円弱。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/04/mba2.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/mba2.jpg"/>
         </item>
         <item>
             <title><![CDATA[中古のMacBook Airを買った]]></title>
-            <link>http://localhost:8084/blog/15-macbookair-mid2012?rel=rss</link>
-            <guid>http://localhost:8084/blog/15-macbookair-mid2012</guid>
+            <link>https://a9z.dev/blog/15-macbookair-mid2012?rel=rss</link>
+            <guid>https://a9z.dev/blog/15-macbookair-mid2012</guid>
             <pubDate>Fri, 10 Apr 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[Safariのデバッグ用に買いました。メルカリで3万円弱。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/04/mba2.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/mba2.jpg"/>
         </item>
         <item>
             <title><![CDATA[auの故障紛失サポートを使ってみた]]></title>
-            <link>http://localhost:8084/blog/14-au-support/?rel=rss</link>
-            <guid>http://localhost:8084/blog/14-au-support/</guid>
+            <link>https://a9z.dev/blog/14-au-support/?rel=rss</link>
+            <guid>https://a9z.dev/blog/14-au-support/</guid>
             <pubDate>Mon, 20 Jan 2020 12:10:00 GMT</pubDate>
             <description><![CDATA[スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_102344.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg"/>
         </item>
         <item>
             <title><![CDATA[auの故障紛失サポートを使ってみた]]></title>
-            <link>http://localhost:8084/blog/14-au-support?rel=rss</link>
-            <guid>http://localhost:8084/blog/14-au-support</guid>
+            <link>https://a9z.dev/blog/14-au-support?rel=rss</link>
+            <guid>https://a9z.dev/blog/14-au-support</guid>
             <pubDate>Mon, 20 Jan 2020 12:10:00 GMT</pubDate>
             <description><![CDATA[スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_102344.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_102344.jpg"/>
         </item>
         <item>
             <title><![CDATA[Echo 第2世代【レビュー】]]></title>
-            <link>http://localhost:8084/blog/13-echo2/?rel=rss</link>
-            <guid>http://localhost:8084/blog/13-echo2/</guid>
+            <link>https://a9z.dev/blog/13-echo2/?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2/</guid>
             <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
             <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/01/echo2.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
         </item>
         <item>
             <title><![CDATA[Echo 第2世代【レビュー】]]></title>
-            <link>http://localhost:8084/blog/13-echo2?rel=rss</link>
-            <guid>http://localhost:8084/blog/13-echo2</guid>
+            <link>https://a9z.dev/blog/13-echo2?rel=rss</link>
+            <guid>https://a9z.dev/blog/13-echo2</guid>
             <pubDate>Fri, 10 Jan 2020 15:00:00 GMT</pubDate>
             <description><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2020/01/echo2.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
         </item>
         <item>
             <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
-            <link>http://localhost:8084/blog/12-github-sponsors-mendoi/?rel=rss</link>
-            <guid>http://localhost:8084/blog/12-github-sponsors-mendoi/</guid>
+            <link>https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss</link>
+            <guid>https://a9z.dev/blog/12-github-sponsors-mendoi/</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
             <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
             <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
-            <link>http://localhost:8084/blog/12-github-sponsors-mendoi?rel=rss</link>
-            <guid>http://localhost:8084/blog/12-github-sponsors-mendoi</guid>
+            <link>https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss</link>
+            <guid>https://a9z.dev/blog/12-github-sponsors-mendoi</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
             <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
             <title><![CDATA[c2.a9z.devを開設]]></title>
-            <link>http://localhost:8084/blog/11-akeome/?rel=rss</link>
-            <guid>http://localhost:8084/blog/11-akeome/</guid>
+            <link>https://a9z.dev/blog/11-akeome/?rel=rss</link>
+            <guid>https://a9z.dev/blog/11-akeome/</guid>
             <pubDate>Tue, 07 Jan 2020 08:00:00 GMT</pubDate>
             <description><![CDATA[あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_112138.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg"/>
         </item>
         <item>
             <title><![CDATA[c2.a9z.devを開設]]></title>
-            <link>http://localhost:8084/blog/11-akeome?rel=rss</link>
-            <guid>http://localhost:8084/blog/11-akeome</guid>
+            <link>https://a9z.dev/blog/11-akeome?rel=rss</link>
+            <guid>https://a9z.dev/blog/11-akeome</guid>
             <pubDate>Tue, 07 Jan 2020 08:00:00 GMT</pubDate>
             <description><![CDATA[あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_112138.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_112138.jpg"/>
         </item>
         <item>
             <title><![CDATA[maqzアップデート]]></title>
-            <link>http://localhost:8084/blog/10-update/?rel=rss</link>
-            <guid>http://localhost:8084/blog/10-update/</guid>
+            <link>https://a9z.dev/blog/10-update/?rel=rss</link>
+            <guid>https://a9z.dev/blog/10-update/</guid>
             <pubDate>Sat, 30 Nov 2019 06:45:00 GMT</pubDate>
             <description><![CDATA[joinmisskeyの成果をmaqzに反映しました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_134047.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg"/>
         </item>
         <item>
             <title><![CDATA[maqzアップデート]]></title>
-            <link>http://localhost:8084/blog/10-update?rel=rss</link>
-            <guid>http://localhost:8084/blog/10-update</guid>
+            <link>https://a9z.dev/blog/10-update?rel=rss</link>
+            <guid>https://a9z.dev/blog/10-update</guid>
             <pubDate>Sat, 30 Nov 2019 06:45:00 GMT</pubDate>
             <description><![CDATA[joinmisskeyの成果をmaqzに反映しました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_134047.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_134047.jpg"/>
         </item>
         <item>
             <title><![CDATA[The Japanese Web Fonts v7リリース]]></title>
-            <link>http://localhost:8084/blog/9-tjwf-v7/?rel=rss</link>
-            <guid>http://localhost:8084/blog/9-tjwf-v7/</guid>
+            <link>https://a9z.dev/blog/9-tjwf-v7/?rel=rss</link>
+            <guid>https://a9z.dev/blog/9-tjwf-v7/</guid>
             <pubDate>Wed, 02 Oct 2019 03:45:00 GMT</pubDate>
             <description><![CDATA[The Japanese Web Fonts v7をリリースしました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_103848.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg"/>
         </item>
         <item>
             <title><![CDATA[The Japanese Web Fonts v7リリース]]></title>
-            <link>http://localhost:8084/blog/9-tjwf-v7?rel=rss</link>
-            <guid>http://localhost:8084/blog/9-tjwf-v7</guid>
+            <link>https://a9z.dev/blog/9-tjwf-v7?rel=rss</link>
+            <guid>https://a9z.dev/blog/9-tjwf-v7</guid>
             <pubDate>Wed, 02 Oct 2019 03:45:00 GMT</pubDate>
             <description><![CDATA[The Japanese Web Fonts v7をリリースしました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_103848.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_103848.jpg"/>
         </item>
         <item>
             <title><![CDATA[ドメインを買ってMisskeyインスタンスを立てました]]></title>
-            <link>http://localhost:8084/blog/8-a9zdev/?rel=rss</link>
-            <guid>http://localhost:8084/blog/8-a9zdev/</guid>
+            <link>https://a9z.dev/blog/8-a9zdev/?rel=rss</link>
+            <guid>https://a9z.dev/blog/8-a9zdev/</guid>
             <pubDate>Tue, 10 Sep 2019 11:30:00 GMT</pubDate>
             <description><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/09/P_20190906_151146.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg"/>
         </item>
         <item>
             <title><![CDATA[ドメインを買ってMisskeyインスタンスを立てました]]></title>
-            <link>http://localhost:8084/blog/8-a9zdev?rel=rss</link>
-            <guid>http://localhost:8084/blog/8-a9zdev</guid>
+            <link>https://a9z.dev/blog/8-a9zdev?rel=rss</link>
+            <guid>https://a9z.dev/blog/8-a9zdev</guid>
             <pubDate>Tue, 10 Sep 2019 11:30:00 GMT</pubDate>
             <description><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/09/P_20190906_151146.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/09/P_20190906_151146.jpg"/>
         </item>
         <item>
             <title><![CDATA[家計簿アプリの話]]></title>
-            <link>http://localhost:8084/blog/7-kakeibo-app/?rel=rss</link>
-            <guid>http://localhost:8084/blog/7-kakeibo-app/</guid>
+            <link>https://a9z.dev/blog/7-kakeibo-app/?rel=rss</link>
+            <guid>https://a9z.dev/blog/7-kakeibo-app/</guid>
             <pubDate>Mon, 09 Sep 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/09/P_20190906_183148.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/09/P_20190906_183148.jpg"/>
         </item>
         <item>
             <title><![CDATA[家計簿アプリの話]]></title>
-            <link>http://localhost:8084/blog/7-kakeibo-app?rel=rss</link>
-            <guid>http://localhost:8084/blog/7-kakeibo-app</guid>
+            <link>https://a9z.dev/blog/7-kakeibo-app?rel=rss</link>
+            <guid>https://a9z.dev/blog/7-kakeibo-app</guid>
             <pubDate>Mon, 09 Sep 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/09/P_20190906_183148.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/09/P_20190906_183148.jpg"/>
         </item>
         <item>
             <title><![CDATA[C96 4日目に行ってきてみた]]></title>
-            <link>http://localhost:8084/blog/6-shash-junbikai/?rel=rss</link>
-            <guid>http://localhost:8084/blog/6-shash-junbikai/</guid>
+            <link>https://a9z.dev/blog/6-shash-junbikai/?rel=rss</link>
+            <guid>https://a9z.dev/blog/6-shash-junbikai/</guid>
             <pubDate>Tue, 20 Aug 2019 05:30:00 GMT</pubDate>
             <description><![CDATA[群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_141001.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg"/>
         </item>
         <item>
             <title><![CDATA[C96 4日目に行ってきてみた]]></title>
-            <link>http://localhost:8084/blog/6-shash-junbikai?rel=rss</link>
-            <guid>http://localhost:8084/blog/6-shash-junbikai</guid>
+            <link>https://a9z.dev/blog/6-shash-junbikai?rel=rss</link>
+            <guid>https://a9z.dev/blog/6-shash-junbikai</guid>
             <pubDate>Tue, 20 Aug 2019 05:30:00 GMT</pubDate>
             <description><![CDATA[群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/08/P_20190812_141001.jpg"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_141001.jpg"/>
         </item>
         <item>
             <title><![CDATA[Fediverseへのいざない]]></title>
-            <link>http://localhost:8084/blog/5-fediverse/?rel=rss</link>
-            <guid>http://localhost:8084/blog/5-fediverse/</guid>
+            <link>https://a9z.dev/blog/5-fediverse/?rel=rss</link>
+            <guid>https://a9z.dev/blog/5-fediverse/</guid>
             <pubDate>Fri, 15 Mar 2019 04:15:00 GMT</pubDate>
             <description><![CDATA[分散SNSで自分に合ったインターネットライフを。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/03/FEDIVERSE.png"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png"/>
         </item>
         <item>
             <title><![CDATA[Fediverseへのいざない]]></title>
-            <link>http://localhost:8084/blog/5-fediverse?rel=rss</link>
-            <guid>http://localhost:8084/blog/5-fediverse</guid>
+            <link>https://a9z.dev/blog/5-fediverse?rel=rss</link>
+            <guid>https://a9z.dev/blog/5-fediverse</guid>
             <pubDate>Fri, 15 Mar 2019 04:15:00 GMT</pubDate>
             <description><![CDATA[分散SNSで自分に合ったインターネットライフを。]]></description>
-            <enclosure url="http://localhost:8084/files/images/imports/2019/03/FEDIVERSE.png"/>
+            <enclosure url="https://a9z.dev/files/images/imports/2019/03/FEDIVERSE.png"/>
         </item>
     </channel>
 </rss>
