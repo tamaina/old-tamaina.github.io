@@ -265,7 +265,7 @@ Rakuten Linkでの通話時、**相手の音声が全く聞こえない**とい�
 
 12日昼の質問の返信はいったいいつになるのでしょうか……w。
 
-電話サポートももちろん（？）繋がらないようで、Twitter面白い投稿がありました。
+電話サポートももちろん（？）繋がらないようで、Twitterに面白い投稿がありました。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">楽天モバイルの電話サポート繋がらない問題解決方法<br>・NACK5を９時前につける<br>・埼玉りそな銀行のＣＭが流れたら発信の準備<br>・♪さいまたりっそな、ぎんこ～う♪の「う」の時に発信！<br>・テンキーの1か5を押す！<br>・繋がる！！！<br><br>繋がった時は震えて泣きそうでした。</p>&mdash; juno works (@juno_works0001) <a href="https://twitter.com/juno_works0001/status/1250215502783250432?ref_src=twsrc%5Etfw">April 15, 2020</a></blockquote>
 
