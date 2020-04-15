@@ -65,3 +65,14 @@ div.blogstyle.blogstyle-image
     > p
       @extend .small
       margin: .2em .2em
+
+div.blogstyle.blogstyle-table
+  width: 100%
+  margin-bottom: 1rem
+
+  @media (max-width: map-get($grid-breakpoints, xl) - 0.02)
+    overflow: auto
+    white-space: nowrap
+
+  > table
+    margin-bottom: 0
