@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>aqz/tamaina's Web site</title>
-    <updated>2020-04-15T11:37:12.492Z</updated>
+    <updated>2020-04-16T07:05:08.390Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://a9z.dev"/>
     <link rel="self" href="https://a9z.dev/feed.atom"/>
@@ -106,11 +106,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
+        <title type="html"><![CDATA[GitHub Sponsorsの申請について]]></title>
         <id>https://a9z.dev/blog/12-github-sponsors-mendoi/</id>
         <link href="https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss"/>
         <updated>2020-01-07T08:01:00.000Z</updated>
-        <summary type="html"><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></summary>
+        <summary type="html"><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></summary>
         <author>
             <name>aqz</name>
             <email/>
@@ -118,11 +118,11 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
+        <title type="html"><![CDATA[GitHub Sponsorsの申請について]]></title>
         <id>https://a9z.dev/blog/12-github-sponsors-mendoi</id>
         <link href="https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss"/>
         <updated>2020-01-07T08:01:00.000Z</updated>
-        <summary type="html"><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></summary>
+        <summary type="html"><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></summary>
         <author>
             <name>aqz</name>
             <email/>

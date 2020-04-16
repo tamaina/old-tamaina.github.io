@@ -4,7 +4,7 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Wed, 15 Apr 2020 11:37:12 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Apr 2020 07:05:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
@@ -74,19 +74,19 @@
             <enclosure url="https://a9z.dev/files/images/imports/2020/01/echo2.jpg"/>
         </item>
         <item>
-            <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
+            <title><![CDATA[GitHub Sponsorsの申請について]]></title>
             <link>https://a9z.dev/blog/12-github-sponsors-mendoi/?rel=rss</link>
             <guid>https://a9z.dev/blog/12-github-sponsors-mendoi/</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
-            <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
+            <description><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
-            <title><![CDATA[GitHub Sponsorsは面倒くさくない！]]></title>
+            <title><![CDATA[GitHub Sponsorsの申請について]]></title>
             <link>https://a9z.dev/blog/12-github-sponsors-mendoi?rel=rss</link>
             <guid>https://a9z.dev/blog/12-github-sponsors-mendoi</guid>
             <pubDate>Tue, 07 Jan 2020 08:01:00 GMT</pubDate>
-            <description><![CDATA[GitHub Sponsorsの申請で個人的に引っかかった点をまとめました。]]></description>
+            <description><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></description>
             <enclosure url="https://a9z.dev/files/images/imports/2019/08/P_20190812_114755a.jpg"/>
         </item>
         <item>
