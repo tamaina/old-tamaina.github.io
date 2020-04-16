@@ -36,7 +36,11 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
   })
   $("img[src^=\"/\"]").each((i, el) => { $(el).attr("src", `${urlprefix}${$(el).attr("src")}`) })
   $("img[src^=\"files/\"]").each((i, el) => { $(el).attr("src", `${urlprefix}/${$(el).attr("src")}`) })
-  $("table").addClass("table table-sm table-bordered")
+  $("table").each((i, el) => {
+    $(el).addClass("table table-sm table-bordered")
+    $(el).after(`<div class="blogstyle blogstyle-table">${$.html($(el))}</div>`)
+    $(el).remove()
+  })
   $(":not([data-mfm]) > blockquote").addClass("blockquote rounded px-3 px-md-4 py-3 font-weight-light")
   $(":not([data-mfm]) > a[href^=\"http\"], :not([data-mfm]) > a[href^=\"//\"]").append(String.raw`<i class="fa fas external-link-alt" data-fa-prefix="fas" data-fa-icon-name="external-link-alt" data-fa-option="{'classes':['fa-fw', 'fa-sm']}"></i>`)
   const as = []
