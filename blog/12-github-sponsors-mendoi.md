@@ -11,7 +11,9 @@ author:
   avatar: aqz
 amp: true
 ---
-GitHub Sponsorsの手続きが面倒臭かったけど今になってみればそこまで面倒じゃないと思っています。
+GitHub Sponsorsの手続きが面倒臭かった部分のまとめ。
+
+**[私めもSponsorsに登録していますので、よければ。](https://github.com/sponsors/tamaina/)**
 
 ※英語がだめなので間違ったことを書いているかもしれませんがご了承ください。
 
@@ -59,8 +61,8 @@ GitHub Sponsorsの銀行口座へのはStripeを使いますが、本人確認�
 
 私の場合、<u>[GitHubのサポート](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1240.htm)に連絡を取って**6**が必須なフォームに変更してもらいました</u>。
 
-次のような内容を[GitHubのコンタクトフォーム](https://support.github.com/contact)で送信すれば変えてくれるんじゃないかと思います。  
-文を例示してはいますが、**私はそこまで英語に明るくない**のでこれを送って変なことになっても責任は負えません。
+以上を踏まえて、次のような内容を[GitHubのコンタクトフォーム](https://support.github.com/contact)で送信すれば変えてくれそうです。  
+文を例示してはいますが、**私はそこまで英語に明るくないのでこれを送ってあらぬ問題が発生しても責任は負えません**。ご勘弁願います。
 
 ----
 
