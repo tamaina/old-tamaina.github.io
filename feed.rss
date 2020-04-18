@@ -4,26 +4,74 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Thu, 16 Apr 2020 07:05:08 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Apr 2020 13:25:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
         <atom:link href="https://a9z.dev/feed.atom" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[Rakuten Casaはあんま意味なさそうだけど意味はあるかも]]></title>
+            <link>https://a9z.dev/blog/16-4-rakuten-casa/?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-4-rakuten-casa/</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:04 GMT</pubDate>
+            <description><![CDATA[Casa = タダのWi-Fiルーターです。Linkアプリで一応Wi-Fiのみでの通話ができますが、緊急通報や050発信はできません。万が一のときに契約しておいた方がいいかも。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-casa.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Rakuten Casaはあんま意味なさそうだけど意味はあるかも]]></title>
+            <link>https://a9z.dev/blog/16-4-rakuten-casa?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-4-rakuten-casa</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:04 GMT</pubDate>
+            <description><![CDATA[Casa = タダのWi-Fiルーターです。Linkアプリで一応Wi-Fiのみでの通話ができますが、緊急通報や050発信はできません。万が一のときに契約しておいた方がいいかも。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-casa.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Wi-FiでRakuten Linkの通話できないときは…]]></title>
+            <link>https://a9z.dev/blog/16-2-rakuten-link-wifi/?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-2-rakuten-link-wifi/</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:02 GMT</pubDate>
+            <description><![CDATA[Wi-FiでRakuten Linkの通話ができないときは、ルーターの設定を弄りましょう！詳細をご説明します。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-link.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Wi-FiでRakuten Linkの通話できないときは…]]></title>
+            <link>https://a9z.dev/blog/16-2-rakuten-link-wifi?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-2-rakuten-link-wifi</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:02 GMT</pubDate>
+            <description><![CDATA[Wi-FiでRakuten Linkの通話ができないときは、ルーターの設定を弄りましょう！詳細をご説明します。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-link.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Rakuten Mobile 料金比較]]></title>
+            <link>https://a9z.dev/blog/16-3-rakuten-mobile-price/?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-3-rakuten-mobile-price/</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:01 GMT</pubDate>
+            <description><![CDATA[楽天モバイル Rakuten UN-LIMIT 2.0 と他キャリア・MVNOとの料金を比較してみました。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-price.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Rakuten Mobile 料金比較]]></title>
+            <link>https://a9z.dev/blog/16-3-rakuten-mobile-price?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-3-rakuten-mobile-price</guid>
+            <pubDate>Sat, 18 Apr 2020 13:00:01 GMT</pubDate>
+            <description><![CDATA[楽天モバイル Rakuten UN-LIMIT 2.0 と他キャリア・MVNOとの料金を比較してみました。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-price.png"/>
+        </item>
+        <item>
             <title><![CDATA[Rakuten Mobileが来た]]></title>
             <link>https://a9z.dev/blog/16-rakuten-mobile/?rel=rss</link>
             <guid>https://a9z.dev/blog/16-rakuten-mobile/</guid>
-            <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
-            <description><![CDATA[MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。]]></description>
-            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
+            <pubDate>Sat, 18 Apr 2020 13:00:00 GMT</pubDate>
+            <description><![CDATA[MVNOからMNOに移行しました。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-mobile.png"/>
         </item>
         <item>
             <title><![CDATA[Rakuten Mobileが来た]]></title>
             <link>https://a9z.dev/blog/16-rakuten-mobile?rel=rss</link>
             <guid>https://a9z.dev/blog/16-rakuten-mobile</guid>
-            <pubDate>Sun, 12 Apr 2020 16:00:00 GMT</pubDate>
-            <description><![CDATA[MVNOからMNOに移行してみたものの、1つだけ大きな不具合に直面してしまいました。他キャリア・MVNOとの比較も調査してみました。]]></description>
-            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rm-1.jpg"/>
+            <pubDate>Sat, 18 Apr 2020 13:00:00 GMT</pubDate>
+            <description><![CDATA[MVNOからMNOに移行しました。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-mobile.png"/>
         </item>
         <item>
             <title><![CDATA[中古のMacBook Airを買った]]></title>
