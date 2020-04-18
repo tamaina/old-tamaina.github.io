@@ -12,7 +12,7 @@ author:
 amp: true
 ---
 現在この問題は解決していません。記事の更新をお知らせしますので、ぜひMisskeyのフォローをよろしくお願いいたします。  
-`#RakutenLink`をつけてお知らせする予定ですので、私の普段のノートがうるさいと思った方はぜひ[アンテナ機能](https://join.misskey.page/ja/wiki/usage/antenna)をご活用ください。
+`#RakutenMobile`をつけてお知らせする予定ですので、私の普段のノートがうるさいと思った方はぜひ[アンテナ機能](https://join.misskey.page/ja/wiki/usage/antenna)をご活用ください。
 
 ## 現象と環境
 Wi-Fi接続時、Rakuten Linkでの通話の際、相手の音声が聞こえません。こちらの音声は聞こえています。
