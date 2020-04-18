@@ -4,7 +4,7 @@ description: Casa = タダのWi-Fiルーターです。Linkアプリで一応Wi-
 layout: blog
 category: Computer
 thumbnail: /files/images/imports/2020/04/rakuten-casa.png
-date: 2020-04-18T22:00:04+09:00
+date: 2020-04-19T02:00:04+09:00
 author:
   name: aqz
   url: https://yuzulia.xyz/@aqz
@@ -27,7 +27,7 @@ amp: true
 [光回線の種類についてはこちらの動画で学んでください。](https://www.youtube.com/watch?v=sIczqm4MDEU)
 
 ## おしらせ
-4/18現在、楽天モバイルではMVNOと同じく紹介キャンペーンを行っており、紹介者のIDを申し込み時に入力すると紹介された方に**2000ポイント**がもらえます。
+4/19現在、楽天モバイルではMVNOと同じく紹介キャンペーンを行っており、紹介者のIDを申し込み時に入力すると紹介された方に**2000ポイント**がもらえます。
 
 私のIDは`2020040803433`ですので、お申し込みの際にぜひ入力していただけると嬉しいです。
 
