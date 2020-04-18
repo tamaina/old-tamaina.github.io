@@ -4,7 +4,7 @@ description: 楽天モバイル Rakuten UN-LIMIT 2.0 と他キャリア・MVNO�
 layout: blog
 category: Computer
 thumbnail: /files/images/imports/2020/04/rakuten-price.png
-date: 2020-04-19T02:00:01+09:00
+date: 2020-04-19T02:00:03+09:00
 author:
   name: aqz
   url: https://yuzulia.xyz/@aqz
@@ -13,7 +13,7 @@ amp: true
 ---
 4/8にコロナ禍の最中にMNOとして新規参入した楽天モバイル（Rakuten Mobile）は、ただ一つのプラン「Rakuten UN-LIMIT 2.0」だけで勝負をしかけてきました。  
 価格破壊を謳っていますが、いったいどの程度安いのでしょうか？他MNOやMVNOと比較してみました。  
-この記事ではあくまで価格に絞ってお話しします。この記事を読む前にぜひ、**[楽天モバイルのプランの概要などを説明したこちらの記事]()**をお読みください。
+この記事ではあくまで価格に絞ってお話しします。この記事を読む前にぜひ、**[楽天モバイルのプランの概要などを説明したこちらの記事](16-rakuten-mobile)**をお読みください。  
 公式サイト: https://network.mobile.rakuten.co.jp/
 
 ![](/files/images/imports/2020/04/rm-1.jpg)

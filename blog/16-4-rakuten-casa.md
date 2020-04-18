@@ -11,7 +11,8 @@ author:
   avatar: aqz
 amp: true
 ---
-この記事ではあくまで楽天ひかりとRakuten Casaに絞ってお話しします。この記事を読む前にぜひ、**[楽天モバイルのプランの概要などを説明したこちらの記事]()**をお読みください。
+この記事ではあくまで楽天ひかりとRakuten Casaに絞ってお話しします。  
+この記事を読む前にぜひ、**[楽天モバイルのプランの概要などを説明したこちらの記事](16-rakuten-mobile)**をお読みください。  
 公式サイト: https://network.mobile.rakuten.co.jp/
 
 ## 楽天ひかりとRakuten Casa
