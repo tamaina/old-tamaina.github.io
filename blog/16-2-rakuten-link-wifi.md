@@ -25,7 +25,7 @@ Twitterにて、同種の現象の報告を発見しました。こちらもBuff
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">やっぱりRakuten Linkでの電話はWi-Fiにつながっていると音声が通じないみたいですね…<br>電話自体は通じていますが、楽天モバイルのSIMを入れているスマホでは声が聞こえない…<br><br>Wi-Fiを切って携帯回線にすると声が聞こえます</p>&mdash; アキラ (@akirakira_memo) <a href="https://twitter.com/akirakira_memo/status/1247829526710632448?ref_src=twsrc%5Etfw">April 8, 2020</a></blockquote>
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">＞Wi-Fiルーターはどの機種をご利用ですか？<br>自分は自宅固定回線から試しました<br>回線はso-net光、ルーターはBAFFALO製・型番はWSR-1166DHPL/Nです</p>&mdash; アキラ (@akirakira_memo) <a href="https://twitter.com/akirakira_memo/status/1250393731678625793?ref_src=twsrc%5Etfw">April 15, 2020</a>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">＞Wi-Fiルーターはどの機種をご利用ですか？<br>自分は自宅固定回線から試しました<br>回線はso-net光、ルーターはBAFFALO製・型番はWSR-1166DHPL/Nです</p>&mdash; アキラ (@akirakira_memo) <a href="https://twitter.com/akirakira_memo/status/1250393731678625793?ref_src=twsrc%5Etfw">April 15, 2020</a></blockquote>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
