@@ -14,14 +14,19 @@ description: 詳細な使い方
 
 また、エディターも必要です。エディターにはVisual Studio Codeを推奨します。
 
-また、環境によって以下の操作をしてください。
+環境によって追加のライブラリも必要です。
 
 ##### Mac OS
+- Command Line Tools
+- libjpeg, libpng
+
 ```
 brew install libjpeg libpng
 ```
 
 ##### Ubuntu
+- libjpeg, libpng
+
 ```
 apt-get install -y libjpeg libpng
 ```
