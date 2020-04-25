@@ -526,7 +526,7 @@ gulp.task("make-browserconfig", cb => {
   })
 })
 
-gulp.task("make-sitemap", cb => {
+gulp.task("make-sitemap", async (cb) => {
   const urls = pages.map(page => ({
     url: page.meta.permalink
   }))
