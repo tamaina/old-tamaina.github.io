@@ -49,6 +49,8 @@ disqus: tminghio
 # 無効にしたかったらfalse
 ga: UA-148331052-1
 # 無効にしたかったらfalse
+gad: ca-pub-1736621122676736
+# 無効にしたかったらfalse
 sidebar: true
 # サイドバーは無効にできる
 manifest:
