@@ -83,6 +83,7 @@ html(lang=site.language)
       block js_head
 
   body(class=(site.sidebar ? 'with-sidebar' : ''))
+    #fixed(style='position: fixed; height: 1px; width: 1px')
     #grid(class=(site.sidebar ? 'with-sidebar' : '')).sidebar-target
       block wo_footer
         block nav
