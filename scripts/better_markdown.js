@@ -15,20 +15,18 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
   $("h2, h3, h4, h5, h6").each((i, el) => { hs.push(encodeURIComponent($(el).text())) })
   $("h2, h3, h4, h5, h6").each(i => { $("h2, h3, h4, h5, h6").eq(i).attr("id", hs[i]) })
   $("img:not(.notblogstyle)").each((i, el) => {
-    const img = (() => {
-      const imgurl = (() => {
-        if ($(el).is("img[src^=\"/\"]")) return $(el).attr("src")
-        if ($(el).is("img[src^=\"files/\"]")) return `/${$(el).attr("src")}`
-        return null
-      })()
-      if (imgurl && imgurl.match("png$|jpg$|jpeg$|gif$|webp$".replace("?", "\\?"))) {
-        const iu = path.parse(imgurl)
-        const sizes = "calc(100vw - 30px), (min-width: 576px) 510px, (min-width: 768px) 40em"
-        return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.360.webp${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720.webp${suf} 720w, ${urlprefix}${iu.dir}/${iu.name}.webp${suf} 1200w" type="image/webp" sizes="${sizes}"><source srcset="${urlprefix}${iu.dir}/${iu.name}.360${iu.ext}${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720${iu.ext}${suf} 720w, ${urlprefix}${iu.dir}/${iu.base}${suf} 1200w" sizes="${sizes}">${$.html($(el))}</picture>`
-      }
-      $(el).attr("src", `${$(el).attr("src")}${suf}`)
-      return $.html($(el))
+    const imgurl = (() => {
+      if ($(el).is("img[src^=\"/\"]")) return $(el).attr("src")
+      if ($(el).is("img[src^=\"files/\"]")) return `/${$(el).attr("src")}`
+      return null
     })()
+    if (imgurl && imgurl.match("png$|jpg$|jpeg$|gif$|webp$".replace("?", "\\?"))) {
+      const iu = path.parse(imgurl)
+      const sizes = "calc(100vw - 30px), (min-width: 576px) 510px, (min-width: 768px) 40em"
+      return `<picture><source srcset="${urlprefix}${iu.dir}/${iu.name}.360.webp${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720.webp${suf} 720w, ${urlprefix}${iu.dir}/${iu.name}.webp${suf} 1200w" type="image/webp" sizes="${sizes}"><source srcset="${urlprefix}${iu.dir}/${iu.name}.360${iu.ext}${suf} 360w, ${urlprefix}${iu.dir}/${iu.name}.720${iu.ext}${suf} 720w, ${urlprefix}${iu.dir}/${iu.base}${suf} 1200w" sizes="${sizes}">${$.html($(el))}</picture>`
+    }
+    $(el).attr("src", `${$(el).attr("src")}${suf}`)
+    const img = $.html($(el))
     const tit = $(el).attr("title")
     const str = `<div class="blogstyle blogstyle-image"><${imgurl ? `a href="${imgurl}" target="_blank"` : "div"}>${img}${tit && tit.length > 0 ? `<p>${tit}</p>` : ""}</${imgurl ? "a" : "div"}></div>`
     $(el).after(str)
