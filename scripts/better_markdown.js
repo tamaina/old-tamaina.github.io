@@ -30,7 +30,7 @@ module.exports = (htm, urlprefix, image_compressing_strategy_version) => {
       return $.html($(el))
     })()
     const tit = $(el).attr("title")
-    const str = `<div class="blogstyle blogstyle-image"><div>${img}${tit && tit.length > 0 ? `<p>${tit}</p>` : ""}</div></div>`
+    const str = `<div class="blogstyle blogstyle-image"><${imgurl ? `a href="${imgurl}" target="_blank"` : "div"}>${img}${tit && tit.length > 0 ? `<p>${tit}</p>` : ""}</${imgurl ? "a" : "div"}></div>`
     $(el).after(str)
     $(el).remove()
   })
