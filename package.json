@@ -83,7 +83,7 @@
     "marked": "1",
     "minimist": "^1.2.3",
     "mkdirp": "1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.0",
     "node-sass": "^4.10.0",
     "npm": "^6.9.0",
     "numeral": "^2.0.6",
