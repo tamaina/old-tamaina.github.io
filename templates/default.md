@@ -2,7 +2,6 @@
 title: タイトル
 description: 簡単な説明を140文字以内で書きます。しかし多くの場合は140文字に届きません。
 layout: default
-date: $date
 thumbnail: /files/hoge/foo/****.jpeg
 ---
 
