@@ -15,6 +15,7 @@ const mkdirp = require("mkdirp")
 const webpackStream = require("webpack-stream")
 const webpack = require("webpack")
 const { SitemapStream, streamToPromise } = require("sitemap")
+const { Readable } = require("stream")
 
 const postcssSorting = require("postcss-sorting")
 const autoprefixer = require("autoprefixer")
@@ -506,6 +507,7 @@ gulp.task("make-rss", cb => {
   return cb()
 })
 
+/*
 const browserconfigXml = () => `<?xml version="1.0" encoding="utf-8"?>
     <browserconfig>
       <msapplication>
@@ -521,10 +523,11 @@ const browserconfigXml = () => `<?xml version="1.0" encoding="utf-8"?>
     </browserconfig>`
 
 gulp.task("make-browserconfig", cb => {
-  fs.writeFile("dist/docs/browserconfig.xml", browserconfigXml, () => {
+  fs.writeFile("dist/docs/browserconfig.xml", browserconfigXml(), () => {
     glog(colors.green("✔ browserconfig.xml")); cb()
   })
 })
+*/
 
 gulp.task("make-sitemap", async (cb) => {
   const urls = pages.map(page => ({
@@ -532,13 +535,10 @@ gulp.task("make-sitemap", async (cb) => {
   }))
 
   const stream = new SitemapStream({
-    hostname: urlPrefix,
-    urls
+    hostname: urlPrefix
   })
 
-  stream.end()
-
-  const pr = await streamToPromise(stream)
+  const pr = await streamToPromise(Readable.from(urls).pipe(stream))
 
   fs.writeFile("dist/docs/sitemap.xml", pr, () => {
     glog(colors.green("✔ sitemap.xml"))
@@ -748,7 +748,7 @@ gulp.task("make-subfiles",
     gulp.parallel(
       "make-manifest",
       "make-rss",
-      "make-browserconfig",
+      // "make-browserconfig",
       "make-sitemap"
     ),
     cb => { cb() }
