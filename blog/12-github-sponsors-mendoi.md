@@ -7,7 +7,7 @@ thumbnail: /files/images/imports/2019/08/P_20190812_114755a.jpg
 date: 2020-01-07T17:01:00+09:00
 author:
   name: aqz
-  url: https://yuzulia.xyz/@aqz
+  url: https://c2.a9z.dev/@aqz
   avatar: aqz
 amp: true
 ---

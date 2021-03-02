@@ -7,7 +7,7 @@ thumbnail: /files/images/imports/2020/04/mba2.jpg
 date: 2020-04-11T01:00:00+09:00
 author:
   name: aqz
-  url: https://yuzulia.xyz/@aqz
+  url: https://c2.a9z.dev/@aqz
   avatar: aqz
 amp: true
 ---
