@@ -2,109 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>aqz/tamaina's Web site</title>
-    <updated>2020-05-07T08:58:09.413Z</updated>
+    <updated>2021-03-02T07:53:56.925Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://a9z.dev"/>
     <link rel="self" href="https://a9z.dev/feed.atom"/>
     <subtitle>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</subtitle>
     <icon>https://a9z.dev/favicon.ico</icon>
     <rights>© aqz / tamaina</rights>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Casaはあんま意味なさそうだけど意味はあるかも]]></title>
-        <id>https://a9z.dev/blog/16-4-rakuten-casa/</id>
-        <link href="https://a9z.dev/blog/16-4-rakuten-casa/?rel=rss"/>
-        <updated>2020-04-18T17:00:04.000Z</updated>
-        <summary type="html"><![CDATA[Casa = タダのWi-Fiルーターです。Linkアプリで一応Wi-Fiのみでの通話ができますが、緊急通報や050発信はできません。万が一のときに契約しておいた方がいいかも。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Casaはあんま意味なさそうだけど意味はあるかも]]></title>
-        <id>https://a9z.dev/blog/16-4-rakuten-casa</id>
-        <link href="https://a9z.dev/blog/16-4-rakuten-casa?rel=rss"/>
-        <updated>2020-04-18T17:00:04.000Z</updated>
-        <summary type="html"><![CDATA[Casa = タダのWi-Fiルーターです。Linkアプリで一応Wi-Fiのみでの通話ができますが、緊急通報や050発信はできません。万が一のときに契約しておいた方がいいかも。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Mobile 料金比較]]></title>
-        <id>https://a9z.dev/blog/16-3-rakuten-mobile-price/</id>
-        <link href="https://a9z.dev/blog/16-3-rakuten-mobile-price/?rel=rss"/>
-        <updated>2020-04-18T17:00:03.000Z</updated>
-        <summary type="html"><![CDATA[楽天モバイル Rakuten UN-LIMIT 2.0 と他キャリア・MVNOとの料金を比較してみました。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Mobile 料金比較]]></title>
-        <id>https://a9z.dev/blog/16-3-rakuten-mobile-price</id>
-        <link href="https://a9z.dev/blog/16-3-rakuten-mobile-price?rel=rss"/>
-        <updated>2020-04-18T17:00:03.000Z</updated>
-        <summary type="html"><![CDATA[楽天モバイル Rakuten UN-LIMIT 2.0 と他キャリア・MVNOとの料金を比較してみました。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
-        <id>https://a9z.dev/blog/16-2-rakuten-link-wifi/</id>
-        <link href="https://a9z.dev/blog/16-2-rakuten-link-wifi/?rel=rss"/>
-        <updated>2020-04-18T17:00:02.000Z</updated>
-        <summary type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができません！]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
-        <id>https://a9z.dev/blog/16-2-rakuten-link-wifi</id>
-        <link href="https://a9z.dev/blog/16-2-rakuten-link-wifi?rel=rss"/>
-        <updated>2020-04-18T17:00:02.000Z</updated>
-        <summary type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができません！]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Mobileが来た]]></title>
-        <id>https://a9z.dev/blog/16-rakuten-mobile/</id>
-        <link href="https://a9z.dev/blog/16-rakuten-mobile/?rel=rss"/>
-        <updated>2020-04-18T17:00:00.000Z</updated>
-        <summary type="html"><![CDATA[MVNOからMNOに移行しました。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rakuten Mobileが来た]]></title>
-        <id>https://a9z.dev/blog/16-rakuten-mobile</id>
-        <link href="https://a9z.dev/blog/16-rakuten-mobile?rel=rss"/>
-        <updated>2020-04-18T17:00:00.000Z</updated>
-        <summary type="html"><![CDATA[MVNOからMNOに移行しました。]]></summary>
-        <author>
-            <name>aqz</name>
-            <email/>
-            <uri/>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[中古のMacBook Airを買った]]></title>
         <id>https://a9z.dev/blog/15-macbookair-mid2012/</id>
@@ -113,8 +17,6 @@
         <summary type="html"><![CDATA[Safariのデバッグ用に買いました。メルカリで3万円弱。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -125,8 +27,6 @@
         <summary type="html"><![CDATA[Safariのデバッグ用に買いました。メルカリで3万円弱。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -137,8 +37,6 @@
         <summary type="html"><![CDATA[スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -149,8 +47,6 @@
         <summary type="html"><![CDATA[スマートフォンの画面が割れたのでauの故障紛失サポートを使ってみました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -161,8 +57,6 @@
         <summary type="html"><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -173,8 +67,6 @@
         <summary type="html"><![CDATA[AmazonでEchoというBluetoothスピーカーが安かったので購入。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -185,8 +77,6 @@
         <summary type="html"><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -197,8 +87,6 @@
         <summary type="html"><![CDATA[一般的な日本人が申請するときの提出書類についてメモ。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -209,8 +97,6 @@
         <summary type="html"><![CDATA[あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -221,8 +107,6 @@
         <summary type="html"><![CDATA[あけましておめでとうございます。去年12月にc2.a9z.devを開設し、一時的にそちらがメインのアカウントになります。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -233,8 +117,6 @@
         <summary type="html"><![CDATA[joinmisskeyの成果をmaqzに反映しました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -245,8 +127,6 @@
         <summary type="html"><![CDATA[joinmisskeyの成果をmaqzに反映しました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -257,8 +137,6 @@
         <summary type="html"><![CDATA[The Japanese Web Fonts v7をリリースしました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -269,8 +147,6 @@
         <summary type="html"><![CDATA[The Japanese Web Fonts v7をリリースしました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -281,8 +157,6 @@
         <summary type="html"><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -293,8 +167,6 @@
         <summary type="html"><![CDATA[a9z.devを買いました。このサイトのURLは変更になります。また、Misskeyインスタンスmk.a9z.devを立ち上げました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -305,8 +177,6 @@
         <summary type="html"><![CDATA[とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -317,8 +187,6 @@
         <summary type="html"><![CDATA[とりあえずKyashを連携できるZaimとMoneyForwardを連携させてみて、どっちが使いやすいのか試してみました。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -329,8 +197,6 @@
         <summary type="html"><![CDATA[群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -341,8 +207,6 @@
         <summary type="html"><![CDATA[群馬から遠路はるばる東京ビッグサイトまで行ってきた模様をほぼ写真のみでお伝えします。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -353,8 +217,6 @@
         <summary type="html"><![CDATA[分散SNSで自分に合ったインターネットライフを。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
     <entry>
@@ -365,8 +227,6 @@
         <summary type="html"><![CDATA[分散SNSで自分に合ったインターネットライフを。]]></summary>
         <author>
             <name>aqz</name>
-            <email/>
-            <uri/>
         </author>
     </entry>
 </feed>
