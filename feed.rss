@@ -4,10 +4,26 @@
         <title>aqz/tamaina's Web site</title>
         <link>https://a9z.dev</link>
         <description>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</description>
-        <lastBuildDate>Tue, 02 Mar 2021 07:58:55 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 06 Mar 2021 08:00:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© aqz / tamaina</copyright>
+        <item>
+            <title><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
+            <link>https://a9z.dev/blog/16-2-rakuten-link-wifi/?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-2-rakuten-link-wifi/</guid>
+            <pubDate>Sat, 18 Apr 2020 17:00:02 GMT</pubDate>
+            <description><![CDATA[家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-link.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
+            <link>https://a9z.dev/blog/16-2-rakuten-link-wifi?rel=rss</link>
+            <guid>https://a9z.dev/blog/16-2-rakuten-link-wifi</guid>
+            <pubDate>Sat, 18 Apr 2020 17:00:02 GMT</pubDate>
+            <description><![CDATA[家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。]]></description>
+            <enclosure url="https://a9z.dev/files/images/imports/2020/04/rakuten-link.png" length="0" type="image/png"/>
+        </item>
         <item>
             <title><![CDATA[中古のMacBook Airを買った]]></title>
             <link>https://a9z.dev/blog/15-macbookair-mid2012/?rel=rss</link>

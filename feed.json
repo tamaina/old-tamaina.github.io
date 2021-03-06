@@ -6,6 +6,28 @@
     "description": "aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。",
     "items": [
         {
+            "id": "https://a9z.dev/blog/16-2-rakuten-link-wifi/",
+            "url": "https://a9z.dev/blog/16-2-rakuten-link-wifi/?rel=rss",
+            "title": "Wi-FiでRakuten Linkの通話ができない！",
+            "summary": "家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rakuten-link.png",
+            "date_modified": "2020-04-18T17:00:02.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
+            "id": "https://a9z.dev/blog/16-2-rakuten-link-wifi",
+            "url": "https://a9z.dev/blog/16-2-rakuten-link-wifi?rel=rss",
+            "title": "Wi-FiでRakuten Linkの通話ができない！",
+            "summary": "家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。",
+            "image": "https://a9z.dev/files/images/imports/2020/04/rakuten-link.png",
+            "date_modified": "2020-04-18T17:00:02.000Z",
+            "author": {
+                "name": "aqz"
+            }
+        },
+        {
             "id": "https://a9z.dev/blog/15-macbookair-mid2012/",
             "url": "https://a9z.dev/blog/15-macbookair-mid2012/?rel=rss",
             "title": "中古のMacBook Airを買った",

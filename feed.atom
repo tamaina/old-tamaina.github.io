@@ -2,13 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>aqz/tamaina's Web site</title>
-    <updated>2021-03-02T07:58:55.323Z</updated>
+    <updated>2021-03-06T08:00:45.765Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://a9z.dev"/>
     <link rel="self" href="https://a9z.dev/feed.atom"/>
     <subtitle>aqz/tamainaのWebサイトです。なお、このサイトを生成している「maqz」は簡単にモダンなサイトを作成できるサイトビルダーです。</subtitle>
     <icon>https://a9z.dev/favicon.ico</icon>
     <rights>© aqz / tamaina</rights>
+    <entry>
+        <title type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
+        <id>https://a9z.dev/blog/16-2-rakuten-link-wifi/</id>
+        <link href="https://a9z.dev/blog/16-2-rakuten-link-wifi/?rel=rss"/>
+        <updated>2020-04-18T17:00:02.000Z</updated>
+        <summary type="html"><![CDATA[家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wi-FiでRakuten Linkの通話ができない！]]></title>
+        <id>https://a9z.dev/blog/16-2-rakuten-link-wifi</id>
+        <link href="https://a9z.dev/blog/16-2-rakuten-link-wifi?rel=rss"/>
+        <updated>2020-04-18T17:00:02.000Z</updated>
+        <summary type="html"><![CDATA[家のWi-FiでRakuten Linkの通話ができない場合、Buffalo製ルーターから他社製ルーターに変更するとたぶん直ります。]]></summary>
+        <author>
+            <name>aqz</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[中古のMacBook Airを買った]]></title>
         <id>https://a9z.dev/blog/15-macbookair-mid2012/</id>
