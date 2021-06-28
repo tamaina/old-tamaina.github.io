@@ -88,7 +88,7 @@
     "npm": "^7.6.0",
     "numeral": "^2.0.6",
     "postcss-sorting": "5",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.24.0",
     "pug": "^2.0.3",
     "pump": "^3.0.0",
     "punycode": "^2.1.1",
