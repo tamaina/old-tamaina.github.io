@@ -84,7 +84,7 @@
     "minimist": "^1.2.3",
     "mkdirp": "1",
     "moment": "^2.24.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "npm": "^7.6.0",
     "numeral": "^2.0.6",
     "postcss-sorting": "5",
